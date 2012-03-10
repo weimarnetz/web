@@ -29,34 +29,7 @@
   </head>
 
   <body>
-<script type="text/javascript">
-    
-    function getElement(aID)
-    {
-        return (document.getElementById) ?
-            document.getElementById(aID) :document.all[aID];
-    }
 
-    function getIFrameDocument(aID){ 
-        var rv = null; 
-        var frame=getElement(aID);
-        // if contentDocument exists, W3C compliant (e.g. Mozilla) 
-        if (frame.contentDocument)
-            rv = frame.contentDocument;
-        else // bad Internet Explorer  ;)
-            rv = document.frames[aID].document;
-        return rv;
-    }
-
-    function adjustMyFrameHeight()
-    {
-        var frame = getElement("myFrame");
-        var frameDoc = getIFrameDocument("myFrame");
-        frame.height = frameDoc.body.offsetHeight;
-    }
-</script>
-
-	
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
@@ -81,6 +54,111 @@
         </div>
       </div>
     </div>
+
+  <script type="text/javascript" src="./js/cbi.js"></script>
+<script type="text/javascript">//<![CDATA[                         
+                                                                   
+        XHR.poll(10 , '<%=REQUEST_URI%>', { status: 1 },           
+                function(x, info)                                  
+                {                                                  
+                var nt = document.getElementById('olsr_neigh_table');
+                        if (nt)                                      
+                        {                                            
+                                var s = '';                          
+                                for (var idx = 0; idx < info.length; idx++)
+                                {                                          
+                                        var neigh = info[idx];             
+                                                                           
+                                        s += String.format(                
+                                                '<tr class="cbi-section-table-row cbi-rowstyle-'+(1 + (idx % 2))+'">' +
+                                                        '<td class="cbi-section-table-cell" style="background-color:%s"><a href="http://%s/cgi-bin-status.html">%s</a></td>',
+                                                neigh.dfgcolor, neigh.rip, neigh.rip                                                                                         
+                                                );                                                                                                                           
+                                        if (neigh.hn) {                                                                                                                      
+                                                s += String.format(                                                                                                          
+                                                        '<td class="cbi-section-table-cell" style="background-color:%s"><a href="http://%s/cgi-bin-status.html">%s</a></td>',
+                                                        neigh.dfgcolor, neigh.hn, neigh.hn                                                                                   
+                                                        );                                                                                                                   
+                                                }                                                                                                                            
+                                        else    {                                                                                                                            
+                                                s += String.format(                                                                                                          
+                                                        '<td class="cbi-section-table-cell" style="background-color:%s">?</td>',                                             
+                                                        neigh.dfgcolor                                                                                                       
+                                                        );                                                                                                                   
+                                                }                                                                                                                            
+                                        s += String.format(                                                                                                                  
+                                                        '<td class="cbi-section-table-cell" style="background-color:%s">%s</td>' +                                           
+                                                        '<td class="cbi-section-table-cell" style="background-color:%s">%s</td>' +                                           
+                                                        '<td class="cbi-section-table-cell" style="background-color:%s">%s</td>' +                                           
+                                                        '<td class="cbi-section-table-cell" style="background-color:%s">%s</td>' +                                           
+                                                        '<td class="cbi-section-table-cell" style="background-color:%s">%s</td>' +                                           
+                                                '</tr>',                                                                                                                     
+                                                                                                                                                                             
+                                                        neigh.dfgcolor, neigh.lip, neigh.dfgcolor, neigh.dev, neigh.dfgcolor, neigh.lq, neigh.dfgcolor, neigh.nlq, neigh.color, neigh.cost || '?'
+                                                );                                                                                                                                               
+                                }                                                                                                                                                                
+                                                                                                                                                                                                 
+                                nt.innerHTML = s;                                                                                                                                                
+                        }                                                                                                                                                                        
+                }                                                                                                                                                                                
+        );                                                                                                                                                                                       
+//]]></script>
+
+<h2><a id="content" name="content"><%:OLSR connections%></a></h2>                                                                                                                                
+                                                                                                                                                                                                 
+<fieldset class="cbi-section">                                                                                                                                               
+        <legend><%:Overview of currently established OLSR connections%></legend>                                                                                                                 
+                                                                                                                                                                                                 
+        <table class="cbi-section-table">                                                                                                                                    
+                <thead>                                                                                                                                                                          
+                        <tr class="cbi-section-table-titles">                                                                                                                                    
+                                <th class="cbi-section-table-cell"><%:Neighbour IP%></th>                                                                                                        
+                                <th class="cbi-section-table-cell"><%:Hostname%></th>                                                                                                            
+                                <th class="cbi-section-table-cell"><%:Local interface IP%></th>                                                                              
+                                <th class="cbi-section-table-cell"><%:Device%></th>                                                                                          
+                                <th class="cbi-section-table-cell">LQ</th>                                                                                                                       
+                                <th class="cbi-section-table-cell">NLQ</th>                                                                                                                      
+                                <th class="cbi-section-table-cell">ETX</th>                                                                                                                      
+                        </tr>                                                                                                                                                                    
+                </thead>                                                                                                                                                     
+                                                                                                                                                                                                 
+                <tbody id="olsr_neigh_table">                                                                                                                                                    
+                <%      local i = 1                                                                                                                                                              
+                        for k, link in ipairs(links) do                                                                                                                                          
+                        link.Cost = tonumber(link.Cost) or 0                                                                                                                                     
+                        color = olsrtools.etx_color(link.Cost)                                                                                                               
+                                                                                                                                                                             
+                        defaultgw_color = ""                                                                                                                                                     
+                        if link.defaultgw == 1 then                                                                                                                                              
+                                defaultgw_color = "#ffff99"                                                                                                                                      
+                        end                                                                                                                                                                      
+                %>                                                                                                                                                                               
+                                                                                                                                                                                                 
+                <tr class="cbi-section-table-row cbi-rowstyle-<%=i%>">                                                                                                                           
+                        <td class="cbi-section-table-cell" style="background-color:<%=defaultgw_color%>"><a href="http://<%=link["Remote IP"]%>/cgi-bin-status.html"><%=link["Remote IP"]%></a></td>
+                        <td class="cbi-section-table-cell" style="background-color:<%=defaultgw_color%>"><a href="http://<%=link["Hostname"]%>/cgi-bin-status.html"><%=link["Hostname"]%></a></td>  
+                        <td class="cbi-section-table-cell" style="background-color:<%=defaultgw_color%>"><%=link["Local IP"]%></td>                                                                 
+                        <td class="cbi-section-table-cell" style="background-color:<%=defaultgw_color%>"><%=link["Local Device"]%></td>                                                             
+                        <td class="cbi-section-table-cell" style="background-color:<%=defaultgw_color%>"><%=link.LQ%></td>                                                                          
+                        <td class="cbi-section-table-cell" style="background-color:<%=defaultgw_color%>"><%=link.NLQ%></td>                                                                         
+                        <td class="cbi-section-table-cell" style="background-color:<%=color%>"><%=string.format("%.3f", link.Cost)%></td>                                                           
+                </tr>                                                                                                                                                                             
+                <%                                                                                                                                                                               
+                        i = ((i % 2) + 1)                                                                                                                                                           
+                end %>                                                                                                                                                                              
+                </tbody>                                                                                                                                                                            
+        </table>                                                                                                                                                                                    
+<br />                                                                                                                                                                                            
+                                                                                                                                                                                                    
+<h3><%:Legend%>:</h3>                                                                                                                                                                               
+<ul>                                                                                                                                                                                              
+        <li><strong>LQ: </strong><%:Success rate of packages received from the neighbour%></li>                                                                                                     
+        <li><strong>NLQ: </strong><%:Success rate of packages sent to the neighbour%></li>                                                                                                          
+        <li><strong>ETX: </strong><%:Expected retransmission count%></li>                                                                                                                           
+</ul>                                                                                                                                                                                               
+</fieldset>
+	
+
 
 	 <div class="container">
 		<h1>muss noch</h1>

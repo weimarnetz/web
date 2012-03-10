@@ -61,17 +61,29 @@
       <h1>Willkommen im Weimarnetz</h1>
       
       <h2>Aktuelle Meldungen</h2>
+      <div class="row">
+      <div class="span6">
       <?php
       	$wikinews=file_get_contents("http://wireless.subsignal.org/index.php?title=Vorlage:Startseite.Aktuelles");
       	$wikinews=substr($wikinews, strpos($wikinews, "<ul><li>" ), strpos($wikinews, "</li></ul>")-strpos($wikinews, "<ul><li>") + strlen("</li></ul>" ));
       	echo str_replace("/index.php?title=","http://wireless.subsignal.org/index.php?title",str_replace("<a href=", "<a target=_blank href=",$wikinews) );
       	?>
+      	</div>
+      	<div class="span6">                                                                                                          
+				<a href="http://wireless.subsignal.org/index.php?title=Vorlage:Startseite.Aktuelles&action=edit" target="_blank"><small>Text bearbeiten</small></a>
+			</div>
+			</div>      	
       <h2>Aktuelle Diskussionen</h2>
-      <A HREF="./news.php" >Direktlink</A> zum Newsserver - Benutzername: <I>freifunk</I> Passwort: <I>weimar</I><BR>
+      <div class="row">
+      <div class="span6">
       <?php
       	echo str_replace("<a href=", "<a target=_blank href=",file_get_contents("http://weimarnetz.de/latestnews.html"));
       	?>
-      	
+      	</div>
+      	<div class="span6">
+      	<A HREF="./news.php" target="_blank" >Direktlink</A> zum Newsserver<br>Benutzername: <I>freifunk</I> Passwort: <I>weimar</I>
+      	</div>
+      	</div>
       	<h2>Spendenaufruf</h2>
       	<div class="row">
       	<div class="span6"><?php
