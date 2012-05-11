@@ -61,30 +61,7 @@
 
   <body onload="setIframeHeight('ifrm');" onresize="setIframeHeight('ifrm');">
 
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="#">Weimarnetz Rootserver</a>
-          <div class="nav-collapse">
-            <ul class="nav">
-              <li><a href="./index.php">Home</a></li>
-              <li><a href="./wiki.php">Wiki</a></li>
-              <li><a href="./map.php">Karte</a></li>             
-              <li><a href="./topology.php">Topologie</a></li>
-              <li><a href="./status.php" >OLSR Status</a></li>
-              <li class="active"><a href="./news.php" >Newsserver</a></li>
-              <li><a href="./about.php">Über</a></li>
-              <li><a href="./contact.php">Kontakt</a></li>
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
-    </div>
+<?php include("./inc/header.inc.php")?>
 
 	 <div class="container">
 	 	<h1>Newsserver</h1>
@@ -103,12 +80,7 @@ marginheight="0" frameborder="0">test</iframe></div>
 	</div>
 
     	
-        <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster--> 
-    <script src="js/bootstrap.js"></script>
-    <script src="js/bootstrap-min.js"></script>
-    <script src="js/jquery.js"></script>	
+<?php include("./inc/footer.inc.php")?>
 
 
 

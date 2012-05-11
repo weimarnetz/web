@@ -30,30 +30,7 @@
 
   <body>
 
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="#">Weimarnetz Rootserver</a>
-          <div class="nav-collapse">
-            <ul class="nav">
-              <li><a href="./index.php">Home</a></li>
-              <li><a href="./wiki.php">Wiki</a></li>
-              <li><a href="./map.php">Karte</a></li>             
-              <li><a href="./topology.php">Topologie</a></li>
-              <li class="active"><a href="./status.php" >OLSR Status</a></li>
-              <li><a href="./news.php" >Newsserver</a></li>
-              <li><a href="./about.php">Über</a></li>
-              <li><a href="./contact.php">Kontakt</a></li>
-            </ul>
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
-    </div>
+ <?php include("./inc/header.inc.php")?>
 
   <script type="text/javascript" src="./js/cbi.js"></script>
 <script type="text/javascript">//<![CDATA[                         
@@ -122,7 +99,12 @@
                         </tr>                                                                                                                                                                    
                 </thead>                                                                                                                                                     
                                                                                                                                                                                                  
-                <tbody id="olsr_neigh_table">                                                                                                                                                    
+                <tbody id="olsr_neigh_table">
+                
+                <?php
+                
+                ?>                                                                                                                                                    
+                
                 <%      local i = 1                                                                                                                                                              
                         for k, link in ipairs(links) do                                                                                                                                          
                         link.Cost = tonumber(link.Cost) or 0                                                                                                                                     
@@ -150,27 +132,15 @@
         </table>                                                                                                                                                                                    
 <br />                                                                                                                                                                                            
                                                                                                                                                                                                     
-<h3><%:Legend%>:</h3>                                                                                                                                                                               
+<h3>Legende:</h3>                                                                                                                                                                               
 <ul>                                                                                                                                                                                              
         <li><strong>LQ: </strong><%:Success rate of packages received from the neighbour%></li>                                                                                                     
         <li><strong>NLQ: </strong><%:Success rate of packages sent to the neighbour%></li>                                                                                                          
         <li><strong>ETX: </strong><%:Expected retransmission count%></li>                                                                                                                           
 </ul>                                                                                                                                                                                               
 </fieldset>
-	
-
-
-	 <div class="container">
-		<h1>muss noch</h1>
-	</div>
-
     	
-        <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/bootstrap.js"></script>
-    <script src="js/bootstrap-min.js"></script>
-    <script src="js/jquery.js"></script>	
+ <?php include("./inc/footer.inc.php")?>
 
 
 
