@@ -37,10 +37,23 @@ spell_lang: de_AT_frami
 c2e.convert_symbol: 0
 snr_escape_chars: 0
 view_blockstack: 1
+htmlbar_notebooktab: 0
 last_filefilter: 
 spell_insert_entities: 0
 spell_check_default: 1
+savedir: file:///home/andi/Dokumente/weimarnetz/web
+files: /home/andi/Dokumente/weimarnetz/web/inc/footer.inc.php
+files: /home/andi/Dokumente/weimarnetz/web/monitoring.php
 snr_replacetype: 0
+recent_files: file:///home/andi/Dokumente/weimarnetz/web/news.php
+recent_files: file:///home/andi/Dokumente/weimarnetz/web/inc/footer.inc.php
+recent_files: file:///home/andi/Dokumente/weimarnetz/web/map.php
+recent_files: file:///home/andi/Dokumente/weimarnetz/web/wiki.php
+recent_files: file:///home/andi/Dokumente/weimarnetz/web/inc/header.inc.php
+recent_files: file:///home/andi/Dokumente/weimarnetz/web/topology.php
+recent_files: file:///home/andi/Dokumente/weimarnetz/web/contact.php
+recent_files: file:///home/andi/Dokumente/weimarnetz/web/about.php
+recent_files: file:///home/andi/Dokumente/weimarnetz/web/index.php
 webroot: http://localhost/~andi
 charmap_block: 1
 e2c.convert_iso: 0
@@ -60,6 +73,7 @@ c2e.convert_iso: 0
 bookmarks_filename_mode: 0
 documentroot: file:///home/andi/Dokumente/weimarnetz/web
 wrap_text_default: 0
+opendir: file:///home/andi/Dokumente/weimarnetz/web
 e2c.convert_xml: 1
 default_mime_type: text/x-html5
 view_left_panel: 1
@@ -68,6 +82,7 @@ view_line_numbers: 1
 show_mbhl: 1
 adv_open_matchname: 0
 convertcolumn_horizontally: 0
-c2e.convert_special: 0
+snr_recursion_level: 0
 e2c.convert_symbol: 0
 e2c.convert_num: 0
+c2e.convert_special: 0
