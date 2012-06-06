@@ -1,4 +1,6 @@
-<h1>Newsserver</h1>
+# Newsserver
+
+
 <div class="row">
 <div class="span6">Monitoring von Freifunkroutern in Weimar - Dokumentation folgt.</div>
 <div class="span1 offset5"><a class="btn" href="http://intercity-vpn.de/networks/ffweimar/" target="_blank">Neues&nbsp;Tab</a></div>

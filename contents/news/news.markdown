@@ -1,4 +1,6 @@
-<h1>Newsserver</h1>
+# Newsserver
+
+
 <div class="row">
 <div class="span6">Zugang zu Newsgroups und Mailinglisten der Freifunkcommunity</div>
 <div class="span1 offset5"><a class="btn" href="http://weimarnetz.de/newsgroups" target="_blank">Neues&nbsp;Tab</a></div>

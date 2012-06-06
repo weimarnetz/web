@@ -1,6 +1,8 @@
-<h1>Willkommen im Weimarnetz</h1>
+# Willkommen im Weimarnetz
 
-<h2>Aktuelle Meldungen</h2>
+
+## Aktuelle Meldungen
+
 <div class="row">
 <div class="span6">
 <!--

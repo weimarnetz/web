@@ -1,5 +1,9 @@
-<h1>Kontakt</h1>
-Es gibt mannigfaltige Möglichkeiten, uns zu erreichen.<br>
+# Kontakt
+
+
+Es gibt mannigfaltige Möglichkeiten, uns zu erreichen.
+
+
 <div class="row">
 <div class="span6"><h2>Per Mailingliste</h2>
 <address><strong>Allgemeine Liste</strong><br>

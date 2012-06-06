@@ -1,4 +1,6 @@
-<h1>Wiki</h1>
+# Wiki
+
+
 <div class="row">
 <div class="span4">Mach mit auf unserem Wiki!</div>
 <div class="span1 offset7"><a class="btn" href="http://wireless.subsignal.org" target="_blank">Neues&nbsp;Tab</a></div>
