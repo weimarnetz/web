@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Weimarnetz - Rootserver</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Unknown" >
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="apple-touch-icon" href="http://twitter.github.com/bootstrap/examples/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="http://twitter.github.com/bootstrap/examples/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="http://twitter.github.com/bootstrap/examples/images/apple-touch-icon-114x114.png">
+  </head>
+
+  <body>
+<script type="text/javascript">
+    
+    function getElement(aID)
+    {
+        return (document.getElementById) ?
+            document.getElementById(aID) :document.all[aID];
+    }
+
+    function getIFrameDocument(aID){ 
+        var rv = null; 
+        var frame=getElement(aID);
+        // if contentDocument exists, W3C compliant (e.g. Mozilla) 
+        if (frame.contentDocument)
+            rv = frame.contentDocument;
+        else // bad Internet Explorer  ;)
+            rv = document.frames[aID].document;
+        return rv;
+    }
+
+    function adjustMyFrameHeight()
+    {
+        var frame = getElement("myFrame");
+        var frameDoc = getIFrameDocument("myFrame");
+        frame.height = frameDoc.body.offsetHeight;
+    }
+</script>
+
+<div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="./index.html">Weimarnetz Rootserver</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li><a href="./index.html">Home</a></li>
+              <li class="dropdown">
+						<a href="wiki.html" data-target="#"	class="dropdown-toggle"	data-toggle="dropdown">Informationen <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+				  			<li>><a href="./wiki.html">Wiki</a></li>
+							<li><a href="./news.html" >Newsserver</a></li>
+							<li>><a href="./termsofuse.html" >Nutzungsbedingungen</a></li>
+							<li>><a href="./picopeering.html" >Picopeering Aggreement</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="map.html" data-target="#"	class="dropdown-toggle"	data-toggle="dropdown">Karten <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="./map.html">Geographische Karte</a></li>
+							<li><a href="./topology.html">Topologische Karte</a></li>
+						</ul>					
+					</li>
+				   <li class="dropdown">
+				   	<a href="status.html"	data-target="#" class="dropdown-toggle"	data-toggle="dropdown">Status <b class="caret"></b></a>
+				   	<ul class="dropdown-menu">
+				  			<li><a href="./status.html" >OLSR Status</a></li> 	
+				  			<li><a href="./monitoring.html" >Monitoring</a></li>
+				  			</ul>
+				   </li>
+              <li class="divider-vertical"></li>
+               <ul class="nav pull-right">         
+              	<li><a href="./about.html">Über</a></li>
+              	</ul>
+              	<li class="dropdown">
+				   	<a href="impressum.html" data-target="#" class="dropdown-toggle"	data-toggle="dropdown">Impressum <b class="caret"></b></a>
+				   	<ul class="dropdown-menu">
+				   	<li><a href="./impressum.html">Impressum</a></li>
+              	<li><a href="./contact.html">Kontakt</a></li>
+              	</ul>
+              </ul>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <noscript><div class="container">
+    <div class="alert alert-error">
+    <strong>Achtung!</strong> Bitte aktiviere Javascript in Deinem Browser, um diese Website vollständig nutzen zu können.
+    </div>
+    </div></noscript>
+<div class="container">
+	 
+  <h1>Willkommen im Weimarnetz</h1>
+
+<p><h2>Aktuelle Meldungen</h2>
+</p>
+<div class="row">
+<div class="span6">
+<!--
+  TODO: get recent articles from wiki via JSON
+  (http://www.mediawiki.org/wiki/API:Tutorial)
+-->
+  <ul>
+    <li> 12. Jun. 12 - Vortragsreihe &quot;Internet selbstgemacht&quot; - Thema: <i>Follow The White Rabbit - OpenWrt verstehen</i> von Basti
+</li>
+    <li> 24. Apr. 12 - Vortragsreihe &quot;Internet selbstgemacht&quot; - Thema: <i>Clouddienste</i> von Andi
+</li>
+    <li> 3. Apr. 12 - Angrillen zum <a target="_blank" href="http://wireless.subsignal.org/index.php?titleTreffen" title="Treffen">Treffen</a>
+</li>
+  </ul>
+    </div>
+    <div class="span6"><br>        <a href="http://wireless.subsignal.org/index.php?title=Vorlage:Startseite.Aktuelles&action=edit" target="_blank"><small>Text bearbeiten</small></a>
+  </div>
+</div><br><h2>Aktuelle Diskussionen</h2>
+<div class="row">
+<div class="span6">
+<!--
+  TODO: get recent articles from news via JSON
+-->
+  <ul>
+    <li><nobr><span class="np_thread_line_text"><font color="red">05.06.</font>: <a target="_blank" href="http://news.weimarnetz.de/newsgroups/article.php?id=2852&amp;group=freifunk.de.weimar.discuss#2852">&quot;Internet selbstgemacht&quot;  Firmwareentwicklung Open</a> <i>von Andreas Bräu</i></span></nobr></li>
+    <li><nobr><span class="np_thread_line_text"><font color="#999900">04.06.</font>: <a target="_blank" href="http://news.weimarnetz.de/newsgroups/article.php?id=2843&amp;group=freifunk.de.weimar.discuss#2843">Re: wireless-discuss Digest,  Vol 50, Issue 13</a> <i>von Stefan</i></span></nobr></li>
+    <li><nobr><span class="np_thread_line_text"><font color="#999900">04.06.</font>: <a target="_blank" href="http://news.weimarnetz.de/newsgroups/article.php?id=2849&amp;group=freifunk.de.weimar.discuss#2849">Naechstes Treffen am: Dienstag, 5. Juni 2012, Ort:</a> <i>von Weimarnetz Wiki</i></span></nobr></li>
+    <li><nobr><span class="np_thread_line_text">28.05.: <a target="_blank" href="http://news.weimarnetz.de/newsgroups/article.php?id=2848&amp;group=freifunk.de.weimar.discuss#2848">Naechstes Treffen am: Dienstag, 29. Mai 2012, Ort:</a> <i>von Weimarnetz Wiki</i></span></nobr></li>
+    <li><nobr><span class="np_thread_line_text">27.05.: <a target="_blank" href="http://news.weimarnetz.de/newsgroups/article.php?id=2845&amp;group=freifunk.de.weimar.discuss#2845">Artikelnr. : Spende ueber  weimarnetz.de - PayPal-</a> <i>von stephan.gregory@gmx.net</i></span></nobr>
+    </li>
+  </ul>
+    </div>
+    <div class="span6">
+    <A HREF="./news.php" target="_blank" >Direktlink</A> zum Newsserver<br>Benutzername: <I>freifunk</I> Passwort: <I>weimar</I>
+    </div>
+    </div>
+    <h2>Spendenaufruf</h2>
+    <div class="row">
+    <div class="span6">&lt;?php
+    $wikinews=file_get_contents(&quot;<a href="http://wireless.subsignal.org/index.php?title=Vorlage:Spendenaufruf">http://wireless.subsignal.org/index.php?title=Vorlage:Spendenaufruf</a>&quot;);
+    $wikinews=substr($wikinews, strpos($wikinews, &quot;<ul><li>&quot; ), strpos($wikinews, &quot;</li></ul>&quot;)-strpos($wikinews, &quot;<ul><li>&quot;) + strlen(&quot;</li></ul>&quot; ));
+    echo str_replace(&quot;/index.php?title=&quot;,&quot;<a href="http://wireless.subsignal.org/index.php?title&quot;,str_replace(&quot;&lt;a">http://wireless.subsignal.org/index.php?title&quot;,str_replace(&quot;&lt;a</a> href=&quot;, &quot;&lt;a target=_blank href=&quot;,$wikinews) );
+    ?&gt;</div>
+    <div class="span6">
+<form action="https://www.paypal.com/cgi-bin/webscr"
+method="post">
+<input type="hidden" name="cmd" value="_xclick" />
+<input type="hidden" name="business"
+value="wireless-discuss@subsignal.org" />
+<input type="hidden" name="item_name"
+value="Weimarnetz e.V. Einzelspende" />
+<input type="hidden" name="item_number"
+value=": Spende ueber weimarnetz.de" />
+<input type="hidden" name="amount" value="" />
+<input type="hidden" name="lc" value="DE" />
+<input type="image"
+src="http://www.paypal.com/de_DE/DE/i/btn/btn_donateCC_LG.gif"
+title="Paypal-Spende"
+border="0" name="submit" alt="Paypal-Spende" />
+<img alt="" border="0"
+src="http://www.paypal.com/de_DE/i/scr/pixel.gif"
+width="1" height="1" />
+<input type="hidden" name="no_shipping" value="2" />
+<input type="hidden" name="no_note" value="1" />
+<input type="hidden" name="currency_code" value="EUR" />
+<input type="hidden" name="tax" value="0" />
+<input type="hidden" name="bn" value="IC_Beispiel" />
+</form>
+</div>
+</div>
+  
+</div>
+
+    	
+<br />
+<br />
+<div class="container">
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/de/"><img alt="Creative Commons Lizenzvertrag" style="border-width:0" src="img/cc.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">Homepage Weimarnetz e.V.</span> von <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Weimarnetz e.V.</span> steht unter einer <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/de/">Creative Commons Namensnennung-Nicht-kommerziell-Weitergabe unter gleichen Bedingungen 3.0 Deutschland Lizenz</a>.<br />Beruht auf einem Inhalt unter <a xmlns:dct="http://purl.org/dc/terms/" href="http://www.weimarnetz.de" rel="dct:source">www.weimarnetz.de</a>
+</div>
+
+
+<!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+	 <script src="js/jquery.js"></script>    
+    <script src="js/bootstrap-collapse.js"></script>
+    <script src="js/bootstrap-dropdown.js"></script>
+
+</body></html>
