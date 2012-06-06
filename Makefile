@@ -1,4 +1,7 @@
-PUNCH=~/node_modules/punch/bin/punch
+punch = punch
+# if punch can't be found, give the path here:
+#punch = /Users/mfa/node_modules/punch/bin/punch
 
-default: config.json	#default target makes website with punch, depends on config.json
-     $(punch) .    
+#default target makes website with punch
+default:
+	$(punch) g 
