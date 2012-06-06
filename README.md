@@ -20,7 +20,7 @@ as of now, it's not as DRY as it could be, but we take the oppertunity to migrat
     |  _header.mustache (header)      |
     +---------------------------------+
     |  PAGE-SPECIFIC CONTENT          |
-    |  (everything in <container>)    |
+    |  (everything IN <container>)    |
     +---------------------------------+
     |  footer.mustache (footer)       |
     +---------------------------------+

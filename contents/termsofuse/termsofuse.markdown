@@ -1,65 +1,3 @@
-<!DOCTYPE html>
-<html lang="en"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-    <title>Weimarnetz - Nutzungsbedingungen</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="Unknown" >
-
-    <!-- Le styles -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <style>
-      body {
-        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
-      }
-    </style>
-    <link href="css/bootstrap-responsive.css" rel="stylesheet">
-
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="img/favicon.ico">
-    <link rel="apple-touch-icon" href="http://twitter.github.com/bootstrap/examples/images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="http://twitter.github.com/bootstrap/examples/images/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="http://twitter.github.com/bootstrap/examples/images/apple-touch-icon-114x114.png">
-  </head>
-
-  <body>
-<script type="text/javascript">
-    
-    function getElement(aID)
-    {
-        return (document.getElementById) ?
-            document.getElementById(aID) :document.all[aID];
-    }
-
-    function getIFrameDocument(aID){ 
-        var rv = null; 
-        var frame=getElement(aID);
-        // if contentDocument exists, W3C compliant (e.g. Mozilla) 
-        if (frame.contentDocument)
-            rv = frame.contentDocument;
-        else // bad Internet Explorer  ;)
-            rv = document.frames[aID].document;
-        return rv;
-    }
-
-    function adjustMyFrameHeight()
-    {
-        var frame = getElement("myFrame");
-        var frameDoc = getIFrameDocument("myFrame");
-        frame.height = frameDoc.body.offsetHeight;
-    }
-</script>
-
-	
-<?php include("./inc/header.inc.php")?>
-
-	 <div class="container">
 <h1>Nutzungsbedingungen</h1>
 
 <p>Dieses sind die Nutzungsbedingungen f&uuml;r das Netzwerk Freifunk Weimar
@@ -104,12 +42,4 @@ durch die Nutzung des Netzwerks Freifunk Weimar erleidet, ab.
 </p>
 
 Diese Bedingungen haben sind denen von <a href="http://wiki.freifunk-hannover.de/Willkommen" target="_blank">Freifunk Hannover</a> angelehnt.<br>
-Weiterhin gilt das <a href="picopeering.php">Picopeering Aggrement</a>.
-
-	</div>
-
-    	
-<?php include("./inc/footer.inc.php")?>
-
-
-</body></html>
+Weiterhin gilt das <a href="picopeering.html">Picopeering Aggrement</a>.
