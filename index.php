@@ -68,31 +68,13 @@
       	echo str_replace("/index.php?title=","http://wireless.subsignal.org/index.php?title",str_replace("<a href=", "<a target=_blank href=",$wikinews) );
       	?></div>
       	<div class="span6">
-<form action="https://www.paypal.com/cgi-bin/webscr"
-   method="post">
-   <input type="hidden" name="cmd" value="_xclick" />
-   <input type="hidden" name="business"
-        value="wireless-discuss@subsignal.org" />
-   <input type="hidden" name="item_name"
-      value="Weimarnetz e.V. Einzelspende" />
-   <input type="hidden" name="item_number"
-      value=": Spende ueber weimarnetz.de" />
-   <input type="hidden" name="amount" value="" />
-   <input type="hidden" name="lc" value="DE" />
-   <input type="image"
-        src="http://www.paypal.com/de_DE/DE/i/btn/btn_donateCC_LG.gif"
-        title="Paypal-Spende"
-        border="0" name="submit" alt="Paypal-Spende" />
-   <img alt="" border="0"
-      src="http://www.paypal.com/de_DE/i/scr/pixel.gif"
-      width="1" height="1" />
-   <input type="hidden" name="no_shipping" value="2" />
-   <input type="hidden" name="no_note" value="1" />
-   <input type="hidden" name="currency_code" value="EUR" />
-   <input type="hidden" name="tax" value="0" />
-   <input type="hidden" name="bn" value="IC_Beispiel" />
+	<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="3XNJBBT9GAQXL">
+<input type="image" src="https://www.paypalobjects.com/de_DE/DE/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="Jetzt einfach, schnell und sicher online bezahlen – mit PayPal.">
+<img alt="" border="0" src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif" width="1" height="1">
 </form>
-	</div>
+</div>
 	</div>
     </div> <!-- /container -->
 
