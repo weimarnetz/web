@@ -45,8 +45,11 @@
 				  			<li <?php echo getActiveClass("monitoring.php")?> ><a href="./monitoring.php" >Monitoring</a></li>
 				  			</ul>
 				   </li>
-              <li class="divider-vertical"></li>
-               <ul class="nav pull-right">         
+				   			<li class="divider-vertical"></li>
+               <ul class="nav pull-left">         
+              	<li <?php echo getActiveClass("partner.php")?> ><a href="./partner.php">Partner</a></li>
+              	</ul>
+              <ul class="nav pull-right">         
               	<li <?php echo getActiveClass("about.php")?> ><a href="./about.php">Über</a></li>
               	</ul>
               	<li class="dropdown">
