@@ -66,7 +66,7 @@
 
 
 <div class="container">
-<h2><a  name="content">OLSR connections</a></h2>                                                                                                                                
+<h1>OLSR connections</h1>                                                                                                                                
                                                                                                                                                                                                  
 <fieldset class="cbi-section">                                                                                                                                               
         <legend>Overview of currently established OLSR connections</legend>                                                                                                                 
