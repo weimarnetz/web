@@ -64,15 +64,15 @@
 <?php include("./inc/header.inc.php")?>
 
 	 <div class="container">
-	 	<h1>Monitoring</h1>
+	 	<h1>Geographische Karte (openwifimap)</h1>
 	 	<div class="row">
-	 	<div class="span6">Monitoring von Freifunkroutern in Weimar - Dokumentation folgt.</div>
-	 	<div class="span1 offset5"><a class="btn" href="http://intercity-vpn.de/networks/ffweimar/" target="_blank">Neues&nbsp;Tab</a></div>
+	 	<div class="span6">Unsere neue Karte auf Basis von openwifimap.net</div>
+	 	<div class="span1 offset5"><a class="btn" href="http://map.weimarnetz.de" target="_blank">Neues&nbsp;Tab</a></div>
 	 	</div>
 	 	<div class="row">	 	
 	 	</div>
 	 	<div>&nbsp;</div>
-	 	<div style="text-align: center"><iframe id="ifrm" src="http://intercity-vpn.de/networks/ffweimar/" width="98%" scrolling="yes" marginwidth="0"
+	 	<div style="text-align: center"><iframe id="ifrm" src="http://map.weimarnetz.de/openwifimap/_design/openwifimap/map.html" width="98%" scrolling="yes" marginwidth="0"
 marginheight="0" frameborder="0">test</iframe></div>
 	 	
 	
