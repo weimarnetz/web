@@ -41,7 +41,7 @@ htmlbar_notebooktab: 0
 last_filefilter: 
 spell_insert_entities: 0
 spell_check_default: 1
-savedir: file:///home/andi/Dokumente/weimarnetz/web
+savedir: file:///home/andi/Dokumente/weimarnetz/web/inc
 files: /home/andi/Dokumente/weimarnetz/web/inc/footer.inc.php
 files: /home/andi/Dokumente/weimarnetz/web/impressum.php
 files: /home/andi/Dokumente/weimarnetz/web/inc/header.inc.php
@@ -49,12 +49,12 @@ files: /home/andi/Dokumente/weimarnetz/web/contact.php
 files: /home/andi/Dokumente/weimarnetz/web/status.php
 files: /home/andi/Dokumente/weimarnetz/web/partner.php
 snr_replacetype: 0
-recent_files: file:///home/andi/Dokumente/weimarnetz/web/inc/footer.inc.php
-recent_files: file:///home/andi/Dokumente/weimarnetz/web/inc/header.inc.php
-recent_files: file:///home/andi/Dokumente/weimarnetz/web/partner.php
-recent_files: file:///home/andi/Dokumente/weimarnetz/web/impressum.php
-recent_files: file:///home/andi/Dokumente/weimarnetz/web/contact.php
 recent_files: file:///home/andi/Dokumente/weimarnetz/web/status.php
+recent_files: file:///home/andi/Dokumente/weimarnetz/web/partner.php
+recent_files: file:///home/andi/Dokumente/weimarnetz/web/contact.php
+recent_files: file:///home/andi/Dokumente/weimarnetz/web/inc/header.inc.php
+recent_files: file:///home/andi/Dokumente/weimarnetz/web/impressum.php
+recent_files: file:///home/andi/Dokumente/weimarnetz/web/inc/footer.inc.php
 recent_files: file:///home/andi/Dokumente/weimarnetz/web/template.php
 recent_files: file:///home/andi/Dokumente/weimarnetz/web/termsofuse.php
 recent_files: file:///home/andi/Dokumente/weimarnetz/web/picopeering.php
@@ -71,6 +71,9 @@ enable_syntax_scan: 1
 outputb_scroll_mode: 0
 leftpanel_active_tab: 0
 urllist: http://www.openwrt.org
+urllist: http://www.bittorf-wireless.de
+urllist: http://www.cstorch.de
+urllist: http://www.weimar.de
 c2e.IE_apos_workaround: 0
 display_right_margin: 0
 template: /usr/share/bluefish/templates/HTML_5
@@ -84,7 +87,7 @@ c2e.convert_iso: 0
 bookmarks_filename_mode: 0
 documentroot: file:///home/andi/Dokumente/weimarnetz/web
 wrap_text_default: 0
-opendir: file:///home/andi/Dokumente/weimarnetz/web
+opendir: file:///home/andi/Dokumente/weimarnetz/web/inc
 e2c.convert_xml: 1
 default_mime_type: text/x-html5
 view_left_panel: 1
@@ -96,6 +99,7 @@ targetlist: _selfs
 targetlist: _parent
 targetlist: _blank
 targetlist: _top
+targetlist: _window
 adv_open_matchname: 0
 convertcolumn_horizontally: 0
 snr_recursion_level: 0

@@ -32,12 +32,17 @@
 
     <?php include("./inc/header.inc.php")?>
 
-    <div class="container">
-
+    <div class="container-fluid">
+    <div class="row-fluid">
+    <div class="span2">
+		
+					</div>
+					
+			<div class="span8">
       <h1>Willkommen im Weimarnetz</h1>
       
       <h2>Aktuelle Meldungen</h2>
-      <div class="row">
+      <div class="row-fluid">
       <div class="span6">
       <?php
       	$wikinews=file_get_contents("http://wireless.subsignal.org/index.php?title=Vorlage:Startseite.Aktuelles");
@@ -50,7 +55,7 @@
 			</div>
 			</div>      	
       <h2>Aktuelle Diskussionen</h2>
-      <div class="row">
+      <div class="row-fluid">
       <div class="span6">
       <?php
       	echo str_replace("<a href=", "<a target=_blank href=",file_get_contents("http://weimarnetz.de/latestnews.html"));
@@ -61,7 +66,7 @@
       	</div>
       	</div>
       	<h2>Spendenaufruf</h2>
-      	<div class="row">
+      	<div class="row-fluid">
       	<div class="span6"><?php
       	$wikinews=file_get_contents("http://wireless.subsignal.org/index.php?title=Vorlage:Spendenaufruf");
       	$wikinews=substr($wikinews, strpos($wikinews, "<ul><li>" ), strpos($wikinews, "</li></ul>")-strpos($wikinews, "<ul><li>") + strlen("</li></ul>" ));
@@ -75,8 +80,21 @@
 <img alt="" border="0" src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif" width="1" height="1">
 </form>
 </div>
+</div>
 	</div>
+	<div class="span2">
+					<img src="img/Banner/120x500_mindfactory_hardware.jpg" width="120" height="500" alt="Ihre Hardware stößt an ihre Grenzen? Zeit für ein Upgrade! www.mindfactory.de" usemap="#map" />
+					<map name="map">
+							<!-- #$-:Image map file created by GIMP Image Map plug-in -->
+							<!-- #$-:GIMP Image Map plug-in by Maurits Rijk -->
+							<!-- #$-:Please do not edit lines starting with "#$" -->
+							<!-- #$VERSION:2.3 -->
+							<!-- #$AUTHOR:Unknown -->
+							<area shape="rect" coords="3,413,116,438" target="_window" href="http://www.mindfactory.de" />
+					</map>
+					</div>
     </div> <!-- /container -->
+    </div>
 
 <?php include("./inc/footer.inc.php")?>    
  
