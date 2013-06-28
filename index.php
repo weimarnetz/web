@@ -34,11 +34,11 @@
 
     <div class="container-fluid">
     <div class="row-fluid">
-    <div class="span2">
+    <div class="span1">
 		
 					</div>
 					
-			<div class="span8">
+			<div class="span9">
       <h1>Willkommen im Weimarnetz</h1>
       
       <h2>Aktuelle Meldungen</h2>
