@@ -72,7 +72,7 @@
 	 	<div class="row">	 	
 	 	</div>
 	 	<div>&nbsp;</div>
-	 	<div style="text-align: center"><iframe id="ifrm" src="http://map.weimarnetz.de/openwifimap/_design/openwifimap/map.html" width="98%" scrolling="yes" marginwidth="0"
+	 	<div style="text-align: center"><iframe id="ifrm" src="http://map.weimarnetz.de/map.html" width="98%" scrolling="yes" marginwidth="0"
 marginheight="0" frameborder="0">test</iframe></div>
 	 	
 	
