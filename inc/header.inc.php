@@ -34,9 +34,9 @@
 					<li class="dropdown">
 						<a href="/map.php" data-target="#"	class="dropdown-toggle"	data-toggle="dropdown">Karten <b class="caret"></b></a>
 						<ul class="dropdown-menu">
-							<li <?php echo getActiveClass("map.php")?> ><a href="/map.php">Geographische Karte</a></li>
+							<li <?php echo getActiveClass("map2.php")?> ><a href="/map2.php">Geographische Karte (aktiv + inaktiv)</a></li>
+							<li <?php echo getActiveClass("map.php")?> ><a href="/map.php">Geographische Karte (Live!)</a></li>
 							<li <?php echo getActiveClass("topology.php")?> ><a href="/topology.php">Topologische Karte</a></li>
-							<li <?php echo getActiveClass("map2.php")?> ><a href="/map2.php">Neue Geographische Karte</a></li>
 						</ul>					
 					</li>
 				   <li class="dropdown">
