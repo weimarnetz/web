@@ -40,7 +40,24 @@
 					
 			<div class="span9">
       <h1>Willkommen im Weimarnetz</h1>
-      
+
+      <?php 
+	$gwip = $_GET['gateway'];
+	$gwnode = $_GET['gwnode'];
+	$neighborip = $_GET['nodeip'];
+	$neighbornode = $_GET['node'];
+	if ($gwip <> '' or $neighborip <> ''){
+		echo "<div class='alert alert-success'><br/><div class='row-fluid'>";
+		echo "<h2>&nbsp;Dein Internetzugang wurde erfolgreich freigeschaltet</h2>";
+		if ($gwip <> '') {
+			echo "Den Internetzugang stellt Dir dieser <a href='http://", $gwip, "/cgi-bin/luci/freifunk/contact'>freundliche Nachbar bereit</a><br/>";
+		}	
+		if ($neighborip <> '') {
+			echo "Dein nächster Weimarnetzknoten wird von diesem <a href='http://", $neighborip , "/cgi-bin/luci/freifunk/contact'>freundlichen Nachbarn</a> betrieben";
+		}
+		echo "<br/><br/></div></div>";
+	}
+	?>
       <h2>Aktuelle Meldungen</h2>
       <div class="row-fluid">
       <div class="span6">
