@@ -24,6 +24,9 @@
   [class^="col-"] > ul {
     padding-left: 1em;
   }
+  footer {
+    margin-top: 3em;
+  }
   nobr {
     white-space: normal;
   }

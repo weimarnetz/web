@@ -12,6 +12,7 @@
     <?php include("./inc/navbar.inc.php") ?>
     
     <!-- log-in-alert for testing-->
+    <!--
     <div class="alert jumbotron alert-success alert-dismissable">
       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
       <div class="container">
@@ -19,7 +20,6 @@
         <p>Den Internetzugang stellt Dir dieser <a href='http://", $gwip, "/cgi-bin/luci/freifunk/contact'>freundliche Nachbar bereit</a></p>
       </div>
     </div>
-    <!--
      -->
      
     <!-- untested :/
@@ -125,8 +125,6 @@
         </div>
         
       </div> <!-- ende reihe -->
-
-      <hr>
 
       <?php include("./inc/footer.inc.php") ?>
       
