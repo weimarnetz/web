@@ -19,16 +19,17 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" href="/">Weimarnetz Rootserver</a>
+    <a class="navbar-brand" <?php echo getActiveClass("index.php")?> href="/">Weimarnetz</a>
   </div>
 
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav">
-      <li <?php echo getActiveClass("index.php")?> ><a href="/index.php">Home</a></li>
+      <li class="divider-vertical"></li>
       <li class="dropdown">
         <a href="/wiki.php" class="dropdown-toggle" data-toggle="dropdown">Informationen <b class="caret"></b></a>
         <ul class="dropdown-menu">
+          <li <?php echo getActiveClass("about.php")?> ><a href="/about.php">Selbstdarstellung</a></li>
           <li <?php echo getActiveClass("wiki.php")?>><a href="/wiki.php">Wiki</a></li>
           <li <?php echo getActiveClass("news.php")?>><a href="/news.php" >Newsserver</a></li>
           <li <?php echo getActiveClass("termsofuse.php")?>><a href="/termsofuse.php" >Nutzungsbedingungen</a></li>
@@ -69,7 +70,6 @@
           <li <?php echo getActiveClass("impressum.php")?> ><a href="/impressum.php">Impressum</a></li>
           <li <?php echo getActiveClass("contact.php")?> ><a href="/contact.php">Kontakt</a></li>
         </ul>
-      <li <?php echo getActiveClass("about.php")?> ><a href="/about.php">Über</a></li>
       </li>
     </ul>
   </div><!-- /.navbar-collapse -->
