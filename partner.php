@@ -56,6 +56,8 @@
        <p>Der Maschinenraum ist unsere Basis und bietet uns Platz für Testorgien und unsere wöchentlichen Treffen.</p>
      </div>
     
+     <div class="clearfix visible-lg"></div>
+    
      <div class="col-sm-4 col-lg-3">
        <a class="thumbnail" href="http://www.bittorf-wireless.de" target="_window"><img src="img/Banner/banner_bittorfwireless.png" alt="Bittorf Wireless" /></a>
        <p>Bittorf Wireless unterstützt uns mit Technik, Wissen und Softwareentwicklung.</p>
