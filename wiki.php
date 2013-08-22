@@ -1,31 +1,8 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-    <title>Weimarnetz - Wiki</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="Unknown" >
-
-    <!-- Le styles -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <style>
-      body {
-        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
-      }
-    </style>
-    <link href="css/bootstrap-responsive.css" rel="stylesheet">
-
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="img/favicon.ico">
-    <link rel="apple-touch-icon" href="http://twitter.github.com/bootstrap/examples/images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="http://twitter.github.com/bootstrap/examples/images/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="http://twitter.github.com/bootstrap/examples/images/apple-touch-icon-114x114.png">
+  <title>Weimarnetz - Wiki</title>
+  <?php include("./inc/_head.inc.php") ?>
+  
     <script type="text/javascript">
 		function setIframeHeight(iframeName) {
 		  //var iframeWin = window.frames[iframeName];
@@ -57,11 +34,11 @@
 		  return myHeight;
 		}
 	</script>
-  </head>
+</head>
 
-  <body onload="setIframeHeight('ifrm');" onresize="setIframeHeight('ifrm');">
+<body onload="setIframeHeight('ifrm');" onresize="setIframeHeight('ifrm');">
 
-    <?php include("./inc/header.inc.php")?>
+  <?php include("./inc/navbar.inc.php") ?>
 
 	 <div class="container">
 	 	<h1>Wiki</h1>
@@ -77,10 +54,11 @@
 marginheight="0" frameborder="0">test</iframe></div>
 	 	
 	
-	</div>
+  <?php include("./inc/footer.inc.php") ?>
 
-    	
- <?php include("./inc/footer.inc.php")?>
+  </div> <!-- ende container -->
+  
+  <?php include("./inc/_foot.inc.php") ?>
 
 
 </body></html>

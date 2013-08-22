@@ -1,39 +1,15 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-    <title>Weimarnetz - Karte</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="Unknown" >
+  <title>Weimarnetz - Karte</title>
+  <?php include("./inc/_head.inc.php") ?>
+</head>
 
-    <!-- Le styles -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <style>
-      body {
-        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
-      }
-    </style>
-    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+<body>
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+  <?php include("./inc/navbar.inc.php") ?>
 
-    <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="img/favicon.ico">
-    <link rel="apple-touch-icon" href="http://twitter.github.com/bootstrap/examples/images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="http://twitter.github.com/bootstrap/examples/images/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="http://twitter.github.com/bootstrap/examples/images/apple-touch-icon-114x114.png">
-  </head>
+<div class="container">
 
-  <body>
-  
-	
-<?php include("./inc/header.inc.php")?>
-
-	 <div class="container">
   <script src="http://dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=6.1" type="text/javascript"></script>
                 <script type="text/javascript">                                                                            
                         var alias = new Array;                                                                             
@@ -119,10 +95,10 @@
                 </script>                                                                                        
                 <div id="ffmap" style="position:relative; width:100%; height:640px;"></div> 
 
-	</div>
+  <?php include("./inc/footer.inc.php")?>
+  </div>
 
-    	
-<?php include("./inc/footer.inc.php")?>
 
+<?php include("./inc/_foot.inc.php")?>
 
 </body></html>

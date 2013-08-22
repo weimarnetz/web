@@ -1,69 +1,15 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta charset="utf-8">
-    <title>Weimarnetz - Monitoring</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="Unknown" >
+  <title>Weimarnetz - Monitoring</title>
+  <?php include("./inc/_head.inc.php") ?>
+</head>
 
-    <!-- Le styles -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <style>
-      body {
-        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
-      }
-    </style>
-    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+<body onload="setIframeHeight('ifrm');" onresize="setIframeHeight('ifrm');">
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+  <?php include("./inc/navbar.inc.php") ?>
 
-    <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="img/favicon.ico">
-    <link rel="apple-touch-icon" href="http://twitter.github.com/bootstrap/examples/images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="http://twitter.github.com/bootstrap/examples/images/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="http://twitter.github.com/bootstrap/examples/images/apple-touch-icon-114x114.png">
-    <script type="text/javascript">
-		function setIframeHeight(iframeName) {
-		  //var iframeWin = window.frames[iframeName];
-		  var iframeEl = document.getElementById? document.getElementById(iframeName): document.all? document.all[iframeName]: null;
-		  if (iframeEl) {
-		  iframeEl.style.height = "auto"; // helps resize (for some) if new doc shorter than previous
-		  //var docHt = getDocHeight(iframeWin.document);
-		  // need to add to height to be sure it will all show
-		  var h = alertSize();
-		  var new_h = (h-148);
-		  iframeEl.style.height = new_h + "px";
-		  //alertSize();
-		  }
-		}
+  <div class="container">
 
-		function alertSize() {
-		  var myHeight = 0;
-		  if( typeof( window.innerWidth ) == 'number' ) {
-		    //Non-IE
-		    myHeight = window.innerHeight;
-		  } else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
-		    //IE 6+ in 'standards compliant mode'
-		    myHeight = document.documentElement.clientHeight;
-		  } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
-		    //IE 4 compatible
-		    myHeight = document.body.clientHeight;
-		  }
-		  //window.alert( 'Height = ' + myHeight );
-		  return myHeight;
-		}
-	</script>
-  </head>
-
-  <body onload="setIframeHeight('ifrm');" onresize="setIframeHeight('ifrm');">
-
-<?php include("./inc/header.inc.php")?>
-
-	 <div class="container">
 	 	<h1>Monitoring</h1>
 	 	<div class="row">
 	 	<div class="span6">Monitoring von Freifunkroutern in Weimar - Dokumentation folgt.</div>
@@ -76,11 +22,42 @@
 marginheight="0" frameborder="0">test</iframe></div>
 	 	
 	
-	</div>
+  <?php include("./inc/footer.inc.php") ?>
 
-    	
-<?php include("./inc/footer.inc.php")?>
+</div>
 
+<?php include("./inc/_foot.inc.php") ?>
 
+  <script type="text/javascript">
+	function setIframeHeight(iframeName) {
+	  //var iframeWin = window.frames[iframeName];
+	  var iframeEl = document.getElementById? document.getElementById(iframeName): document.all? document.all[iframeName]: null;
+	  if (iframeEl) {
+	  iframeEl.style.height = "auto"; // helps resize (for some) if new doc shorter than previous
+	  //var docHt = getDocHeight(iframeWin.document);
+	  // need to add to height to be sure it will all show
+	  var h = alertSize();
+	  var new_h = (h-148);
+	  iframeEl.style.height = new_h + "px";
+	  //alertSize();
+	  }
+	}
+
+	function alertSize() {
+	  var myHeight = 0;
+	  if( typeof( window.innerWidth ) == 'number' ) {
+	    //Non-IE
+	    myHeight = window.innerHeight;
+	  } else if( document.documentElement && ( document.documentElement.clientWidth || document.documentElement.clientHeight ) ) {
+	    //IE 6+ in 'standards compliant mode'
+	    myHeight = document.documentElement.clientHeight;
+	  } else if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+	    //IE 4 compatible
+	    myHeight = document.body.clientHeight;
+	  }
+	  //window.alert( 'Height = ' + myHeight );
+	  return myHeight;
+	}
+</script>
 
 </body></html>
