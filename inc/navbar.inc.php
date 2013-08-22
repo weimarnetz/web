@@ -19,7 +19,7 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </button>
-    <a class="navbar-brand" <?php echo getActiveClass("index.php")?> href="/">Weimarnetz</a>
+    <a class="navbar-brand" <?php echo getActiveClass("index.php")?> href="/"><strong>Weimarnetz</strong></a>
   </div>
 
   <!-- Collect the nav links, forms, and other content for toggling -->
