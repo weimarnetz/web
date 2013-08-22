@@ -1,0 +1,27 @@
+{
+  "name": "weimarnetz.de",
+  "version": "3.0.0",
+  "authors": [
+    "Andi Bräu <freifunk@andi95.de>",
+    "Max F. Albrecht <1@178.is>"
+  ],
+  "description": "weimarnetz website",
+  "homepage": "http://weimarnetz.de",
+  "keywords": [
+    "weimarnetz", "freifunk"
+  ],
+  "main": "index.php",
+  "license": "CC-BY-NC-SA",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-theme-freifunk": "git://github.com/eins78/bootstrap-theme-freifunk.git#gh-pages",
+    "font-awesome": "~3.2.1"
+  }
+}
