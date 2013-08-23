@@ -7,7 +7,7 @@
     <?php include("./inc/_head.inc.php") ?>  
   </head>
 
-  <body>
+  <body id="home">
 
     <?php include("./inc/navbar.inc.php") ?>
     
@@ -29,14 +29,14 @@
     $neighborip = $_GET['nodeip'];
     $neighbornode = $_GET['node'];
     if ($gwip <> '' or $neighborip <> ''){
-      echo '<div class="alert jumbotron alert-success alert-dismissable">
+      echo '<div class="alert jumbotron alter-unlock alert-success alert-dismissable">
       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><div class="container">';
       echo '<h2>Dein Internetzugang wurde erfolgreich freigeschaltet</h2>';
       if ($gwip <> '') {
-        echo '<p>Den Internetzugang stellt Dir dieser <a href="http://', $gwip, '/cgi-bin/luci/freifunk/contact">freundliche Nachbar bereit</a></p>';
+        echo '<p>Den Internetzugang stellt Dir <a href="http://', $gwip, '/cgi-bin/luci/freifunk/contact">dieser freundliche Nachbar</a> bereit.</p>';
       }  
       if ($neighborip <> '') {
-        echo '<p>Dein nächster Weimarnetzknoten wird von diesem <a href="http://', $neighborip , '/cgi-bin/luci/freifunk/contact">freundlichen Nachbarn</a> betrieben</p>';
+        echo '<p>Dein nächster Weimarnetzknoten wird von <a href="http://', $neighborip , '/cgi-bin/luci/freifunk/contact">diesem freundlichen Nachbarn</a> betrieben</p>';
       }
       echo "</div></div>";
     }
@@ -44,10 +44,10 @@
     -->
 
     <!-- grosses startseitenbanner -->
-    <div class="jumbotron">
+    <div id="banner" class="jumbotron jumbotron-special">
       <div class="container">
         <h1>Willkommen im Weimarnetz</h1>
-        <p>Freifunk in Weimar &mdash; Das freie B&uuml;rger-WLAN!</p>
+        <p class="lead">Freifunk in Weimar &mdash; Das freie B&uuml;rger-WLAN!</p>
         <p>
           <a class="btn btn-primary btn-lg" href="http://wireless.subsignal.org/index.php?title=Schnelleinstieg">Jetzt Mitfunken &raquo;</a>
           <a class="btn btn-warning btn-lg" href="/contact.php">Hilfe bekommen &raquo;</a>
@@ -62,14 +62,14 @@
       <!-- main reihe blöcke - content/ad -->
       <div class="row">
     
-        <div class="col-sm-11">
+        <div class="col-sm-10">
     
           <!-- eine reihe content blöcke -->
           <div class="row">
     
             <!-- ein halber block (12/6=1/2) -->
             <div class="col-sm-6">
-              <h2>Aktuelle Meldungen</h2>
+              <h2 class="page-header">Aktuelle Meldungen</h2>
               <!-- dyn: news-liste -->
               <?php
               $wikinews=file_get_contents("http://wireless.subsignal.org/index.php?title=Vorlage:Startseite.Aktuelles");
@@ -82,7 +82,7 @@
     
             <!-- ein halber block (12/6=1/2) -->
             <div class="col-sm-6">
-              <h2>Aktuelle Diskussionen</h2>
+              <h2 class="page-header">Aktuelle Diskussionen</h2>
               <p>
                 <!-- dyn: discuss-liste -->
                 <?php
@@ -99,7 +99,7 @@
           <div class="row">
 
             <div class="col-sm-6">
-              <h2>Spendenaufruf</h2>
+              <h2 class="page-header">Spendenaufruf</h2>
               <!-- dyn: spenden-liste -->
               <?php
               $wikinews=file_get_contents("http://wireless.subsignal.org/index.php?title=Vorlage:Spendenaufruf");
@@ -125,8 +125,8 @@
 
         </div> <!-- ende content -->
     
-        <div class="col-sm-1">
-          <h2><small class="text-muted">Werbung</small></h2>
+        <div class="col-sm-2" style="text-align:right">
+          <h2 class="page-header"><small class="text-muted">Sponsor</small></h2>
           <!-- mindfactory banner -->
           <img src="img/Banner/120x500_mindfactory_hardware.jpg" width="120" height="500" alt="Ihre Hardware stößt an ihre Grenzen? Zeit für ein Upgrade! www.mindfactory.de" usemap="#admap" />
           <map name="admap">

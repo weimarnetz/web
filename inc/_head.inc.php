@@ -5,28 +5,10 @@
 
 <!-- Le styles -->
 <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
-
-<!--
-  TODO: theme 
   <link href="bower_components/bootstrap-theme-freifunk/dist/css/bootstrap.min.css" rel="stylesheet"> 
--->
 
-<!-- local fixes. TODO @theme -->
+<!-- local fixes. -->
 <style type="text/css">
-  body {
-    padding-top: 50px;
-    padding-bottom: 20px;
-  }
-  .alert + .jumbotron {
-    margin-top: -21px;
-  }
-  [class^="col-"] > ul {
-    padding-left: 1em;
-  }
-  footer {
-    margin-top: 3em;
-  }
   nobr {
     white-space: normal;
   }
