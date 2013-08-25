@@ -1,5 +1,11 @@
+HOST := $(shell hostname -s)
 
-default: preview
+default: build
+dev:     preview
+
+build:
+	npm install
+	bower install
 
 preview:
-	php -S localhost:8088
+	php -S ${HOST}:8088
