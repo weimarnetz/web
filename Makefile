@@ -4,7 +4,7 @@ default: build
 dev:     preview
 
 build:
-	npm install
+#	npm install
 	bower install
 
 preview:
