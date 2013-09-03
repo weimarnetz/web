@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Weimarnetz - Rootserver</title>
+    <title>Weimarnetz e.V.</title>
     <?php include("./inc/_head.inc.php") ?>  
   </head>
 
@@ -22,7 +22,6 @@
     </div>
      -->
      
-    <!-- untested :/
     <?php 
     $gwip = $_GET['gateway'];
     $gwnode = $_GET['gwnode'];
@@ -41,7 +40,6 @@
       echo "</div></div>";
     }
     ?> 
-    -->
 
     <!-- grosses startseitenbanner -->
     <div id="banner" class="jumbotron jumbotron-special ff-logo-bg">
