@@ -195,12 +195,12 @@ print "
 <!DOCTYPE html>
 <html lang='en'><head>
     <title>Weimarnetz - Index of /" . $vpath ."</title>";
-    include('/inc/_head.inc.php');
+    include('inc/_head.inc.php');
 print "
   </head>
 
   <body>";
-    include('/inc/navbar.inc.php');
+    include('inc/navbar.inc.php');
 print "
 <script type='text/javascript'>
     
@@ -490,7 +490,7 @@ print "</tbody>
 
 	<div class='foot'>". $_ENV['SERVER_SOFTWARE'] . "</div>";
 
-include("/inc/_foot.inc.php");
+include("inc/_foot.inc.php");
 
 print	"</body>
 
