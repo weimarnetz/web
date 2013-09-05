@@ -67,6 +67,12 @@
     
             <!-- ein halber block (12/6=1/2) -->
             <div class="col-sm-6">
+              <h2 class="page-header">Was ist Weimarnetz?</h2>
+	      Weimarnetz baut ein freies, unabhängiges und dezentral organisiertes Datennetz in der Stadt Weimar auf. Das Netz basiert auf Funkverbindungen, die mit handelsüblichen WLAN-Geräten aufgebaut werden. Weimarnetz ist die lokale Umsetzung der über die Ländergrenzen hinweg bekannten <a href="http://www.freifunk.net" target="_blank">Freifunk-Initiative</a>.</br></br>
+	      Werde auch Du Teil des Netzes und <a href="http://wireless.subsignal.org/index.php?title=Schnelleinstieg">mach mit!</a> 
+            </div>
+            <!-- ein halber block (12/6=1/2) -->
+            <div class="col-sm-6">
               <h2 class="page-header">Aktuelle Meldungen</h2>
               <!-- dyn: news-liste -->
               <?php
@@ -78,6 +84,12 @@
               <p><a class="btn btn-xs btn-default" href="http://wireless.subsignal.org/index.php?title=Vorlage:Startseite.Aktuelles&action=edit" target="_blank">Text bearbeiten &raquo;</a></p>
             </div>
     
+   
+          </div> <!-- ende reihe -->
+
+          <!-- zweite reihe blöcke -->
+          <div class="row">
+
             <!-- ein halber block (12/6=1/2) -->
             <div class="col-sm-6">
               <h2 class="page-header">Aktuelle Diskussionen</h2>
@@ -90,11 +102,6 @@
               </p>
               <p><a class="btn btn-xs btn-default" href="./news.php" target="_blank" >Direkt zum Newsserver</a> <small>(Benutzer: <code>freifunk</code> Passwort: <code>weimar</code>)</small></p>
             </div>
-   
-          </div> <!-- ende reihe -->
-
-          <!-- zweite reihe blöcke -->
-          <div class="row">
 
             <div class="col-sm-6">
               <h2 class="page-header">Spendenaufruf</h2>
