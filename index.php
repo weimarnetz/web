@@ -59,12 +59,7 @@
             <div class="col-sm-6">
               <h2 class="page-header">Aktuelle Meldungen</h2>
               <!-- dyn: news-liste -->
-              <?php
-              $wikinews=file_get_contents("http://wireless.subsignal.org/index.php?title=Vorlage:Startseite.Aktuelles");
-              $wikinews=substr($wikinews, strpos($wikinews, "<ul><li>" ), strpos($wikinews, "</li></ul>")-strpos($wikinews, "<ul><li>") + strlen("</li></ul>" ));
-              echo str_replace("/index.php?title=","http://wireless.subsignal.org/index.php?title",str_replace("<a href=", "<a target=_blank href=",$wikinews) );
-              ?>
-      
+	      <?php include("./inc/currentnews.inc.php") ?>
               <p><a class="btn btn-xs btn-default" href="http://wireless.subsignal.org/index.php?title=Vorlage:Startseite.Aktuelles&action=edit" target="_blank">Text bearbeiten &raquo;</a></p>
             </div>
     
@@ -79,9 +74,7 @@
               <h2 class="page-header">Aktuelle Diskussionen</h2>
               <p>
                 <!-- dyn: discuss-liste -->
-                <?php
-                echo str_replace("<a href=", "<a target=_blank href=",file_get_contents("http://weimarnetz.de/latestnews.html"));
-                ?>
+	        <?php include("./inc/currentnews.inc.php") ?>
         
               </p>
               <p><a class="btn btn-xs btn-default" href="./news.php" target="_blank" >Direkt zum Newsserver</a> <small>(Benutzer: <code>freifunk</code> Passwort: <code>weimar</code>)</small></p>
@@ -90,11 +83,7 @@
             <div class="col-sm-6">
               <h2 class="page-header">Spendenaufruf</h2>
               <!-- dyn: spenden-liste -->
-              <?php
-              $wikinews=file_get_contents("http://wireless.subsignal.org/index.php?title=Vorlage:Spendenaufruf");
-              $wikinews=substr($wikinews, strpos($wikinews, "<ul><li>" ), strpos($wikinews, "</li></ul>")-strpos($wikinews, "<ul><li>") + strlen("</li></ul>" ));
-              echo str_replace("/index.php?title=","http://wireless.subsignal.org/index.php?title",str_replace("<a href=", "<a target=_blank href=",$wikinews) );
-              ?>
+	      <?php include("./inc/fundings.inc.php") ?>
       
               <!-- paypal button -->
               <ul><li>
