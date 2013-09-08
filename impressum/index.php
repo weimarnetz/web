@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en"><head>
   <title>Weimarnetz - Impressum</title>
-  <?php include("./inc/_head.inc.php") ?>
+  <?php include("../inc/_head.inc.php") ?>
 </head>
 
 <body>
 
-  <?php include("./inc/navbar.inc.php") ?>
+  <?php include("../inc/navbar.inc.php") ?>
 
 <div class="container">
 <h2>Kontakt</h2>
@@ -34,11 +34,11 @@ Marienstr. 18<br />
 </p><p><b>6. Rechtswirksamkeit dieses Haftungsausschlusses</b>
 </p><p>Dieser Haftungsausschluss ist als Teil des Internetangebotes zu betrachten, von dem aus auf diese Seite verwiesen wurde. Sofern Teile oder einzelne Formulierungen dieses Textes der geltenden Rechtslage nicht, nicht mehr oder nicht vollständig entsprechen sollten, bleiben die übrigen Teile des Dokumentes in ihrem Inhalt und ihrer Gültigkeit davon unberührt.
 </p>
-<?php include("./inc/footer.inc.php")?>
+<?php include("../inc/footer.inc.php")?>
 </div>
 
     	
-<?php include("./inc/_foot.inc.php")?>
+<?php include("../inc/_foot.inc.php")?>
 
 
 </body></html>

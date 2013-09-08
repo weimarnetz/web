@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en"><head>
   <title>Weimarnetz - Karte</title>
-  <?php include("./inc/_head.inc.php") ?>
+  <?php include("../inc/_head.inc.php") ?>
 </head>
 
 <body>
 
-  <?php include("./inc/navbar.inc.php") ?>
+  <?php include("../inc/navbar.inc.php") ?>
 
 <div class="container">
 
@@ -95,10 +95,10 @@
                 </script>                                                                                        
                 <div id="ffmap" style="position:relative; width:100%; height:640px;"></div> 
 
-  <?php include("./inc/footer.inc.php")?>
+  <?php include("../inc/footer.inc.php")?>
   </div>
 
 
-<?php include("./inc/_foot.inc.php")?>
+<?php include("../inc/_foot.inc.php")?>
 
 </body></html>

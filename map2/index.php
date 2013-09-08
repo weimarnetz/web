@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en"><head>
   <title>Weimarnetz - Karte - Openwifimap</title>
-    <?php include("./inc/_head.inc.php") ?>
+    <?php include("../inc/_head.inc.php") ?>
 </head>
 
 
 <body onload="setIframeHeight('ifrm');" onresize="setIframeHeight('ifrm');">
 
-  <?php include("./inc/navbar.inc.php") ?>
+  <?php include("../inc/navbar.inc.php") ?>
 
 	 <div class="container">
 
@@ -22,10 +22,10 @@
                 <div style="text-align: center"><iframe id="ifrm" src="http://map.weimarnetz.de/map.html#bbox=50.9484779952583,11.194210052490234,51.00651822828961,11.441402435302734" width="98%" scrolling="yes" marginwidth="0"
 marginheight="0" frameborder="0">test</iframe></div>
 
-  <?php include("./inc/footer.inc.php") ?>
+  <?php include("../inc/footer.inc.php") ?>
 
 </div>
 
-<?php include("./inc/_foot.inc.php") ?>
+<?php include("../inc/_foot.inc.php") ?>
 
 </body></html>
