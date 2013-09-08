@@ -32,28 +32,28 @@ body {
     <ul class="nav navbar-nav">
       <li class="divider-vertical"></li>
       <li class="dropdown">
-        <a href="/wiki.php" class="dropdown-toggle" data-toggle="dropdown">Informationen <b class="caret"></b></a>
+        <a href="/wiki" class="dropdown-toggle" data-toggle="dropdown">Informationen <b class="caret"></b></a>
         <ul class="dropdown-menu">
-          <li <?php echo getActiveClass("about.php")?> ><a href="/about.php">Selbstdarstellung</a></li>
-          <li <?php echo getActiveClass("wiki.php")?>><a href="/wiki.php">Wiki</a></li>
+          <li <?php echo getActiveClass("/about")?> ><a href="/about">Selbstdarstellung</a></li>
+          <li <?php echo getActiveClass("/wiki")?>><a href="/wiki">Wiki</a></li>
           <li <?php echo (strpos(dirname($_SERVER["SCRIPT_NAME"]), "/newsgroups") !== false) ? "class='active'":"" ;?> ><a href="/newsgroups" >Newsserver</a></li>
-          <li <?php echo getActiveClass("termsofuse.php")?>><a href="/termsofuse.php" >Nutzungsbedingungen</a></li>
-          <li <?php echo getActiveClass("picopeering.php")?>><a href="/picopeering.php" >Picopeering Aggreement</a></li>
+          <li <?php echo getActiveClass("/termsofuse")?>><a href="/termsofuse" >Nutzungsbedingungen</a></li>
+          <li <?php echo getActiveClass("/picopeering")?>><a href="/picopeering" >Picopeering Aggreement</a></li>
         </ul>
       </li>
       <li class="dropdown">
-        <a href="/map.php" class="dropdown-toggle"  data-toggle="dropdown">Karten <b class="caret"></b></a>
+        <a href="/map" class="dropdown-toggle"  data-toggle="dropdown">Karten <b class="caret"></b></a>
         <ul class="dropdown-menu">
-          <li <?php echo getActiveClass("map2.php")?> ><a href="/map2.php">Geographische Karte (aktiv + inaktiv)</a></li>
-          <li <?php echo getActiveClass("map.php")?> ><a href="/map.php">Geographische Karte (Live!)</a></li>
-          <li <?php echo getActiveClass("topology.php")?> ><a href="/topology.php">Topologische Karte</a></li>
+          <li <?php echo getActiveClass("/map2")?> ><a href="/map2">Geographische Karte (aktiv + inaktiv)</a></li>
+          <li <?php echo getActiveClass("/map")?> ><a href="/map">Geographische Karte (Live!)</a></li>
+          <li <?php echo getActiveClass("/topology")?> ><a href="/topology">Topologische Karte</a></li>
         </ul>          
       </li>
       <li class="dropdown">
-        <a href="/status.php" class="dropdown-toggle"  data-toggle="dropdown">Status <b class="caret"></b></a>
+        <a href="/status" class="dropdown-toggle"  data-toggle="dropdown">Status <b class="caret"></b></a>
         <ul class="dropdown-menu">
-          <li <?php echo getActiveClass("status.php")?> ><a href="/status.php" >OLSR Status</a></li>   
-          <li <?php echo getActiveClass("monitoring.php")?> ><a href="/monitoring.php" >Monitoring</a></li>
+          <li <?php echo getActiveClass("/status")?> ><a href="/status" >OLSR Status</a></li>   
+          <li <?php echo getActiveClass("/monitoring")?> ><a href="/monitoring" >Monitoring</a></li>
          </ul>
       </li>
       <li class="dropdown">
@@ -67,13 +67,13 @@ body {
       <li class="divider-vertical"></li>
     </ul>
     <ul class="nav navbar-nav navbar-right">
-      <li <?php echo getActiveClass("partner.php")?> ><a href="/partner.php">Partner</a></li>
+      <li <?php echo getActiveClass("/partner")?> ><a href="/partner">Partner</a></li>
       <li class="dropdown">
         <a href="/impressum.php" class="dropdown-toggle"  data-toggle="dropdown">Impressum <b class="caret"></b>
         </a>
         <ul class="dropdown-menu">
-          <li <?php echo getActiveClass("impressum.php")?> ><a href="/impressum.php">Impressum</a></li>
-          <li <?php echo getActiveClass("contact.php")?> ><a href="/contact.php">Kontakt</a></li>
+          <li <?php echo getActiveClass("/impressum")?> ><a href="/impressum">Impressum</a></li>
+          <li <?php echo getActiveClass("/contact")?> ><a href="/contact">Kontakt</a></li>
         </ul>
       </li>
     </ul>
