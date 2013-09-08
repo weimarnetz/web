@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en"><head>
   <title>Weimarnetz - Nutzungsbedingungen</title>
-  <?php include("./inc/_head.inc.php") ?>
+  <?php include("../inc/_head.inc.php") ?>
 </head>
 
 <body>
 
-  <?php include("./inc/navbar.inc.php") ?>
+  <?php include("../inc/navbar.inc.php") ?>
 
   <div class="container">
     
@@ -56,11 +56,11 @@ durch die Nutzung des Netzwerks Freifunk Weimar erleidet, ab.
 Diese Bedingungen haben sind denen von <a href="http://wiki.freifunk-hannover.de/Willkommen" target="_blank">Freifunk Hannover</a> angelehnt.<br>
 Weiterhin gilt das <a href="picopeering.php">Picopeering Aggrement</a>.
 
-  <?php include("./inc/footer.inc.php") ?>
+  <?php include("../inc/footer.inc.php") ?>
 
   </div> <!-- ende container -->
   
-  <?php include("./inc/_foot.inc.php") ?>
+  <?php include("../inc/_foot.inc.php") ?>
 
 
 </body></html>

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en"><head>
   <title>Weimarnetz - Kontakt</title>
-  <?php include("./inc/_head.inc.php") ?>
+  <?php include("..../inc/_head.inc.phpnavbar.inc.php_head.inc.php") ?>
 </head>
 
 <body onload="setIframeHeight('ifrm');" onresize="setIframeHeight('ifrm');">
 
-  <?php include("./inc/navbar.inc.php") ?>
+  <?php include("..../inc/_head.inc.phpnavbar.inc.phpnavbar.inc.php") ?>
 
   <div class="container">
 
@@ -23,10 +23,10 @@
 marginheight="0" frameborder="0">test</iframe></div>
 	 	
 	
-  <?php include("./inc/footer.inc.php") ?>
+  <?php include("..../inc/_head.inc.phpnavbar.inc.phpfooter.inc.php") ?>
 
 </div>
 
-<?php include("./inc/_foot.inc.php") ?>
+<?php include("..../inc/_head.inc.phpnavbar.inc.php_foot.inc.php") ?>
 
 </body></html>

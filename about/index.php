@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en"><head>
     <title>Weimarnetz - Über</title>
-    <?php include("./inc/_head.inc.php") ?>
+    <?php include("..../inc/_head.inc.phpnavbar.inc.php_head.inc.php") ?>
 </head>
 
 <body>
 
-  <?php include("./inc/navbar.inc.php") ?>
+  <?php include("..../inc/_head.inc.phpnavbar.inc.phpnavbar.inc.php") ?>
 
 	 <div class="container">
 		<h1>Selbstdarstellung</h1>
@@ -24,11 +24,11 @@ F.E.I.N.T.org,bittorf wireless )) und der StuKo der Bauhaus-Universität Weimar.
 <p>Freifunk-Netze sind Selbstmach-Netze. Für den Aufbau nutzen Teilnehmer auf ihren WLAN-Routern, eine spezielle Linuxdistribution, die Freifunk-Firmware. Lokale Communities stellen die auf eigene Bedürfnisse angepasste Software dann auf ihren Websites zur Verfügung. In Dörfern und Städten gibt es immer mehr Freifunk-Gruppen und Zusammenkünfte, wo sich Interessierte treffen. Die Freifunk-Community ist Teil einer globalen Bewegung für freie Infrastrukturen. Unsere Vision ist die Demokratisierung der Kommunikationsmedien durch freie Netzwerke. Die praktische Umsetzung dieser Idee nehmen Freifunk-Communities in der ganzen Welt in Angriff.</p> 
 
     	
-  <?php include("./inc/footer.inc.php") ?>
+  <?php include("..../inc/_head.inc.phpnavbar.inc.phpfooter.inc.php") ?>
 
   </div> <!-- ende container -->
   
-  <?php include("./inc/_foot.inc.php") ?>
+  <?php include("..../inc/_head.inc.phpnavbar.inc.php_foot.inc.php") ?>
 
 
 </body></html>
