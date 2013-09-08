@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en"><head>
   <title>Weimarnetz - Kontakt</title>
-  <?php include("./inc/_head.inc.php") ?>
+  <?php include("../inc/_head.inc.php") ?>
 </head>
 
 <body>
 
-  <?php include("./inc/navbar.inc.php") ?>
+  <?php include("../inc/navbar.inc.php") ?>
 
   <div class="container">
 	
@@ -77,11 +77,11 @@ Es soll als Vorlage f&uuml;r weitere Kleinst-Verbindungsabkommen und Vertr&auml;
 <li> Zus&auml;tzliche Dienste: Im Sinne des PPA ist ein Zus&auml;tzlicher Dienst alles war &uuml;ber freien Transit hinaus geht. Zum Beispiel die Bereitstellung eines DHCP-Servers, WEB-Servers oder Mail-Servers.</li>
 </ul>
 
-  <?php include("./inc/footer.inc.php") ?>
+  <?php include("../inc/footer.inc.php") ?>
 
   </div> <!-- ende container -->
   
-  <?php include("./inc/_foot.inc.php") ?>
+  <?php include("../inc/_foot.inc.php") ?>
 
 
 </body></html>

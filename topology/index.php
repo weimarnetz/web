@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en"><head>
   <title>Weimarnetz - Topologie</title>
-  <?php include("./inc/_head.inc.php") ?>
+  <?php include("../inc/_head.inc.php") ?>
 </head>
 
 <body>
 
-  <?php include("./inc/navbar.inc.php") ?>
+  <?php include("../inc/navbar.inc.php") ?>
 
 
 	 <div class="container">
@@ -17,11 +17,11 @@
 	 	</div>
 	 	<div style="text-align: center"><a href="http://weimarnetz.de/freifunk/topology.png" target="_blank" name="Weimarnetz Topologie"><img width="98%" src="http://weimarnetz.de/freifunk/topology.png" alt="Topologie Weimarnetz" longdesc="Zeigt die aktuelle Topologie des Netzes, Aktualisierung alle 5 Minuten" /></a></div>
     
-    <?php include("./inc/footer.inc.php") ?>
+    <?php include("../inc/footer.inc.php") ?>
 
     </div> <!-- ende container -->
   
-    <?php include("./inc/_foot.inc.php") ?>
+    <?php include("../inc/_foot.inc.php") ?>
 
 
   </body></html>
