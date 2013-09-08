@@ -8,32 +8,6 @@
 
   <?php include("./inc/navbar.inc.php") ?>
 
-  <script type="text/javascript">
-    
-    function getElement(aID)
-    {
-        return (document.getElementById) ?
-            document.getElementById(aID) :document.all[aID];
-    }
-
-    function getIFrameDocument(aID){ 
-        var rv = null; 
-        var frame=getElement(aID);
-        // if contentDocument exists, W3C compliant (e.g. Mozilla) 
-        if (frame.contentDocument)
-            rv = frame.contentDocument;
-        else // bad Internet Explorer  ;)
-            rv = document.frames[aID].document;
-        return rv;
-    }
-
-    function adjustMyFrameHeight()
-    {
-        var frame = getElement("myFrame");
-        var frameDoc = getIFrameDocument("myFrame");
-        frame.height = frameDoc.body.offsetHeight;
-    }
-</script>
 
 	 <div class="container">
 		<h1>Topologie</h1>

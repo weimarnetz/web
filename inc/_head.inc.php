@@ -14,6 +14,8 @@
   }
 </style>
 
+<script src="/inc/iframe.inc.js"></script>
+
 <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>
   <script src="/bower_components/bootstrap/assets/js/html5shiv.js"></script>
