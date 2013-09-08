@@ -1,0 +1,24 @@
+Florian Amrhein
+
+Documentation - Quickstart Guide
+
+After you downloaded the newsportal archive, uncompress it
+   and move the files inside into a directory of your webserver.
+   There are only a few options in config.inc.php that you have to edit
+   to let newsportal run:
+     * $file_language: Your favourite language-package.
+     * $server: The adress of your newsserver
+     * $port: The port of your newsserver, normaly this is 119
+
+   Security related options:
+     * Set $readonly=true, if you don't want users to post articles to
+       groups.
+
+   To customize the output you can change the following values:
+     * $treestyle: 0-7, different thread-layouts. Just try out. Normally
+       7 should be the right for you
+     * $maxarticles: The maximal number of articles that newsportal loads
+       from the newsserver. If the number is too high NewsPortal will
+       slow down.
+     * $articles_per_page: Maximum amount of articles showed on one page.
+       0 if you don't want to split the thread into several pages.

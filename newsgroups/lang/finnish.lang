@@ -1,0 +1,53 @@
+<?
+$text_header["from"]="<b>Lähettäjä:</b> ";
+$text_header["subject"]="<b>Otsikko:</b> ";
+$text_header["newsgroups"]="<b>Uutisryhmät:</b> ";
+$text_header["followup"]="<b>Vastaa:</b> ";
+$text_header["organization"]="<b>Organisaatio:</b> ";
+$text_header["date"]="<b>Päivämäärä:</b> ";
+$text_header["message-id"]="<b>Viestin ID:</b> ";
+$text_header["references"]="<b>Referenssit:</b> ";
+$text_header["user-agent"]="<b>Käyttäjäohjelmisto:</b> ";
+$text_header["date_format"]="M d Y H:i:s";
+
+$text_thread["no_articles"]="<p><b>Ei artikkeleita</b></p>";
+$text_thread["button_write"]="Kirjoita";
+$text_thread["button_grouplist"]="Uutisryhmät";
+$text_thread["button_top"]="Takaisin";
+$text_thread["date"]="<b>Päivämäärä</b>";
+$text_thread["subject"]="<b>Otsikko</b>";
+$text_thread["author"]="<b>Tekijä</b>";
+$text_thread["no_such_group"]="Ryhmää ei ole";
+
+$text_groups["newsgroup"]="<b>Uutisryhmä</b>";
+$text_groups["description"]="<b>Kuvaus</b>";
+
+$text_article["button_answer"]="Vastaa";
+
+$text_post["missing_message"]="Viestiosa on tyhjä";
+$text_post["missing_email"]="Sähköpostiosoitteesi puuttuu";
+$text_post["missing_name"]="Nimi tai alias puuttuu";
+$text_post["missing_subject"]="Otsikko puuttuu";
+$text_post["button_post"]="Lähetä";
+$text_post["remember"]="Muista nimi ja sähköpostiosoite";
+$text_post["message"]="Viesti";
+$text_post["group_head"]="Lähetä artikkeli ";
+$text_post["group_tail"]="";
+$text_post["followup_not_allowed"]="Sinulla ei ole oikeuttaa lähettää viestejä ryhmiin:";
+$text_post["message_posted"]="Viesti lähetetty";
+$text_post["message_posted2"]="Viesti lähetetty onnistuneesti";
+$text_post["button_back"]="Takaisin";
+$text_post["button_back2"]="kenelle";
+$text_post["error_newsserver"]="Uutispalvelin ei hyväksy viestiä:";
+$text_post["error_readonly"]="Ryhmä on kirjoitussuojattu";
+$text_post["error_wrong_email"]="Virheellinen sähköpostiosoite";
+
+$text_error["error:"]='<font color="red">Virhe:</font>';
+$text_error["connection_failed"]="Ei yhteyttä uutispalvelimeen";
+$text_error["article_not_found"]="<p>Artikkelia ei ole.</p>";
+$text_error["read_access_denied"]="<p>Ei oikeutta lukea!</p>";
+$text_error["post_failed"]="Yhteys epäonnistui. Kokeile myöhemmin uudelleen.";
+$text_error["auth_error"]="Käyttäjätunnistus palvelimella epäonnistui.";
+$text_error["spool_error"]="Virhe spool-tiedostossa. Lataa uudelleen (reload).";
+
+?>

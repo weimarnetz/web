@@ -1,0 +1,3 @@
+- no mime-decoding of the names of attachments
+- message-ids inside texts are misinterpreted as email-addresses and get
+  a mailto: tag

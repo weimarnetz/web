@@ -1,0 +1,61 @@
+<?
+$text_header["from"]="<b>Fra:</b> ";
+$text_header["subject"]="<b>Emne:</b> ";
+$text_header["newsgroups"]="<b>Nyhedsgrupper:</b> ";
+$text_header["followup"]="<b>Opfølging:</b> ";
+$text_header["organization"]="<b>Organisation:</b> ";
+$text_header["date"]="<b>Dato:</b> ";
+$text_header["message-id"]="<b>Message-ID:</b> ";
+$text_header["references"]="<b>Referencer:</b> ";
+$text_header["user-agent"]="<b>User-Agent:</b> ";
+$text_header["date_format"]="d M Y H:i:s";
+$text_header["attachments"]="<b>Vedhæftning:</b> ";
+
+$text_thread["no_articles"]="<p><b>Ingen artikler tilgængelige</b></p>";
+$text_thread["button_write"]="Skriv";
+$text_thread["button_grouplist"]="Nyhedsgrupper";
+$text_thread["button_top"]="Tilbage til toppen";
+$text_thread["date"]="<b>Dato</b>";
+$text_thread["subject"]="<b>Emne</b>";
+$text_thread["author"]="<b>Forfatter</b>";
+$text_thread["no_such_group"]="Gruppen findes ikke.";
+
+$text_groups["newsgroup"]="<b>Nyhedsgruppe</b>";
+$text_groups["description"]="<b>Beskrivelse</b>";
+
+$text_article["button_answer"]="Svar";
+$text_article["block-xnoarchive"]="Dette system er ikke et arkiv, men
+administratoren af systemet besluttede sig for at blokere artikler, hvor
+forfatteren ikke ønsker arkivering.";
+
+$text_post["name"]="Dit navn:";
+$text_post["email"]="Din E-Mail:";
+$text_post["missing_message"]="Du skal inkludere et indlæg.";
+$text_post["missing_email"]="Du skal opgive en email-addresse.";
+$text_post["missing_name"]="Du skal opgive navn eller alias.";
+$text_post["missing_subject"]="Du skal skrive et emne.";
+$text_post["button_post"]="Post";
+$text_post["remember"]="Husk navn og e-mail addresse";
+$text_post["message"]="Artikel";
+$text_post["group_head"]="Skriv artikel til";
+$text_post["group_tail"]="";
+$text_post["followup_not_allowed"]="Du har ikke rettigheder til at poste her:";
+$text_post["message_posted"]="Artikel postet";
+$text_post["message_posted2"]="Artikel postet successfuldt.";
+$text_post["button_back"]="Tilbage";
+$text_post["button_back2"]="til";
+$text_post["error_newsserver"]="Nyhedsserveren accepterer ikke artiklen:";
+$text_post["error_readonly"]="Gruppen er skrivebeskyttet";
+$text_post["error_wrong_email"]="E-mail addressen er fejlagtig";
+$text_post["wrote_prefix"]="";
+$text_post["wrote_suffix"]=" skrev:";
+
+$text_error["error:"]='<font color="red">Fejl:</font>';
+$text_error["connection_failed"]="Kunne ikke forbinde til serveren";
+$text_error["article_not_found"]="<p>Artiklen eksisterer ikke.</p>";
+$text_error["read_access_denied"]="<p>Ingen rettigheter til at læse!</p>";
+$text_error["post_failed"]="Kunne ikke koble til, prøv igen senere.";
+$text_error["auth_error"]="Godkendelse på nyhedsserveren fejlede.";
+$text_error["spool_error"]="Fejl i spolefil, prøv venligst igen.";
+
+?>

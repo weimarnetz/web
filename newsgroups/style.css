@@ -1,0 +1,185 @@
+/* =========== Page Layout ================ */
+
+BODY {
+  color: black;
+  background: white;
+}
+
+/* =========== Index Layout ============== */
+
+/* headline */
+h1.np_index_headline {
+  font-size: large;
+}
+
+/* border around all groups */
+.np_index_groups {
+  background: #eeeeee;
+  padding: 0px;
+  border: solid 1px #26598f;
+}
+
+/* a block of groups */
+.np_index_groupblock {
+  margin-bottom: 20px;
+}
+
+/* headline of a group of blocks */
+.np_index_grouphead {
+  border: solid 1px #26598f;
+  background: #26598f;
+  color: white;
+}
+
+/* a single group */
+.np_index_group {
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+/* =========== Thread Layout ============== */
+
+/* Headline */
+h1.np_thread_headline {
+  font-size: large;
+}
+
+
+/* Table around the thread */
+table.np_thread_table {
+  width: 100%;
+  border: solid 1px #26598f;
+  border-spacing: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* Head of the table */
+tr.np_thread_head,td.np_thread_head {
+  color: white;
+  background: #26598f;
+  margin: 0px;
+}
+
+
+
+/* Even line numbers in the thread */
+tr.np_thread_line1,td.np_thread_line1 {
+  padding-left:   3px;
+  padding-top:    0px;
+  padding-right:  0px;
+  padding-bottom: 0px;
+  background: #f9f9f9;
+  margin: 0px;
+}
+
+/* Odd line numbers in the thread */
+tr.np_thread_line2,td.np_thread_line2 {
+  padding-left: 3px;
+  padding-top:    0px;
+  padding-right:  0px;
+  padding-bottom: 0px;
+  background: #eeeeee;
+  margin: 0px;
+}
+
+/* Text inside a Line */
+span.np_thread_line_text {
+  font-size: small;
+}
+
+/* The small images, a thread consists of */
+img.thread_image {
+  vertical-align: bottom;
+}
+
+/* =========== Article Layout ============= */
+
+/* headline */
+h1.np_article_headline {
+  font-size: large;
+}
+
+
+/* Head of an article */
+div.np_article_header {
+  background: #eeeeee;
+  padding: 3px;
+  border: solid 1px #26598f;
+}
+
+/* Layout of the Text-Body */
+div.np_article_body {
+  margin-top: 20px;
+  font-family: "Lucida Console", "Courier New", Courier, "Andale Mono", monospace;
+}
+
+/* Layout of quoted text / graphic layout */
+blockquote.np_article_quote {
+  border-left: #002255 solid 1px;
+  padding-left: 5px;
+  color: #002277;
+  margin: 0px;
+}
+
+/* =========== Post layout =========== */
+
+/* headline */
+h1.np_post_headline {
+  font-size: large;
+}
+
+
+/* Head with the input fields for subject, name and email  */
+.np_post_header {
+  background: #eeeeee;
+  padding: 3px;
+  border: solid 1px #26598f;
+}
+
+/* Body with the message-field and the post-button in it */
+.np_post_body {
+  background: #eeeeee;
+  padding: 3px;
+  border: solid 1px #26598f;
+  margin-top: 10px;
+}
+
+
+/* =========== navigation buttons on top of every page =========== */
+
+.np_buttonbar {
+  background: #26598f;
+  padding: 1px;
+  margin-bottom: 10px;
+  color: black;
+}
+
+td.np_button {
+  padding-left: 5px;
+  padding-right: 5px;
+  border-right: solid white 1px;
+  color: white;
+  white-space: nowrap;
+}
+
+a.np_button {
+  color: white;
+  text-decoration: underline;
+}
+
+.np_pages {
+  color: white;
+}
+
+.np_pages_selected {
+  color: white:
+  text-weight: bold;
+  margin-left: 5px;
+}
+
+.np_pages_unselected {
+  color: white;
+  text-decoration: underline;
+  margin-left: 5px;
+}

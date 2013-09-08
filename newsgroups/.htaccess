@@ -1,0 +1,12 @@
+# Beschreibung
+AuthType Basic 
+AuthUserFile /etc/news/passwd 
+AuthName "Weimarnetz Newsserver -- geschuetzer Bereich (User:freifunk Passwort:weimar)" 
+require valid-user
+
+order deny,allow
+deny from all
+allow from localhost
+#satisfy any 
+
+allow from all

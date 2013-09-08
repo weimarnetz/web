@@ -36,7 +36,7 @@ body {
         <ul class="dropdown-menu">
           <li <?php echo getActiveClass("about.php")?> ><a href="/about.php">Selbstdarstellung</a></li>
           <li <?php echo getActiveClass("wiki.php")?>><a href="/wiki.php">Wiki</a></li>
-          <li <?php echo getActiveClass("news.php")?>><a href="/news.php" >Newsserver</a></li>
+          <li <?php echo (strpos(dirname($_SERVER["SCRIPT_NAME"]), "/newsgroups") !== false) ? "class='active'":"" ;?> ><a href="/newsgroups" >Newsserver</a></li>
           <li <?php echo getActiveClass("termsofuse.php")?>><a href="/termsofuse.php" >Nutzungsbedingungen</a></li>
           <li <?php echo getActiveClass("picopeering.php")?>><a href="/picopeering.php" >Picopeering Aggreement</a></li>
         </ul>

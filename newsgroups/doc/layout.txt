@@ -1,0 +1,48 @@
+Florian Amrhein
+
+NewsPortal Layout Guide
+
+Colors
+
+   To change the colors of NewsPortal simply edit the style.css. It
+   should be self explaining.
+
+only topics in thread.php
+
+   Normaly, newsportal always displays complete threads in thread.php. An
+   alternative view you can suppress this by setting setting
+   $thread_show["replies"] to false in the thread layout section in
+   config.inc.php.
+   It makes sense to set $thread_show["threadsize"] to true, so that your
+   visitors can see how many articles are in a thread without clicking on
+   it. It would also good, that they see the date of the most recent
+   article in the thread instead of the first, so set
+   $thread_show["lastdate"] to true.
+
+flat view for articles
+
+   If you show only the topics in your thread.php, as described above,
+   you maybe want to activate the flat-view for your articles.
+   Normaly, your article.php only shows one single article plus (if not
+   deactivated by setting article_showthread to false) links to the other
+   articles in the thread.
+   This behaviour can be changed by using an alternative code for
+   displaying articles. Set $file_article to "article-flat.php". Now, all
+   articles of a thread are shown on one single page (that can be
+   splittet, what we see later) one after another.
+   This style is typical for webboards. If you want to show real
+   newsgroups, this will make problems, because users of webboards often
+   add additions to the thread by simply replying to the last article,
+   what will make problems, if their answer don't match to this last
+   article.
+   But this flat-view make sense, if you have an isolated system, and
+   only want to use a newsserver as backend without using the typical
+   layout and handling of newsgroups.
+   Now, there are some additionaly settings, you may want to use:
+     * $articleflat_articles_per_page defines, how many articles should
+       be displayed on a single page
+     * Long articles can be cut to the first
+       $articleflat_chars_per_articles. If a article gets cut, there will
+       be a link where your visitors can view the complete article. If
+       you have set $file_article_full to the original article.php, then
+       they will see the normal view to a single article.

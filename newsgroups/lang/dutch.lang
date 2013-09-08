@@ -1,0 +1,53 @@
+<?
+$text_header["from"]="<b>Afzender:</b> ";
+$text_header["subject"]="<b>Onderwerp:</b> ";
+$text_header["newsgroups"]="<b>Nieuwsgroepen:</b> ";
+$text_header["followup"]="<b>Antwoord-naar:</b> ";
+$text_header["organization"]="<b>Organisatie:</b> ";
+$text_header["date"]="<b>Datum:</b> ";
+$text_header["message-id"]="<b>Bericht-ID:</b> ";
+$text_header["references"]="<b>Referenties:</b> ";
+$text_header["user-agent"]="<b>User-Agent:</b> ";
+$text_header["date_format"]="d M Y H:i:s";
+
+$text_thread["no_articles"]="<p><b>Geen artikelen beschikbaar</b></p>";
+$text_thread["button_write"]="Schrijf";
+$text_thread["button_grouplist"]="Nieuwsgroepen";
+$text_thread["button_top"]="Terug naar boven";
+$text_thread["date"]="<b>Datum</b>";
+$text_thread["subject"]="<b>Onderwerp</b>";
+$text_thread["author"]="<b>Auteur</b>";
+$text_thread["no_such_group"]="Groep bestaat niet.";
+
+$text_groups["newsgroup"]="<b>Nieuwsgroep</b>";
+$text_groups["description"]="<b>Beschrijving</b>";
+
+$text_article["button_answer"]="Antwoord";
+
+$text_post["missing_message"]="Je moet een bericht schrijven om te posten.";
+$text_post["missing_email"]="Je moet een e-mailadres invullen.";
+$text_post["missing_name"]="Je moet je naam, of tenminste een alias invullen.";
+$text_post["missing_subject"]="Je moet een onderwerp invullen.";
+$text_post["button_post"]="Post";
+$text_post["remember"]="Onthoud naam en e-mailadres";
+$text_post["message"]="Bericht";
+$text_post["group_head"]="Schrijf bericht voor ";
+$text_post["group_tail"]="";
+$text_post["followup_not_allowed"]="Je bent niet gemachtigd om te posten in de groepen:";
+$text_post["message_posted"]="Bericht gepost";
+$text_post["message_posted2"]="Het bericht is succesvol gepost.";
+$text_post["button_back"]="Terug";
+$text_post["button_back2"]="naar";
+$text_post["error_newsserver"]="De nieuwsserver accepteert het bericht niet:";
+$text_post["error_readonly"]="Deze groep is alleen-lezen.";
+$text_post["error_wrong_email"]="Het e-mail adres is verkeerd";
+
+$text_error["error:"]='<font color="red">Fout:</font>';
+$text_error["connection_failed"]="De verbinding met nieuwsserver is mislukt";
+$text_error["article_not_found"]="<p>Dit artikel bestaat niet.</p>";
+$text_error["read_access_denied"]="<p>Geen rechten om te lezen!</p>";
+$text_error["post_failed"]="Verbinding mislukt. Probeer de pagine opnieuw in te laden.";
+$text_error["auth_error"]="Authenticatie op de nieuwsserver is mislukt.";
+$text_error["spool_error"]="Fout in het spooler bestand. Laad de pagina opnieuw.";
+
+?>

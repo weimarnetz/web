@@ -1,0 +1,53 @@
+<?
+$text_header["from"]="<b>От:</b> ";
+$text_header["subject"]="<b>Тема:</b> ";
+$text_header["newsgroups"]="<b>Группы новостей:</b> ";
+$text_header["followup"]="<b>Followup:</b> ";
+$text_header["organization"]="<b>Организация:</b> ";
+$text_header["date"]="<b>Дата:</b> ";
+$text_header["message-id"]="<b>Message-ID:</b> ";
+$text_header["references"]="<b>Ссылки:</b> ";
+$text_header["user-agent"]="<b>Программа:</b> ";
+$text_header["date_format"]="M d Y H:i:s";
+
+$text_thread["no_articles"]="<p><b>Сообщений нет</b></p>";
+$text_thread["button_write"]="Писать";
+$text_thread["button_grouplist"]="Группы новостей";
+$text_thread["button_top"]="Наверх";
+$text_thread["date"]="<b>Дата</b>";
+$text_thread["subject"]="<b>Тема</b>";
+$text_thread["author"]="<b>Автор</b>";
+$text_thread["no_such_group"]="Нет такой группы.";
+
+$text_groups["newsgroup"]="<b>Группа новостей</b>";
+$text_groups["description"]="<b>Описание</b>";
+
+$text_article["button_answer"]="Ответить";
+
+$text_post["missing_message"]="Пустые сообщения не отправляются.";
+$text_post["missing_email"]="Необходимо указать адрес Эл. Почты.";
+$text_post["missing_name"]="Необходимо указать Имя или хотя-бы Псевдоним.";
+$text_post["missing_subject"]="Необходимо указать Тему.";
+$text_post["button_post"]="Отправить";
+$text_post["remember"]="Запомнить имя и E-Mail";
+$text_post["message"]="Сообщение";
+$text_post["group_head"]="Подготовка сообщения в группу ";
+$text_post["group_tail"]="";
+$text_post["followup_not_allowed"]="Вам не разрешено отправлять в эти группы:";
+$text_post["message_posted"]="Сообщение отправлено";
+$text_post["message_posted2"]="Ваше сообщение было успешно отправлено.";
+$text_post["button_back"]="Назад";
+$text_post["button_back2"]="к";
+$text_post["error_newsserver"]="Сервер новостей не принял сообщение:";
+$text_post["error_readonly"]="Эта группа новостей только для чтения";
+$text_post["error_wrong_email"]="Неправильный адрес Эл. Почты";
+
+$text_error["error:"]='<font color="red">Ошибка:</font>';
+$text_error["connection_failed"]="Отказ соединения с сервером новостей";
+$text_error["article_not_found"]="<p>Такого сообщения нет.</p>";
+$text_error["read_access_denied"]="<p>Чтение не разрешено!</p>";
+$text_error["post_failed"]="Отказ соединения. Попробуй обновить (Reload) позднее.";
+$text_error["auth_error"]="Отказ аутентификации на сервере новостей.";
+$text_error["spool_error"]="Ошибка в буферном файле. Пожалуйста, обновите (Reload).";
+
+?>

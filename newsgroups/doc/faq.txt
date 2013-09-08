@@ -1,0 +1,85 @@
+NewsPortal Frequently Asked Questions
+
+What newsserver should I use?
+
+   Normally, NewsPortal is made for people who already own a newsserver
+   with local groups.
+   If you want to give your users access to usenet groups, and want to do
+   this by using an external newsserver, you should better do this by
+   installing your own newsserver. Newsportal can produce much load on
+   the newsserver, so the most administrators of newsserver would not
+   like it, if you use their newsservers without asking.
+   A good newsserver (for Unix) is INN.
+
+How can I configure NewsPortal to access groups on different servers?
+
+   If you have, for example three hierarchies a.ALL, b.ALL and c.ALL on
+   three different servers A, B and C, you have to the following:
+   First, configure newsserver normally in your config.inc.php by setting
+   $server to A. For the servers B and C create two config-files named,
+   for example, server-B.inc and server-C.inc. Write <?
+   $server="news.serverB.org"; ?> in server-B.inc and the corresponding
+   for C into server-C.inc.
+   Now, you have to tell newsportal, when it has to use the configuration
+   files for B and C, because until this point newsportal only use A as
+   default.
+   This can be done by setting the $group_config in config.inc.php. For
+   example like this, to bind hierarchy b.ALL to server B and hierarchie
+   c.ALL to server C:
+$group_config=array(
+              '^b\.' => "server-B.inc",
+              '^c\.' => "server-C.inc"
+);
+
+   Now, thread.php, article.php and post.php should use the right server.
+   You can test this by opening
+   http://yourserver.org/thread.php?group=b.groupname
+   The problem is, that index.php can only use one server while fetching
+   the group-informations.
+   The only solution with the actual version of NewsPortal is to delete
+   index.php and replace it with a static html-file that links to the
+   single groups via thread.php.
+   Later versions of NewsPortal will have more comfortable solutions for
+   this.
+
+How does Newsportal store it's data?
+
+   Newsportal stores it's data in form of plain text files in it's spool
+   directory. It only stores the thread data, not the articles itself,
+   unless you activate the article-cache.
+
+Will it grow?
+
+   Normaly you have set $maxarticles, so Newsportal doesn't fetch more
+   than this number of article-overviews from every group. If all your
+   groups have more than $maxarticles articles in it, the content of your
+   spool directory will not grow.
+   But, if you have activated the article-cache, then the spool can grow,
+   because every article can have a different size. If, for example,
+   suddenly appears an article with a very long attachment on it, this
+   attachment will be stored in the spool and let your spool grow. The
+   spool will later shrink, when the article will be deleted, when it
+   reaches the "horizont" defined by $maxarticles.
+
+Do I have to set a holding time for old articles?
+
+   No, this is not necessary, and not possible at the moment. Later, for
+   the article-cache, there will be such a setting, so that articles can
+   be deleted before they reaches their horizont.
+   But you can manualy or by script remove everything in your spool
+   directory.
+
+NewsPortal doesn't want to the newsserver
+
+   There are several reasons why Newsportal doesn't connect to your
+   newsserver.
+    1. Do you try to use the newsserver of your dialin provider? Normaly,
+       such newsservers only work if you connect to them from inside the
+       network of the provider. So, at home you can use their newsserver,
+       but your webserver somewhere in the internet is not allowed to
+       connect.
+    2. You try to use Newsportal on a shared webserver? Often provider of
+       such servers block outgoing connections because of safety reasons
+       or because it is difficult to charge you for the traffic you make.
+       You have to move to another provider, or use a dedicated or
+       virtual server.

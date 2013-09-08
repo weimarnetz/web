@@ -1,0 +1,8 @@
+A very simple RSS backend.
+
+Copy this file to your newsportal-directory, and edit it to configure it.
+
+Note, that this skript doesn't connect to any newsserver, it just reads the
+contents of your newsportal-spooldir. So if you don't actualize this
+directory by viewing the group with newsportal, the RSS-feed won't be
+actualized.
