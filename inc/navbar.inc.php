@@ -1,11 +1,10 @@
 <?php
 
 	function getActiveClass($filename) {
-		if ($filename == basename($_SERVER["SCRIPT_NAME"]))
+		if ($filename == basename($_SERVER["SCRIPT_NAME"]) or strcmp(dirname($_SERVER["SCRIPT_NAME"]), $filename) == 0)
 		{
 			return "class='active'";
 			}
-			
 	}
 
 ?>
@@ -36,7 +35,7 @@ body {
         <ul class="dropdown-menu">
           <li <?php echo getActiveClass("/about")?> ><a href="/about">Selbstdarstellung</a></li>
           <li <?php echo getActiveClass("/wiki")?>><a href="/wiki">Wiki</a></li>
-          <li <?php echo (strpos(dirname($_SERVER["SCRIPT_NAME"]), "/newsgroups") !== false) ? "class='active'":"" ;?> ><a href="/newsgroups" >Newsserver</a></li>
+          <li <?php echo getActiveClass("/newsgroups")?> ><a href="/newsgroups" >Newsserver</a></li>
           <li <?php echo getActiveClass("/termsofuse")?>><a href="/termsofuse" >Nutzungsbedingungen</a></li>
           <li <?php echo getActiveClass("/picopeering")?>><a href="/picopeering" >Picopeering Aggreement</a></li>
         </ul>
@@ -79,7 +78,6 @@ body {
     </ul>
   </div><!-- /.navbar-collapse -->
 </nav>
-
     
     <noscript><div class="container">
     <div class="alert alert-error">
