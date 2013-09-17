@@ -1,11 +1,11 @@
 <?php
 
-	function getActiveClass($filename) {
-		if ($filename == basename($_SERVER["SCRIPT_NAME"]) or strcmp(dirname($_SERVER["SCRIPT_NAME"]), $filename) == 0)
-		{
-			return "class='active'";
-			}
-	}
+        function getActiveClass($filename) {
+                if ($filename == basename($_SERVER["SCRIPT_NAME"]) or strcmp(dirname($_SERVER["SCRIPT_NAME"]), $filename) == 0)
+                {
+                        return "class='active'";
+                        }
+        }
 
 ?>
 <style>
@@ -33,32 +33,35 @@ body {
       <li class="dropdown">
         <a href="/wiki" class="dropdown-toggle" data-toggle="dropdown">Informationen <b class="caret"></b></a>
         <ul class="dropdown-menu">
+          <li class="dropdown-header">Einstieg</li>
+          <li <?php echo getActiveClass("/mitmachen")?> ><a href="/about">Mitmachen</a></li> 
+          <li <?php echo getActiveClass("/contact")?> ><a href="/contact">Community</a></li>
           <li <?php echo getActiveClass("/about")?> ><a href="/about">Selbstdarstellung</a></li>
+          <li class="dropdown-header">Dokumentation</li>
           <li <?php echo getActiveClass("/wiki")?>><a href="/wiki">Wiki</a></li>
-          <li <?php echo getActiveClass("/newsgroups")?> ><a href="/newsgroups" >Newsserver</a></li>
+          <li <?php echo getActiveClass("/newsgroups")?> ><a href="/newsgroups" >Mailinglisten</a></li>
+          <li class="dropdown-header">Rechtliches</li>
           <li <?php echo getActiveClass("/termsofuse")?>><a href="/termsofuse" >Nutzungsbedingungen</a></li>
           <li <?php echo getActiveClass("/picopeering")?>><a href="/picopeering" >Picopeering Aggreement</a></li>
         </ul>
       </li>
       <li class="dropdown">
-        <a href="/map" class="dropdown-toggle"  data-toggle="dropdown">Karten <b class="caret"></b></a>
+        <a href="/map" class="dropdown-toggle"  data-toggle="dropdown">Daten <b class="caret"></b></a>
         <ul class="dropdown-menu">
+          <li class="dropdown-header">Status</li>
+          <li <?php echo getActiveClass("/status")?> ><a href="/status" >OLSR Status</a></li>   
+          <li <?php echo getActiveClass("/monitoring")?> ><a href="/monitoring" >Monitoring</a></li>
+          <li class="dropdown-header">Karten</li>
           <li <?php echo getActiveClass("/map2")?> ><a href="/map2">Geographische Karte (aktiv + inaktiv)</a></li>
-          <li <?php echo getActiveClass("/map")?> ><a href="/map">Geographische Karte (Live!)</a></li>
+          <li <?php echo getActiveClass("/maplive")?> ><a href="/maplive">Geographische Karte (Live!)</a></li>
           <li <?php echo getActiveClass("/topology")?> ><a href="/topology">Topologische Karte</a></li>
         </ul>          
       </li>
       <li class="dropdown">
-        <a href="/status" class="dropdown-toggle"  data-toggle="dropdown">Status <b class="caret"></b></a>
+        <a href="/freifunk/firmware/ar71xx" class="dropdown-toggle"  data-toggle="dropdown">Downloads <b class="caret"></b></a>
         <ul class="dropdown-menu">
-          <li <?php echo getActiveClass("/status")?> ><a href="/status" >OLSR Status</a></li>   
-          <li <?php echo getActiveClass("/monitoring")?> ><a href="/monitoring" >Monitoring</a></li>
-         </ul>
-      </li>
-      <li class="dropdown">
-        <a href="/freifunk/firmware/ar71xx" class="dropdown-toggle"  data-toggle="dropdown">Firmware <b class="caret"></b></a>
-        <ul class="dropdown-menu">
-<li <?php echo (strpos(dirname($_SERVER["SCRIPT_NAME"]), "/freifunk/firmware/ar71xx") !== false) ? "class='active'":"" ;?> ><a href="/freifunk/firmware/ar71xx" >Atheros (TP-Link, Ubiqity, usw)</a></li>   
+          <li class="dropdown-header">Firmware</li>
+	  <li <?php echo (strpos(dirname($_SERVER["SCRIPT_NAME"]), "/freifunk/firmware/ar71xx") !== false) ? "class='active'":"" ;?> ><a href="/freifunk/firmware/ar71xx" >Atheros (TP-Link, Ubiqity, usw)</a></li>   
           <li <?php echo getActiveClass("freifunk/firmware/brcm47xx")?> ><a href="/freifunk/firmware/brcm47xx" >Broadcom (Linksys, Buffalo, usw.)</a></li>
           <li <?php echo getActiveClass("freifunk/firmware/nightlies")?> ><a href="/freifunk/firmware/nightlies" >Nightly Builds</a></li>
         </ul>
