@@ -12,7 +12,6 @@
   nobr {
     white-space: normal;
   }
-  // navbar
   body {
     padding-top: 50px;
     padding-bottom: 20px;
