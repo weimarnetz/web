@@ -8,12 +8,6 @@
         }
 
 ?>
-<style>
-body {
-  padding-top: 50px;
-  padding-bottom: 20px;
-}
-</style>
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
@@ -34,7 +28,7 @@ body {
         <a href="/wiki" class="dropdown-toggle" data-toggle="dropdown">Informationen <b class="caret"></b></a>
         <ul class="dropdown-menu">
           <li class="dropdown-header">Einstieg</li>
-          <li <?php echo getActiveClass("/mitmachen")?> ><a href="/about">Mitmachen</a></li> 
+          <li <?php echo getActiveClass("/mitmachen")?> ><a href="/mitmachen">Mitmachen</a></li> 
           <li <?php echo getActiveClass("/contact")?> ><a href="/contact">Community</a></li>
           <li <?php echo getActiveClass("/about")?> ><a href="/about">Selbstdarstellung</a></li>
           <li class="dropdown-header">Dokumentation</li>
