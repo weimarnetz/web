@@ -28,7 +28,7 @@
         <a href="/wiki" class="dropdown-toggle" data-toggle="dropdown">Informationen <b class="caret"></b></a>
         <ul class="dropdown-menu">
           <li class="dropdown-header">Einstieg</li>
-          <li <?php echo getActiveClass("/mitmachen")?> ><a href="/about">Mitmachen</a></li> 
+          <li <?php echo getActiveClass("/mitmachen")?> ><a href="/mitmachen">Mitmachen</a></li> 
           <li <?php echo getActiveClass("/contact")?> ><a href="/contact">Community</a></li>
           <li <?php echo getActiveClass("/about")?> ><a href="/about">Selbstdarstellung</a></li>
           <li class="dropdown-header">Dokumentation</li>
