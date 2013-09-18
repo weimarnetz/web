@@ -8,12 +8,6 @@
         }
 
 ?>
-<style>
-body {
-  padding-top: 50px;
-  padding-bottom: 20px;
-}
-</style>
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <!-- Brand and toggle get grouped for better mobile display -->
   <div class="navbar-header">
