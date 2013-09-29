@@ -16,7 +16,7 @@
 
         <h3>Jeder kann mitmachen!</h3>
 
-        <p>Sprich mit deinem Freundeskreis, Geschäftspartner_innen und allen Menschen die dich umgeben und verbreite die Idee von Freifunk.
+        <p>Sprich mit deinem Freundeskreis, Geschäftspartnerinnen, -partern und allen Menschen die dich umgeben und verbreite die Idee von Freifunk.
 
         Alle können Freifunker werden! Wir freuen uns über Unterstützung bei:</p>
       
@@ -35,7 +35,7 @@
       
         <div class="row">
 
-          <div class="col-sm-4 col-lg-3">
+          <div class="col-sm-4 col-lg-4">
             <div class="case" id="case-starter">
               <div class="case-head page-header">
                 <h3>Starter-Kit</h3>
@@ -70,7 +70,7 @@
             </div>
           </div>
 
-          <div class="col-sm-4 col-lg-3">
+          <div class="col-sm-4 col-lg-4">
             <div class="case" id="case-level2">
               <div class="case-head page-header">
                 <h3>Level 2</h3>
@@ -108,7 +108,7 @@
             </div>
           </div>
 
-          <div class="col-sm-4 col-lg-3">
+          <div class="col-sm-4 col-lg-4">
             <div class="case" id="case-backbone">
               <div class="case-head page-header">
                 <h3>Backbone</h3>
@@ -143,14 +143,15 @@
               </div>
             </div>
           </div>
+	</div>
         
           <div class="clearfix hidden-lg"></div>
-    
-          <div class="col-sm-12 col-lg-3">
+	<div class="row">
+          <div class="col-sm-12 col-lg-12">
             <h3 id="more">Weitere Informationen und Hinweise</h3>
             <dl>
               <dt>Wo stehen schon Freifunk-Router?</dt>
-              <dd>Schau mal auf der <a href="../map">Netzkarte</a> nach. Wenn es bei dir noch keinen Freifunk-Router in der Nachbarschaft gibt, dann sei die oder der Erste!</dd>
+              <dd>Schau mal auf der <a href="../map2">Netzkarte</a> nach. Wenn es bei dir noch keinen Freifunk-Router in der Nachbarschaft gibt, dann sei die oder der Erste!</dd>
               <dt>Benötige ich einen Router für 2.4 GHz oder 5 GHz?</dt>
               <dd>Damit sich ein Freifunk-Router mit einem anderen Freifunk-Router über WLAN verbinden kann, müssen beide Router im gleichen Frequenzband (2.4 GHz oder 5 GHz) arbeiten. Bitte vorher prüfen!</dd>
               <dt>Können mehrere Freifunk-Router an einem Ort miteinander verbunden werden?</dt>
