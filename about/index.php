@@ -1,14 +1,42 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-    <title>Weimarnetz - Über</title>
+    <title>Weimarnetz - Über uns</title>
     <?php include("../inc/_head.inc.php") ?>
 </head>
 
 <body>
+<!-- Styles für ein responsiv eingebundenes Video-->
+<style>
+.js-video {
+  height: 0;
+  padding-top: 25px;
+  padding-bottom: 67.5%;
+  margin-bottom: 10px;
+  position: relative;
+  overflow: hidden;
+}
 
+.js-video.widescreen {
+  padding-bottom: 57.25%;
+}
+
+.js-video.vimeo {
+  padding-top: 0;
+}
+.js-video embed, .js-video iframe, .js-video object, .js-video video {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+</style>
   <?php include("../inc/navbar.inc.php") ?>
 
 	 <div class="container">
+		<h1>Was ist Freifunk?</h1>
+		<p>Diese kurze Video erklärt dir die Idee, die hinter Freifunk steckt.</p>
+		<div class="js-video [vimeo widescreen] " style="text-align: center;"><iframe src="//player.vimeo.com/video/64814620" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> <p><a href="http://vimeo.com/64814620">Freifunk verbindet!</a> from <a href="http://vimeo.com/kosmonautensofa">Philipp Seefeldt</a> on <a href="https://vimeo.com">Vimeo</a>.</p></div>
 		<h1>Selbstdarstellung</h1>
 		<i>Auszug aus unserem <a href="http://wireless.subsignal.org/index.php?title=Selbstdarstellung" target="_blank" >Wiki</a>:</i><br>
 	 	<p>Das Projekt Wireless Weimar auch bekannt als das weimarnetz, hat zum Ziel, ein freies,
