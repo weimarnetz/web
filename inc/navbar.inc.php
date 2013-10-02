@@ -28,9 +28,10 @@
         <a href="/wiki" class="dropdown-toggle" data-toggle="dropdown">Informationen <b class="caret"></b></a>
         <ul class="dropdown-menu">
           <li class="dropdown-header">Einstieg</li>
+          <li <?php echo getActiveClass("/about")?> ><a href="http://www.weimarnetz.de/about">Selbstdarstellung</a></li>
           <li <?php echo getActiveClass("/mitmachen")?> ><a href="http://www.weimarnetz.de/mitmachen">Mitmachen</a></li> 
           <li <?php echo getActiveClass("/contact")?> ><a href="http://www.weimarnetz.de/contact">Community</a></li>
-          <li <?php echo getActiveClass("/about")?> ><a href="http://www.weimarnetz.de/about">Selbstdarstellung</a></li>
+          <li <?php echo getActiveClass("/spenden")?> ><a href="http://www.weimarnetz.de/spenden">Spenden</a></li>
           <li class="dropdown-header">Dokumentation</li>
           <li <?php echo getActiveClass("/wiki")?>><a href="http://www.weimarnetz.de/wiki">Wiki</a></li>
           <li <?php echo getActiveClass("/newsgroups")?> ><a href="http://www.weimarnetz.de/newsgroups" >Mailinglisten</a></li>
