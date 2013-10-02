@@ -57,10 +57,13 @@
             </div>
             <!-- ein halber block (12/6=1/2) -->
             <div class="col-sm-6">
-              <h2 class="page-header">Aktuelle Meldungen</h2>
-              <!-- dyn: news-liste -->
-	      <?php include("./inc/currentnews.inc.php") ?>
-              <p><a class="btn btn-xs btn-default" href="http://wireless.subsignal.org/index.php?title=Vorlage:Startseite.Aktuelles&action=edit" target="_blank">Text bearbeiten &raquo;</a></p>
+              <!--<h2 class="page-header">Aktuelle Meldungen</h2>
+              <!- dyn: news-liste -->
+	      <?php //include("./inc/currentnews.inc.php") ?>
+      	      <!--<p><a class="btn btn-xs btn-default" href="http://wireless.subsignal.org/index.php?title=Vorlage:Startseite.Aktuelles&action=edit" target="_blank">Text bearbeiten &raquo;</a></p>
+	      -->
+	      <h2 class="page-header">Worum geht es?</h2>
+	      <a href="/about"><img class="img-responsive" src="/img/video/ffvideo.png"/></a>
             </div>
     
    
