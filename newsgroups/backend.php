@@ -1,9 +1,6 @@
 <? header("Content-Type: text/xml"); ?>
 <? echo '<?';?>xml version="1.0" encoding="ISO-8859-1"<? echo '?>';?>
 
-<!DOCTYPE rss PUBLIC "-//Netscape Communications//DTD RSS 0.91//EN"
- "http://my.netscape.com/publish/formats/rss-0.91.dtd">
-
 <rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:itunes="http://www.itunes.com/DTDs/Podcast-1.0.dtd" >
 
 <? /* 
@@ -52,6 +49,7 @@ foreach($thread as $t) {
   echo '<link>'.$articlelink.'?id='.$t->number.'&amp;group='.$group.'</link>\n';
   echo '<dc:contributor>'.htmlspecialchars($t->name).' ('.
        htmlspecialchars($t->from).')</dc:contributor>'."\n";
+  echo '<pubDate>'.date('c', $t->date).'</pubDate>'."\n";
   echo "</item>\n";
 }
 ?>
