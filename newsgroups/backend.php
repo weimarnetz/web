@@ -4,7 +4,7 @@
 <!DOCTYPE rss PUBLIC "-//Netscape Communications//DTD RSS 0.91//EN"
  "http://my.netscape.com/publish/formats/rss-0.91.dtd">
 
-<rss version="0.91">
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:itunes="http://www.itunes.com/DTDs/Podcast-1.0.dtd" >
 
 <? /* 
     * Name of your Channel, 
@@ -12,7 +12,7 @@
     * Description and
     * Language of your channel
     */ 
-ini_set('display_errors', 'On');
+//ini_set('display_errors', 'On');
 ?>
 
 <channel>
@@ -28,26 +28,28 @@ $group="freifunk.de.weimar.discuss";
 // Path to the spool-dir of your newsportal-installation
 $spooldir="http://www.weimarnetz.de/newsgroups/spool/";
 // Where is your newsportal.php?
-$newsportal="http://www.weimarnetz.de/newsgroups/newsportal.php";
+$newsportal="./newsportal.php";
 // Link to your article.php
 $articlelink="http://www.weimarnetz.de/newsgroups/article.php";
+// Maximum number of articles
+$maxArticles=20;
 
 include "config.inc.php";
-include $newsportal;
+include ("$newsportal");
 $compress_spoolfiles=false;
-$thread=array_reverse(thread_load($group));
+$thread=thread_load($group);
 
- print_r($thread);
+// print_r($thread);
 
 $lines=array();
 $i=0;
 foreach($thread as $t) {
   $i++;
-  if($i==15) break; // maximum articles shown
+  if($i==$maxArticles) break; // maximum articles shown
   echo "<item>\n";
   echo '<title>'.htmlspecialchars($t->subject).' ('.
        htmlspecialchars($t->name).")</title>\n";
-  echo '<link>'.$articlelink.'?id='.$t->number."</link>\n";
+  echo '<link>'.$articlelink.'?id='.$t->number.'&amp;group='.$group.'</link>\n';
   echo '<dc:contributor>'.htmlspecialchars($t->name).' ('.
        htmlspecialchars($t->from).')</dc:contributor>'."\n";
   echo "</item>\n";
