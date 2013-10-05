@@ -27,7 +27,7 @@
           <li>dem Betreiben von Diensten für die Community und der Entwicklung von Webanwendungen.</li>
         </ul>
 
-        <p>Komm zum <a href="../contact">Freifunk-Treffen</a> oder frag auf der <a href="../contact">Mailingliste</a>. Du kannst uns auch mit <a href="http://www.betterplace.org/de/projects/14418-berlin-freifunk-net">Spenden</a> unterstützen.
+        <p>Komm zum <a href="../contact">Freifunk-Treffen</a> oder frag auf der <a href="../contact">Mailingliste</a>. Du kannst uns auch mit <a href="http://www.betterplace.org/de/projects/14895-weimarnetz-e-v-freies-wlan-in-weimar">Spenden</a> unterstützen.
         </p>
     
 
