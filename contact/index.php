@@ -16,7 +16,7 @@
       <!-- 1/2 grid, auf großem display 1/4 grid -->
       <div class="col-sm-6 col-lg-3"><h2>Per Mailingliste</h2>
         <address><strong>Allgemeine Liste</strong><br>
-          wireless@subsignal.org		
+          wireless@subsignal.org    
         </address>
         <address><strong>Diskussionsliste</strong><br>
           wireless-discuss@subsignal.org</address>
@@ -33,10 +33,32 @@
           </div>
           <div class="col-sm-6 col-lg-3"><h2>Telefonisch</h2>
             <address><strong>Weimarnetz Sorgentelefon</strong><br>
-              03643 / 544 304</address>	 	
+              03643 / 544 304</address>   
             </div> 
           </div>
-          
+          <div class="row">
+            <!-- zweite Reihe -->
+            <!-- 1 grid je für fb und twitter, auf großem display 1/2 -->
+            <div class="col-sm-12 col-lg-6">
+              <h2>Twitter</h2>
+              <p>Folge uns auf Twitter und verpasse keine Neuigkeiten</p>
+              <a class="twitter-timeline" href="https://twitter.com/weimarnetz" data-chrome="nofooter transparent noborders" data-tweet-limit="5" data-widget-id="386773629188317184">Tweets von @weimarnetz</a>
+              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            </div>
+            <div class="col-sm-12 col-lg-6">
+              <h2>Facebook</h2>
+              <p>Gib uns dein Like bei Facebook. Hier findest du Informationen und kannst uns Fragen stellen oder mit uns diskutieren.</p>
+              <div class="fb-like-box" data-href="http://www.facebook.com/weimarnetz" data-width="The pixel width of the plugin" data-height="300" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
+              <div id="fb-root"></div>
+              <script>(function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                  if (d.getElementById(id)) return;
+                  js = d.createElement(s); js.id = id;
+                  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+                  fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));</script>
+            </div>
+          </div>
           <?php include("../inc/footer.inc.php")?>
 
         </div> <!-- ende container -->
