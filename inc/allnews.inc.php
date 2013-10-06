@@ -19,7 +19,14 @@ $feed->handle_content_type();
 	/*
 	Here, we'll loop through all of the items in the feed, and $item represents the current item in the loop.
 	*/
-	foreach ($feed->get_items(0, 5) as $item):
+	$counter=1;
+	foreach ($feed->get_items(0, 10) as $item):
+	if ($item->get_title() == "") {
+		continue;
+	}
+	if ($counter > 5) {
+		break;
+	}
 	?>
  
 		<li class="item">
@@ -27,6 +34,8 @@ $feed->handle_content_type();
 			<p><small>Vom <?php echo $item->get_date('j.n.Y, G:i \U\h\r'); ?></small></p>
 		</li>
  
-	<?php endforeach; ?>
+	<?php 
+	$counter++;
+	endforeach; ?>
 </ul>
 
