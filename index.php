@@ -85,20 +85,15 @@
             <div class="col-sm-6">
               <h2 class="page-header">Spendenaufruf</h2>
               <!-- dyn: spenden-liste -->
-	      <?php include("./inc/fundings.inc.php") ?>
-      
-              <!-- paypal button -->
-              <ul><li>
-                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                  <span class="label label-primary" style="vertical-align:text-top">PayPal:</span> 
-                  <input type="hidden" name="cmd" value="_s-xclick">
-                  <input type="hidden" name="hosted_button_id" value="MN595Q3HPXZVY">
-                  <input type="image" src="https://www.paypalobjects.com/de_DE/DE/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="Jetzt einfach, schnell und sicher online bezahlen – mit PayPal.">
-                  <img alt="" border="0" src="https://www.paypalobjects.com/de_DE/i/scr/pixel.gif" width="1" height="1">
-                </form>
-              </li></ul>
-      
-              <!-- <p><a class="btn btn-default" href="#">View details &raquo;</a></p> -->
+	      <p>
+		Die Nutzung von Weimarnetz ist kostenlos und keiner der Betreiber von Netzknoten verlangt Geld oder andere Zuwendungen. Jeder Mensch soll das Netz ohne Anmeldung, eigene Router und schlechtes Gewissen nutzen können. Falls das Gewissen trotzdem hineinredet, stellt einen eigenen Router auf und unterstützt uns durch Spenden.
+	      </p>
+	      <p>
+		Eure Spenden werden eingesetzt, um laufende Kosten zu decken, z.B. für den VPN-Server, um die Störerhaftung von den DSL-Einspeisern zu nehmen.
+	      </p>
+	      <p>
+		Welche Möglichkeiten es gibt, uns finanziell zu unterstützen und wofür wir die Spenden einsetzen erfahrt ihr auf <a href="/spenden">dieser Seite</a>.
+	      </p>
             </div>
     
           </div> <!-- ende reihe -->
