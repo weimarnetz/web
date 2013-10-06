@@ -20,7 +20,7 @@
         </address>
         <address><strong>Diskussionsliste</strong><br>
           wireless-discuss@subsignal.org</address>
-          <span class="label label-warning">Achtung!</span> Die Teilnahme an den Mailinglisten setzt eine <a href="http://wireless.subsignal.org/index.php?title=Mailingliste" target="_blank">Registrierung</a> voraus, sonst kommt unter Umständen nie eine Antwort an. Alternativ kann der <a href="./news.php">Newsserver</a> ohne Anmeldung genutzt werden. 
+          <span class="label label-warning">Achtung!</span> Die Teilnahme an den Mailinglisten setzt eine <a href="http://wireless.subsignal.org/index.php?title=Mailingliste" target="_blank">Registrierung</a> voraus, sonst kommt unter Umständen nie eine Antwort an. Alternativ kann der <a href="../newsgroups">Newsserver</a> ohne Anmeldung genutzt werden. 
         </div>
         <div class="col-sm-6 col-lg-3"><h2>Persönlich</h2>
           <p>Wir treffen uns wöchentlich jeden Dienstag ab 20 Uhr, meist im Maschinenraum in der Marienstraße 18. Neben Vorträgen und der Möglichkeit zum Erfahrungsaustausch gibt es viel praktische Firmwareentwicklung und wenn nötig, Bastelorgien am Gerät. Falls dann noch Zeit bleibt, kann man Mate und Bier genießen.<br> Wir begrüßen außerdem gern neue Interessenten und geben Hilfestellung bei Problemen oder der Inbetriebnahme eines neuen Knoten.</p>
