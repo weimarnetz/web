@@ -53,7 +53,7 @@
             <div class="col-sm-6">
               <h2 class="page-header">Was ist Weimarnetz?</h2>
 	      Weimarnetz baut ein freies, unabhängiges und dezentral organisiertes Datennetz in der Stadt Weimar auf. Das Netz basiert auf Funkverbindungen, die mit handelsüblichen WLAN-Geräten aufgebaut werden. Weimarnetz ist die lokale Umsetzung der über die Ländergrenzen hinweg bekannten <a href="http://www.freifunk.net" target="_blank">Freifunk-Initiative</a>.</br></br>
-	      Werde auch Du Teil des Netzes und <a href="http://wireless.subsignal.org/index.php?title=Schnelleinstieg">mach mit!</a> 
+	      Werde auch Du Teil des Netzes und <a href="/mitmachen">mach mit!</a> 
             </div>
             <!-- ein halber block (12/6=1/2) -->
             <div class="col-sm-6">
@@ -74,13 +74,12 @@
 
             <!-- ein halber block (12/6=1/2) -->
             <div class="col-sm-6">
-              <h2 class="page-header">Aktuelle Diskussionen</h2>
+              <h2 class="page-header">Neues aus dem Weimarnetz</h2>
               <p>
                 <!-- dyn: discuss-liste -->
-	        <?php include("./inc/currentnews.inc.php") ?>
+	        <?php include("./inc/allnews.inc.php") ?>
         
               </p>
-              <p><a class="btn btn-xs btn-default" href="./news.php" target="_blank" >Direkt zum Newsserver</a> <small>(Benutzer: <code>freifunk</code> Passwort: <code>weimar</code>)</small></p>
             </div>
 
             <div class="col-sm-6">
