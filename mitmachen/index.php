@@ -21,10 +21,10 @@
         Alle können Freifunker werden! Wir freuen uns über Unterstützung bei:</p>
       
         <ul>
-          <li>der Erweiterung des Freifunk-Netzwerks durch das Aufstellen neuer Freifunk-Router (<a href="#aufstellen">siehe unten</a>) oder durch das Bereitstellen interessanter Standorte für Freifunk-Router (z.B. Dächer).</li>
-          <li>der Entwicklung von Infomaterial, Bannern, Transparenten, T-Shirts, ... was immer dir Kreatives einfällt!</li>
-          <li>der Verbreitung der Idee auf Veranstaltungen, Barcamps und Kongressen.</li>
-          <li>dem Betreiben von Diensten für die Community und der Entwicklung von Webanwendungen.</li>
+          <li>der <strong>Erweiterung des Freifunk-Netzwerks</strong> durch das Aufstellen neuer Freifunk-Router (<a href="#aufstellen">siehe unten</a>) oder durch das Bereitstellen interessanter Standorte für Freifunk-Router (z.B. Dächer).</li>
+          <li>der <strong>Entwicklung von Infomaterial</strong>, Bannern, Transparenten, T-Shirts, ... was immer dir Kreatives einfällt!</li>
+          <li>der <strong>Verbreitung der Idee</strong> auf Veranstaltungen, Barcamps und Kongressen.</li>
+          <li>dem <strong>Betreiben von Diensten</strong> für die Community und der Entwicklung von Webanwendungen.</li>
         </ul>
 
         <p>Komm zum <a href="../contact">Freifunk-Treffen</a> oder frag auf der <a href="../contact">Mailingliste</a>. Du kannst uns auch mit <a href="http://www.betterplace.org/de/projects/14895-weimarnetz-e-v-freies-wlan-in-weimar">Spenden</a> unterstützen.
@@ -57,7 +57,7 @@
                     <ul>
                       <li>Besorge einen Freifunk-fähigen Router. Empfehlung: <a href="#" data-toggle="tooltip" title="TP-Link TL-WR841N, ~20 EUR, 2.4 GHz.">TL-WR-841N</a> oder <a href="#" data-toggle="tooltip" title="TP-Link TL-WDR3600, ~55 EUR, 2.4 GHz und 5 GHz.">TL-WDR3600</a>.
                       </li>
-                      <li>Falls du deinen Internet-Zugang freigeben möchtest, wählt sich dein Router automatisch in unser VPN ein, um dich vor Abmahnungen zu schützen <!-- TODO: Link (wie komme ich an den account?) -->
+                      <li>Falls du deinen Internet-Zugang freigeben möchtest, wählt sich dein Router automatisch in unser VPN ein, um dich vor Abmahnungen zu schützen 
                       </li>
                       <li>Installiere und konfiguriere die <a href="#" data-toggle="tooltip" title="Die Freifunk-Firmware ist eine Software, die auf einem Router installiert wird und ihn in einen Freifunk-Router verwandelt.">Freifunk-Firmware</a>.
                         <!-- TODO: Link (wie flashe ich?) -->
@@ -73,7 +73,7 @@
           <div class="col-sm-4 col-lg-4">
             <div class="case" id="case-level2">
               <div class="case-head page-header">
-                <h3>Level 2</h3>
+                <h3>Nachbarschaft</h3>
                 <h5>Balkon, hohes Gebäude, öffentlicher Platz, Park, weitläufiges Gelände</h5>
                 <img class="img-responsive"  src="../img/participate/participate_medium.png">
               </div>
@@ -153,10 +153,9 @@
               <dt>Wo stehen schon Freifunk-Router?</dt>
               <dd>Schau mal auf der <a href="../map2">Netzkarte</a> nach. Wenn es bei dir noch keinen Freifunk-Router in der Nachbarschaft gibt, dann sei die oder der Erste!</dd>
               <dt>Benötige ich einen Router für 2.4 GHz oder 5 GHz?</dt>
-              <dd>Damit sich ein Freifunk-Router mit einem anderen Freifunk-Router über WLAN verbinden kann, müssen beide Router im gleichen Frequenzband (2.4 GHz oder 5 GHz) arbeiten. Bitte vorher prüfen!</dd>
+              <dd>Damit sich ein Freifunk-Router mit einem anderen Freifunk-Router über WLAN verbinden kann, müssen beide Router im gleichen Frequenzband (2.4 GHz oder 5 GHz) arbeiten. Bitte sprich dich vorher mit deinen Funknachbarn ab!</dd>
               <dt>Können mehrere Freifunk-Router an einem Ort miteinander verbunden werden?</dt>
-              <dd>Mehrere Freifunk-Router können über ein Switch mit Netzwerk-Kabeln verbunden werden. Die im <em>Starter-Kit</em> empfohlenen Router haben z.B. ein
-                integriertes Switch.</dd>
+              <dd>Mehrere Freifunk-Router können über ein Switch mit Netzwerk-Kabeln verbunden werden. Die im <em>Starter-Kit</em> empfohlenen Router haben z.B. ein integriertes Switch.</dd>
             </dl>
 
             <small>Die Inhalte dieser Seite wurden von <a href="http://berlin.freifunk.net" target="_blank">Freifunk Berlin</a> übernommen und angepasst.</small>
