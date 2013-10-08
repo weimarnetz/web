@@ -19,5 +19,5 @@ $feed_date = date("r", mktime(10,0,0,9,8,2010));
 $MergedRSS = new MergedRSS($feeds, "Weimarnetz News Feed", "http://www.weimarnetz.de/", "This is the merged RSS feed our resources", $feed_date);
 
 //Export the first 10 items to screen
-$MergedRSS->export(false, true, 50);
+$MergedRSS->export(false, true, 10);
 

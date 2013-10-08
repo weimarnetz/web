@@ -1,5 +1,5 @@
 <?
-require_once('simplepie/simplepie_1.3.1.mini.php');
+require_once('simplepie/simplepie.php');
 // We'll process this feed with all of the default options.
 $feed = new SimplePie();
 // Set which feed to process.
@@ -20,13 +20,13 @@ $feed->handle_content_type();
 	Here, we'll loop through all of the items in the feed, and $item represents the current item in the loop.
 	*/
 	$counter=1;
-	foreach ($feed->get_items(0, 10) as $item):
-	if ($item->get_title() == "") {
-		continue;
-	}
-	if ($counter > 5) {
-		break;
-	}
+	foreach ($feed->get_items(0, 5) as $item):
+//	if ($item->get_title() == "") {
+//		continue;
+//	}
+//	if ($counter > 5) {
+//		break;
+//	}
 	?>
  
 		<li class="item">
