@@ -155,7 +155,7 @@
               <dt>Benötige ich einen Router für 2.4 GHz oder 5 GHz?</dt>
               <dd>Damit sich ein Freifunk-Router mit einem anderen Freifunk-Router über WLAN verbinden kann, müssen beide Router im gleichen Frequenzband (2.4 GHz oder 5 GHz) arbeiten. Die meisten Router funken momentan (Ende 2013) auf dem 2.4 Ghz-Band; 5 Ghz wird zumeist für Richtfunk-Strecken eingesetzt. In Zweifelsfall sprich dich mit deinen Funknachbarn ab oder komme zum Freifunktreffen.</dd>
               <dt>Können mehrere Freifunk-Router an einem Ort miteinander verbunden werden?</dt>
-              <dd>Mehrere Freifunk-Router können über ein Switch mit Netzwerk-Kabeln verbunden werden. Die im <em>Starter-Kit</em> empfohlenen Router haben z.B. ein integriertes Switch.</dd>
+              <dd>Mehrere Freifunk-Router können über ein Switch mit Netzwerk-Kabeln verbunden werden. Die im <em>Starter-Kit</em> empfohlenen Router haben z.B. einen integrierten Switch. Das bedeutet, du kannst zwei dieser Router direkt mit einem Kabel verbinden</dd>
             </dl>
 
             <small>Die Inhalte dieser Seite wurden von <a href="http://berlin.freifunk.net" target="_blank">Freifunk Berlin</a> übernommen und angepasst.</small>
