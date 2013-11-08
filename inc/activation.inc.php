@@ -4,7 +4,7 @@
     $neighborip = $_GET['nodeip'];
     $neighbornode = $_GET['node'];
     if ($gwip <> '' or $neighborip <> ''){
-      echo '<div class="alert jumbotron alter-unlock alert-success alert-dismissable">
+      echo '<div class="alert jumbotron alert-top alert-success alert-dismissable">
       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><div class="container">';
       echo '<h2>Dein Internetzugang wurde erfolgreich freigeschaltet</h2>';
       if ($gwip <> '') {

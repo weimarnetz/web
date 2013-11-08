@@ -10,19 +10,7 @@
   <body id="home">
 
     <?php include("./inc/navbar.inc.php") ?>
-    
-    <!-- log-in-alert for testing-->
-    <!--
-    <div class="alert jumbotron alert-success alert-dismissable">
-      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-      <div class="container">
-        <h2>Dein Internetzugang wurde erfolgreich freigeschaltet</h2>
-        <p>Den Internetzugang stellt Dir dieser <a href='http://", $gwip, "/cgi-bin/luci/freifunk/contact'>freundliche Nachbar bereit</a></p>
-      </div>
-    </div>
-     -->
 
-        
     <?php include("./inc/activation.inc.php") ?>
 
     <!-- grosses startseitenbanner -->
