@@ -101,8 +101,8 @@
         </div> <!-- ende content -->
     
         <div class="col-sm-2" style="text-align:right">
-          <h2 class="page-header"><small class="text-muted">Sponsor</small></h2>
-          <!-- mindfactory banner -->
+          <h2 class="page-header"><small class="text-muted">Verein</small></h2>
+          <!-- mindfactory banner 
           <img src="img/Banner/120x500_mindfactory_hardware.jpg" width="120" height="500" alt="Ihre Hardware stößt an ihre Grenzen? Zeit für ein Upgrade! www.mindfactory.de" usemap="#admap" />
           <map name="admap">
             <!-- #$-:Image map file created by GIMP Image Map plug-in -->
@@ -110,8 +110,22 @@
             <!-- #$-:Please do not edit lines starting with "#$" -->
             <!-- #$VERSION:2.3 -->
             <!-- #$AUTHOR:Unknown -->
-            <area shape="rect" coords="3,413,116,438" target="_blank" href="http://www.mindfactory.de" />
-          </map>
+            <!--<area shape="rect" coords="3,413,116,438" target="_blank" href="http://www.mindfactory.de" />
+          </map>-->
+	  <p>
+	  <address><strong>Weimarnetz e.V.</strong><br>
+            Marienstr. 18<br>
+            99423 Weimar</address>
+          <address><strong>Weimarnetz Sorgentelefon</strong><br>
+              +49 3643 544304</address>
+	  <address><strong>Email</strong><br>
+	    <a href="mailto:wireless@subsignal.org?subject=Kontakt über weimarnetz.de">wireless@subsignal.org</a>
+	  </address>
+	  <strong>Spenden</strong>
+	  </p>
+	  <p>
+	  <iframe frameborder='0' marginheight='0' marginwidth='0' src='http://www.betterplace.org/de/projects/14895-weimarnetz-e-v-freies-wlan-in-weimar/widget' width='160' height='260' style='border: 0; padding:0; margin:0;'>Ihr Browser unterstützt keine Iframes. <a href='http://www.betterplace.org/projects'>Online Spenden</a> auf betterplace.org</iframe>
+	  </p>
         </div>
       
       </div> <!-- ende main -->

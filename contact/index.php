@@ -33,7 +33,7 @@
           </div>
           <div class="col-sm-6 col-lg-3"><h2>Telefonisch</h2>
             <address><strong>Weimarnetz Sorgentelefon</strong><br>
-              03643 / 544 304</address>   
+              +49 3643 544304</address>   
             </div> 
           </div>
           <div class="row">
