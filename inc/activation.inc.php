@@ -1,4 +1,5 @@
     <?php
+    $origin = $_GET['origin'];
     $gwip = $_GET['gateway'];
     $gwnode = $_GET['gwnode'];
     $neighborip = $_GET['nodeip'];
@@ -12,6 +13,9 @@
       }  
       if ($neighborip <> '') {
         echo '<p>Dein nächster Weimarnetzknoten wird von <a href="http://', $neighborip , '/cgi-bin/luci/freifunk/contact">diesem freundlichen Nachbarn</a> betrieben</p>';
+      }
+      if ($origin <> '') {
+	echo '<p><a href="', urldecode($origin), '" target="_blank">Diese Seite</a>wolltest du ursprünglich ansehen.</p>';
       }
       echo "</div></div>";
     }
