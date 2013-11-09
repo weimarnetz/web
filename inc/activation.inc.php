@@ -15,7 +15,7 @@
         echo '<p>Dein nächster Weimarnetzknoten wird von <a href="http://', $neighborip , '/cgi-bin/luci/freifunk/contact">diesem freundlichen Nachbarn</a> betrieben</p>';
       }
       if ($origin <> '') {
-	echo '<p><a href="', urldecode($origin), '" target="_blank">Diese Seite</a>wolltest du ursprünglich ansehen.</p>';
+	echo '<p><small>PS: <a href="', urldecode($origin), '" target="_blank">Diese Seite</a> wolltest du ursprünglich ansehen.</small></p>';
       }
       echo "</div></div>";
     }
