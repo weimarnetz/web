@@ -56,7 +56,7 @@
         <a href="/freifunk/firmware/ar71xx" class="dropdown-toggle"  data-toggle="dropdown">Downloads <b class="caret"></b></a>
         <ul class="dropdown-menu">
           <li class="dropdown-header">Meshkit</li>
-	  <li <?php echo getActiveClass("/meshkit")?> ><a href="http://meshkit.weimarnetz.de" >Eigene Firmware bauen</a></li>
+	  <li <?php echo getActiveClass("/meshkit")?> ><a href="http://meshkit.weimarnetz.de:8000" >Eigene Firmware bauen</a></li>
           <li class="dropdown-header">Firmware</li>
 	  <li <?php echo (strpos(dirname($_SERVER["SCRIPT_NAME"]), "/freifunk/firmware/ar71xx") !== false) ? "class='active'":"" ;?> ><a href="http://www.weimarnetz.de/freifunk/firmware/ar71xx" >Atheros (TP-Link, Ubiqity, usw)</a></li>   
           <li <?php echo getActiveClass("freifunk/firmware/brcm47xx")?> ><a href="http://www.weimarnetz.de/freifunk/firmware/brcm47xx" >Broadcom (Linksys, Buffalo, usw.)</a></li>
