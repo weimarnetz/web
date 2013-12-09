@@ -33,7 +33,7 @@
           <li <?php echo getActiveClass("/contact")?> ><a href="http://www.weimarnetz.de/contact">Community</a></li>
           <li <?php echo getActiveClass("/spenden")?> ><a href="http://www.weimarnetz.de/spenden">Spenden</a></li>
           <li class="dropdown-header">Dokumentation</li>
-          <li <?php echo getActiveClass("/wiki")?>><a href="http://www.weimarnetz.de/wiki">Wiki</a></li>
+          <li <?php echo getActiveClass("/wiki")?>><a href="http://wireless.subsignal.org">Wiki</a></li>
           <li <?php echo getActiveClass("/newsgroups")?> ><a href="http://www.weimarnetz.de/newsgroups" >Mailinglisten</a></li>
           <li class="dropdown-header">Rechtliches</li>
           <li <?php echo getActiveClass("/termsofuse")?>><a href="http://www.weimarnetz.de/termsofuse" >Nutzungsbedingungen</a></li>
