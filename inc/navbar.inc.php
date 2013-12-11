@@ -45,6 +45,7 @@
         <ul class="dropdown-menu">
           <li class="dropdown-header">Status</li>
           <li <?php echo getActiveClass("/status")?> ><a href="http://www.weimarnetz.de/status" >OLSR Status</a></li>   
+          <li <?php echo getActiveClass("/services")?> ><a href="http://www.weimarnetz.de/services" >Angebote/Dienste</a></li>   
           <li <?php echo getActiveClass("/monitoring")?> ><a href="http://www.weimarnetz.de/monitoring" >Monitoring</a></li>
           <li class="dropdown-header">Karten</li>
           <li <?php echo getActiveClass("/map2")?> ><a href="http://www.weimarnetz.de/map2">Geographische Karte (aktiv + inaktiv)</a></li>
