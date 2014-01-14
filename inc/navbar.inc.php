@@ -44,8 +44,8 @@
         <a href="/map" class="dropdown-toggle"  data-toggle="dropdown">Daten <b class="caret"></b></a>
         <ul class="dropdown-menu">
           <li class="dropdown-header">Status</li>
-          <li <?php echo getActiveClass("/status")?> ><a href="http://www.weimarnetz.de/status" >OLSR Status</a></li>   
-          <li <?php echo getActiveClass("/services")?> ><a href="http://www.weimarnetz.de/services" >Angebote/Dienste</a></li>   
+          <li <?php echo getActiveClass("/status")?> ><a href="http://www.weimarnetz.de/status" >OLSR Status</a></li>  
+	  <li <?php echo getActiveClass("/services")?> ><a href="http://www.weimarnetz.de/services" >Angebote/Dienste</a></li> 
           <li <?php echo getActiveClass("/monitoring")?> ><a href="http://www.weimarnetz.de/monitoring" >Monitoring</a></li>
           <li class="dropdown-header">Karten</li>
           <li <?php echo getActiveClass("/map2")?> ><a href="http://www.weimarnetz.de/map2">Geographische Karte (aktiv + inaktiv)</a></li>
@@ -57,7 +57,7 @@
         <a href="/freifunk/firmware/ar71xx" class="dropdown-toggle"  data-toggle="dropdown">Downloads <b class="caret"></b></a>
         <ul class="dropdown-menu">
           <li class="dropdown-header">Meshkit</li>
-	  <li <?php echo getActiveClass("/meshkit")?> ><a href="http://meshkit.weimarnetz.de:8000" >Eigene Firmware bauen</a></li>
+	  <li <?php echo getActiveClass("/meshkit")?> ><a href="http://meshkit.weimarnetz.de" >Eigene Firmware bauen</a></li>
           <li class="dropdown-header">Firmware</li>
 	  <li <?php echo (strpos(dirname($_SERVER["SCRIPT_NAME"]), "/freifunk/firmware/ar71xx") !== false) ? "class='active'":"" ;?> ><a href="http://www.weimarnetz.de/freifunk/firmware/ar71xx" >Atheros (TP-Link, Ubiqity, usw)</a></li>   
           <li <?php echo getActiveClass("freifunk/firmware/brcm47xx")?> ><a href="http://www.weimarnetz.de/freifunk/firmware/brcm47xx" >Broadcom (Linksys, Buffalo, usw.)</a></li>
