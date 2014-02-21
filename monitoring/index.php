@@ -26,8 +26,9 @@
         <tr>
             <th class="sorttable_numeric">Geändert<span id="sorttable_sortfwdind">&nbsp;▾</span></th>
             <th>Name</th>
+	    <th class="sorttable_numeric">Knoten</th>
 	    <th>Firmware</th>
-	    <th class="sorttable_numeric">Uptime</th>
+	    <th class="sorttable_numeric">Uptime in h</th>
 	    <th class="sorttable_numeric">Nachbarn</th>
         </tr>
     </thead>
@@ -38,7 +39,7 @@
 
 </div>
 	
-<script src="http://underscorejs.org/underscore.js"></script>
+<script src="../underscore.js"></script>
   <?php include("../inc/footer.inc.php") ?>
 
 </div>
@@ -47,10 +48,18 @@
     
     <% _.each(items,function(item,key,list){ if (item.doc.firmware){%>
     <tr>
-        <td style="background-color:<%= lastChangeColor(item.doc.mtime) %>"><%= item.doc.mtime  %></td>
+        <td class="<%= lastChangeColor(item.doc.mtime) %>"><%= item.doc.mtime  %></td>
         <td><a href="#" data-toggle="modal" data-target="#info<%= key %>"><%= item.doc.hostname %></a></td>
+	  <% if (item.doc.olsr.ipv4Config) {%> 
+	    <td data-nodenumer="<%= item.doc.nodeNumber %>" data-mainip="<%= item.doc.olsr.ipv4Config.mainIpAddress %>">
+	      <a href="http://<%= item.doc.olsr.ipv4Config.mainIpAddress %>/cgi-bin-status.html" target="_blank">
+	      <%= item.doc.nodeNumber %>
+	      </a><% } else { %>
+	    <td>
+	  <% } %>
+	</td>
 	<td><%= item.doc.firmware.revision %></td>
-	<td><%= item.doc.system.uptime   %></td>
+	<td data-uptime="<%= item.doc.system.uptime %>"><%= Math.round(item.doc.system.uptime/3600)   %></td>
 	<td><%= item.doc.links.length %></td>
     
     </tr>
@@ -121,6 +130,9 @@ success: ( function(Response){
   _.each(rows, function(item, key, list) {
     var diff = new Date().getTime() - new Date(item.doc.mtime).getTime();
     item.doc.mtime = Math.round(diff/36000000);
+    if (item.doc.olsr && item.doc.olsr.ipv4Config) {
+      item.doc.nodeNumber = getNodeNumber(item.doc.olsr.ipv4Config.mainIpAddress);
+    }
   });
   console.log(26, 'sorted: ', rows);
   $("table.outer tbody").html(_.template(tableTemplate,{items:rows}));
@@ -132,15 +144,20 @@ error: function(XMLHttpRequest, textStatus, errorThrown){alert("Error");
 };
 test()
 
+function getNodeNumber(ip) {
+  ip = ip.split(".");
+  return Math.round(ip[2]) + ( Math.round(ip[3] / 64) -1 ) * 255;
+}
+
 function lastChangeColor(mtime) {
   if (mtime<=12) {
-    return "#00cc00";
+    return "success";
   } else if (mtime<=96) {
-    return "#ffcb05";
+    return "warning";
   } else if (mtime<=192) {
-    return "#ff6600";
+    return "danger";
   } else {
-    return "#bb3333";
+    return "danger";
   }
 }
   
