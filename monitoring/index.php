@@ -4,6 +4,7 @@
   <?php include("../inc/_head.inc.php") ?>
   <script src="/inc/sorttable.js"></script>
   <link href="/inc/monitoring.css" rel="stylesheet">
+  <link href="/inc/jquery.loadmask.css" rel="stylesheet">
 </head>
 
 <body onload="setIframeHeight('ifrm');" onresize="setIframeHeight('ifrm');">
@@ -24,7 +25,7 @@
 <table class="outer table table-striped sortable">
     <thead>
         <tr>
-            <th class="sorttable_numeric">Geändert<span id="sorttable_sortfwdind">&nbsp;▾</span></th>
+            <th class="sorttable_numeric">Alter in h<span id="sorttable_sortfwdind">&nbsp;▾</span></th>
             <th>Name</th>
 	    <th class="sorttable_numeric">Knoten</th>
 	    <th>Firmware</th>
@@ -77,11 +78,11 @@
           </div>
           <div class="modal-body">
 	    <ul class="nav nav-tabs" id="dev<%= key%>">
-	      <li class="active"><a href="#general<%= key %>" data-toggle="pill">Allgemein</a></li>
-	      <li><a href="#contact<%= key %>" data-toggle="pill">Kontakt</a></li>
-	      <li><a href="#network<%= key %>" data-toggle="pill">Netzwerk</a></li>
-	      <li><a href="#olsr<%= key %>" data-toggle="pill">OLSR</a></li>
-	      <li><a href="#map<%= key %>" data-toggle="pill">Karte</a></li>
+	      <li class="active"><a href="#general<%= key %>" data-toggle="tab">Allgemein</a></li>
+	      <li><a href="#contact<%= key %>" data-toggle="tab">Kontakt</a></li>
+	      <li><a href="#network<%= key %>" data-toggle="tab">Netzwerk</a></li>
+	      <li><a href="#olsr<%= key %>" data-toggle="tab">OLSR</a></li>
+	      <li><a href="#map<%= key %>" data-toggle="tab" data-tab-url="http://map.weimarnetz.de/#detail?node=<%= item.id %>">Karte</a></li>
 	    </ul>
 	    <div class="tab-content">
 	      <div class="tab-pane fade in active" id="general<%= key %>">
@@ -125,12 +126,9 @@
 		<% }) %>
 		</dl>
 	      </div>
-	      <div class="tab-pane fade in" id="map<%= key%>">
-		<iframe src="" width="100%" height="500px"></iframe>
-		<!--<iframe src="http://map.weimarnetz.de/map.html?bbox=<%= item.doc.longitude %>,<%= item.doc.latitude %>" width="100%" height="500px"></iframe>-->
-	      </div>
+	      <div class="tab-pane fade" id="map<%= key%>"></div>
 	    </div>
-          </div>
+	  </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Schließen</button>
           </div>
@@ -196,4 +194,7 @@ function lastChangeColor(mtime) {
   
 
 </script>
+<script src="/inc/jquery.loadmask.js"></script>
+<script src="/inc/bootstrap-remote-tabs.js"></script>
+
 </body></html>
