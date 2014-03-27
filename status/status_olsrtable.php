@@ -21,7 +21,7 @@
 		curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, $timeout);
 		$file_content = curl_exec($ch);
 		curl_close($ch);
-		$neighbors = json_decode("{ " . $file_content,true);
+		$neighbors = json_decode($file_content,true);
 		
                 
 		for ($i=0;$i< count($neighbors[links]);$i++) {
