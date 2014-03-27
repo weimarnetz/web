@@ -1,3 +1,4 @@
 *.php~
 *.spc
 /bower_components/
+/inc/feed/cache/
