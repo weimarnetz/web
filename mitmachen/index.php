@@ -55,11 +55,14 @@
                   <dt>So kannst du mitmachen</dt>
                   <dd>
                     <ul>
-                      <li>Besorge einen Freifunk-fähigen Router. Empfehlung: <a href="#" data-toggle="tooltip" title="TP-Link TL-WR841N, ~20 EUR, 2.4 GHz.">TL-WR-841N</a> oder <a href="#" data-toggle="tooltip" title="TP-Link TL-WDR3600, ~55 EUR, 2.4 GHz und 5 GHz.">TL-WDR3600</a>.
+                      <li>Besorge einen Freifunk-fähigen Router. Empfehlung:
+                          <a href="http://www.heise.de/preisvergleich/tp-link-tl-wr841n-a340658.html" data-toggle="tooltip" title="TP-Link TL-WR841N, ~20 EUR, 2.4 GHz." target="_blank">TL-WR-841N</a> oder
+                          <a href="http://www.heise.de/preisvergleich/tp-link-tl-wdr3600-a806392.html" data-toggle="tooltip" title="TP-Link TL-WDR3600, ~55 EUR, 2.4 GHz und 5 GHz." target="_blank">TL-WDR3600</a>.
+                          Du kannst den Router bei einem unserer Treffen mit bestellen.
                       </li>
                       <li>Falls du deinen Internet-Zugang freigeben möchtest, wählt sich dein Router automatisch in unser VPN ein, um dich vor Abmahnungen zu schützen 
                       </li>
-                      <li>Installiere und konfiguriere die <a href="#" data-toggle="tooltip" title="Die Freifunk-Firmware ist eine Software, die auf einem Router installiert wird und ihn in einen Freifunk-Router verwandelt.">Freifunk-Firmware</a>.
+                      <li>Installiere und konfiguriere die <a href="http://meshkit.weimarnetz.de" data-toggle="tooltip" title="Die Freifunk-Firmware ist eine Software, die auf einem Router installiert wird und ihn in einen Freifunk-Router verwandelt.">Freifunk-Firmware</a>.
                         <!-- TODO: Link (wie flashe ich?) -->
                       </li>
                       <li>Stelle den Router an einem geeigneten Ort auf (z.B. Fensterbank).</li>
