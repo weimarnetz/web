@@ -10,32 +10,86 @@
 <body onload="setIframeHeight('ifrm');" onresize="setIframeHeight('ifrm');">
 
   <?php include("../inc/navbar.inc.php") ?>
+<?
+  $apifile = "http://www.weimarnetz.de/weimarnetz.json";
+  $monfile = "http://www.weimarnetz.de/monitoring.json";
 
+  $api = file_get_contents($apifile);
+  $json = json_decode($api, true);
+  $mon = file_get_contents($monfile);
+  $monjson = json_decode($mon, true);
+  $servertable = '<table class="table table-striped sortable">' 
+    . '<thead>'
+    . ' <tr>'
+    .	'<th title="Hostname des Servers">Name</th>'
+    .	'<th title="Status des Servers (Up=läuft, Down=aus)">Status</th>'
+    .	'<th title="Anzahl Services in Ordnung">Ok</th>'
+    .	'<th title="Anzahl Services mit Warnung">Warnung</th>'
+    .	'<th title="Anzahl kritischer Services">Kritisch</th>'
+    .	'<th title="Anzahl Services, auf deren Rückmeldung gewartet wird">Wartend</th>'
+    .	'<th title="Anzahl Serices mit Status unbekannt">Unbekannt</th>'
+    .  '</tr>'
+    .'</thead>';
+  foreach($monjson['server'] as $server) {
+    if ($server['host_state'] == "UP" ) { $stateclass = "success";} else {$stateclass = "danger";}
+    if ($server['num_services_ok'] > 0 ) { $okclass = "";} else {$okclass = "danger";}
+    if ($server['num_services_warning'] > 0 ) { $warnclass = "warning";} else {$warnclass = "";}
+    if ($server['num_services_crit'] > 0 ) { $critclass = "danger";} else {$critclass = "";}
+    if ($server['num_services_pending'] > 0 ) { $pendingclass = "info";} else {$pendingclass = "";}
+    $servertable .= '<tr>'
+      . '<td class="' . $stateclass . '">' . $server['host'] . '</td>'
+      . '<td>' . $server['host_state'] . '</td>'
+      . '<td class="' . $okclass . '">' . $server['num_services_ok'] . '</td>'
+      . '<td class="' . $warnclass . '">' . $server['num_services_warn'] . '</td>'
+      . '<td class="' . $critclass . '">' . $server['num_services_crit'] . '</td>'
+      . '<td class="' . $pendingclass . '">' . $server['num_services_pending'] . '</td>'
+      . '<td>' . $server['num_services_unknown'] . '</td>'
+      . '</tr>';  
+  }
+
+  $servertable .= '</table>';
+
+  if ($monjson['routes_counter']['service_state'] == "OK" && $monjson['olsrd']['service_state'] == "OK") {
+    $servicetable = '<div class="row alert alert-success">VPN + OLSR OK - OLSR: ' . $monjson['olsrd']['svc_plugin_output'] . ', Routen: ' . $monjson['routes_counter']['svc_plugin_output'] . '</div>';
+  } else {
+    $servicetable = '<div class="row alert alert-danger">VPN + OLSR nicht OK - OLSR: ' . $monjson['olsrd']['svc_plugin_output'] . ', Routen: ' . $monjson['routes_counter']['svc_plugin_output'] . '</div>';
+  }
+    
+?>
   <div class="container">
 
-	 	<h1>Monitoring</h1>
-	 	<div class="row">
-	 	<div class="span6">Monitoring von Freifunkroutern in Weimar - Dokumentation folgt.</div>
-	 	<div class="span1 offset5"><a class="btn" href="http://intercity-vpn.de/networks/ffweimar/" target="_blank">Neues&nbsp;Tab</a></div>
-	 	</div>
-	 	<div class="row">	 	
-	 	</div>
-	 	<div>&nbsp;</div>
+<h1>Monitoring</h1>
+<div class="row">
+<div class="span6">Monitoring von Freifunkroutern in Weimar - Dokumentation folgt.</div>
+</div>
 
-<table class="outer table table-striped sortable">
+<h2>Allgemeine Daten</h2>
+<div class="row warning">
+<h3>VPN</h3>
+<? echo $servicetable;?>
+<h3>Server</h3>
+<? echo $servertable;?>
+</div>
+
+<h2>Daten der Router</h2>
+<div class="row">
+<div class="routergesamt">Router gesamt: </div>
+Router erreichbar: <? echo $json['state']['nodes']; ?> 
+<table class="router table table-striped sortable">
     <thead>
         <tr>
-            <th class="sorttable_numeric">Alter in h<span id="sorttable_sortfwdind">&nbsp;▾</span></th>
-            <th>Name</th>
-	    <th class="sorttable_numeric">Knoten</th>
-	    <th>Firmware</th>
-	    <th class="sorttable_numeric">Uptime in h</th>
-	    <th class="sorttable_numeric">Nachbarn</th>
+            <th title="Vor so vielen Stunden wurde die Information zuletzt aktualisiert" class="sorttable_numeric">Alter in h<span id="sorttable_sortfwdind">&nbsp;▾</span></th>
+            <th title="Name des Routers">Name</th>
+	    <th title="Knotennummer des Routers" class="sorttable_numeric">Knoten</th>
+	    <th title="Firmwareversion, die aktuell installiert ist">Firmware</th>
+	    <th title="So lang ist der letzte Neustart her" class="sorttable_numeric">Uptime in h</th>
+	    <th title="Anzahl der Nachbarknoten, die dieser Knoten sieht" class="sorttable_numeric">Nachbarn</th>
         </tr>
     </thead>
     <tbody>
     </tbody>
 </table>
+</div>
 <div class="infoboxes">
 
 </div>
@@ -166,7 +220,8 @@ success: ( function(Response){
     if (! item.doc.weimarnetz.nodenumber) { item.doc.weimarnetz.nodenumber = NaN; }
   });
   console.log(26, 'sorted: ', rows);
-  $("table.outer tbody").html(_.template(tableTemplate,{items:rows}));
+  $("div.routergesamt").html("Router gesamt: " + rows.length);
+  $("table.router tbody").html(_.template(tableTemplate,{items:rows}));
   $("div.infoboxes").html(_.template(infoBoxes,{items:rows}));
 } ),
 error: function(XMLHttpRequest, textStatus, errorThrown){alert("Error");
