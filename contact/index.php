@@ -16,7 +16,7 @@
       <!-- 1/2 grid, auf großem display 1/4 grid -->
       <div class="col-sm-6 col-lg-3"><h2>Per Email oder Mailingliste</h2>
 	<address><strong>Email</strong><br>
-	  <a href="kontakt@weimarnetz.de?subject=Anfrage über weimarnetz.de">kontakt@weimarnetz.de</a>
+	  <a href="mailto:kontakt@weimarnetz.de?subject=Anfrage über weimarnetz.de">kontakt@weimarnetz.de</a>
 	</address>
         <address><strong>Allgemeine Liste</strong><br>
           wireless@subsignal.org    
