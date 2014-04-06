@@ -49,7 +49,7 @@
 </div>
 
 <h3>Wo kann ich mitmachen</h3>
-<p>Du kannst eienen Router quasi überall aufbauen. Am besten gibt es vor ein eine Möglichkeit den Router ans Internet anzuschließen oder es gibt bereits WLAN-Funk-Nachbarn.</p>
+<p>Du kannst einen Router quasi überall aufbauen. Am besten gibt es vor Ort eine Möglichkeit den Router ans Internet anzuschließen oder es gibt bereits WLAN-Funk-Nachbarn in der Umgebung.</p>
 <p>Sieh auf der Karte nach ob bereits Knotenpunkte in deiner Nachbarschaft sind mit denen sich dein Router verbinden kann. Du kannst auch zusammen mit anderen einen Aufbau planen. Das <!--FIXME: Wiki-Seite vorher ueberarbeiten-->Weimarnetz-Treffen findet jeden Diestags im <a href="http://blog.maschinenraum.tk/contact/">Maschinenraum</a> statt. Wenn du nicht zum Treffen kommen kannst, erreichst du den Verein auch über die <a href="http://wireless.subsignal.org/index.php?title=Mailingliste">Mailingliste</a> oder über die <a href="mailto:kontakt@weimarnetz.de">Kontakt-E-Mail-Adresse</a>.</p>
 <div style="text-align: center">
 <iframe id="ifrm" src="http://map.weimarnetz.de/map.html#bbox=50.9484779952583,11.194210052490234,51.00651822828961,11.441402435302734" width="98%" scrolling="yes" marginwidth="0" marginheight="0" frameborder="0" style="height: 400px;">Weimarnetz Knoten Karte</iframe>
@@ -59,7 +59,7 @@
 <dl>
 <dt>Die Teilname als Nutzer oder Knotenbetreiber setzt keine Registrierung, Anmeldung, Erlaubniss oder ähnliches vorraus!</dt>
 <dd>Das Netz ist frei und offen für jeden. Siehe dazu auch das <a href="http://www.picopeer.net/PPA-de.html">Pico Peering Agreement</a>.<br \>
-Jeder kann einfach so neue Router aufzubauen. Wir empfehlen Einsteigern dennoch zum Treffen zu kommen, denn vor Ort und persönlich könnnen offene Fragen geklärt und nützliche Tipps ausgetauscht werden. Wenn du möchtest kannst du dich auch auf der Mailingliste anmelden um über Treffen und Neuigkeiten informiert zu werden.</dd><br \>
+Jeder kann einfach so neue Router aufzubauen. Wir empfehlen Einsteigern dennoch zum Treffen zu kommen, denn vor Ort und persönlich könnnen offene Fragen geklärt und nützliche Tipps ausgetauscht werden. Wenn du möchtest kannst du dich auch <a href=https://lists.subsignal.org/mailman/listinfo/wireless-discuss">auf der Mailingliste anmelden</a> um über Treffen und Neuigkeiten informiert zu werden.</dd><br \>
 <dt>Wie ist das eigentlich rechtlich wenn ich mein Internetanschluss anderen zur Verfügung stelle?</dt>
 <dd>Um DSL-Einspeiser vor möglichen Abmahnungen zu schützen und von der sogenannten Störerhaftung zu entlasten betreibt der Weimarnetz e.V. einen VPN-Server in Berlin über den alle WLAN-Teilnehmer getunnelt werden.</dd>
 </dl>
