@@ -107,7 +107,7 @@
           <address><strong>Weimarnetz Sorgentelefon</strong><br>
               +49 3643 544304</address>
 	  <address><strong>Email</strong><br>
-	    <a href="mailto:wireless@subsignal.org?subject=Kontakt über weimarnetz.de">wireless@subsignal.org</a>
+	    <a href="mailto:kontakt@weimarnetz.de?subject=Anfrage über weimarnetz.de">kontakt@weimarnetz.de</a>
 	  </address>
 	  <strong>Spenden</strong>
 	  </p>
