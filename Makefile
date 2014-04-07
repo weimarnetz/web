@@ -8,4 +8,4 @@ build:
 	bower install
 
 preview:
-	php -S ${HOST}:8088
+	php -S localhost:8088 #${HOST}:8088
