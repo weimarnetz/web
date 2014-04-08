@@ -9,7 +9,7 @@
   <?php include("../inc/navbar.inc.php") ?>
 
   <div class="container">
-<!--<h3>Warum mitmachen?</h3>-->
+<h3>Wie kann ich beim Weimarnetz mitmachen?</h3>
 <div class="row">
 	<div class="col-sm-4 col-lg-4">
 		<div class="case" id="case-level2">
@@ -58,10 +58,10 @@
 <h3>Gibt es beim Router aufstellen etwas zu bachten?</h3>
 <dl>
 <dt>Die Teilname als Nutzer oder Knotenbetreiber setzt keine Registrierung, Anmeldung, Erlaubniss oder ähnliches vorraus!</dt>
-<dd>Das Netz ist frei und offen für jeden. Siehe dazu auch das <a href="http://www.picopeer.net/PPA-de.html">Pico Peering Agreement</a>.<br \>
-Jeder kann einfach so neue Router aufzubauen. Wir empfehlen Einsteigern dennoch zum Treffen zu kommen, denn vor Ort und persönlich könnnen offene Fragen geklärt und nützliche Tipps ausgetauscht werden. Wenn du möchtest kannst du dich auch <a href=https://lists.subsignal.org/mailman/listinfo/wireless-discuss">auf der Mailingliste anmelden</a> um über Treffen und Neuigkeiten informiert zu werden.</dd><br \>
+<dd>Das Netz ist frei und offen für jeden, wie im <a href="http://www.picopeer.net/PPA-de.html">Pico Peering Agreement</a> vereinbart.<br \>
+Jeder kann einfach so neue Router aufbauen. Wir empfehlen Einsteigern dennoch zum Treffen zu kommen, denn vor Ort und persönlich könnnen offene Fragen geklärt und nützliche Tipps ausgetauscht werden. Wenn du möchtest kannst du dich auch <a href=https://lists.subsignal.org/mailman/listinfo/wireless-discuss">auf der Mailingliste anmelden</a> um über Treffen und Neuigkeiten informiert zu werden.</dd><br \>
 <dt>Wie ist das eigentlich rechtlich wenn ich mein Internetanschluss anderen zur Verfügung stelle?</dt>
-<dd>Um DSL-Einspeiser vor möglichen Abmahnungen zu schützen und von der sogenannten Störerhaftung zu entlasten betreibt der Weimarnetz e.V. einen VPN-Server in Berlin über den alle WLAN-Teilnehmer getunnelt werden.</dd>
+<dd>Um Internet-Einspeiser vor möglichen Abmahnungen zu schützen und von der sogenannten Störerhaftung zu entlasten betreibt der Weimarnetz e.V. einen VPN-Server in Berlin über den alle WLAN-Teilnehmer getunnelt werden, dadurch können Teilnehmer des Weimarnetz nicht direkt einem Internetanschluss zugeordnet werden.</dd>
 </dl>
 
 <h3>Welche Router kann ich verwenden?<br \>
@@ -69,7 +69,7 @@ Wie und woher bekomme ich einen Router?</h3>
 <p><a href=""><!--FIXME - wiki, liste unterstuetzter modelle-->Einen passenden Router</a> kannst du entweder im Internet oder vor Ort beim <a href="http://www.ccm-weimar.de/">Computer Center Matthey</a>, Saturn, MediaMarkt, u.a. kaufen.
 </p>
 
-<h5>Die von uns verwendeten und empholenen Modelle für den einfachen Einstieg sind:</h5>
+<h5>Die von uns verwendeten und empfohlenen Modelle für den einfachen Einstieg sind:</h5>
 <p>
 <ul>
 	<li>TP-Link <a href="http://www.heise.de/preisvergleich/tp-link-tl-wr841n-a340658.html" target="_blank">TL-WR841N</a>, <a href="http://www.heise.de/preisvergleich/tp-link-tl-wr841nd-a601787.html" target="_blank">TL-WR841ND</a> und <a href="http://www.heise.de/preisvergleich/tp-link-tl-wr842nd-a702920.html" target="_blank">TL-WR842ND</a> (15 bis 30 &euro;)</li>
@@ -82,7 +82,7 @@ Wie und woher bekomme ich einen Router?</h3>
 
 <h3>Ich habe einen Router / Wie geht es weiter?<br \>
 Wie kommt die Weimarnetz-Firmware auf den Router?</h3>
-<p>Im Wiki findest du eine Anleitung wie du mit dem <a href="http://meshkit.weimarnetz.de/">Meshkit</a> die Firmware vorbereitest und dann auf dem Router <a href="http://wireless.subsignal.org/index.php?title=Firmware-Installation">installierst</a>. Wenn du Hilfe benötigst oder dir etwas unklar ist, schreib uns auf der Mailingliste oder komm zum wöchtentlichen Treffen in den Maschinenraum, Marienstraße 18.
+<p>Im Wiki findest du eine <a href="http://wireless.subsignal.org/index.php?title=Firmware-Installation">Anleitung</a> wie du mit dem <a href="http://meshkit.weimarnetz.de/">Meshkit</a> die Firmware vorbereitest und dann auf dem Router <a href="http://wireless.subsignal.org/index.php?title=Firmware-Installation">installierst</a>. Wenn du Hilfe benötigst oder dir etwas unklar ist, schreib uns auf der Mailingliste oder komm zum wöchtentlichen Treffen in den Maschinenraum, Marienstraße 18.
 </p>
 
 <h3>Ich möchte verstehen wie die Firmware funktioniert und Änderungen vornehmen!</h3>
