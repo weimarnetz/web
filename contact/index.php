@@ -26,7 +26,7 @@
           <span class="label label-warning">Achtung!</span> Die Teilnahme an den Mailinglisten setzt eine <a href="http://wireless.subsignal.org/index.php?title=Mailingliste" target="_blank">Registrierung</a> voraus, sonst kommt unter Umständen nie eine Antwort an. Alternativ kann der <a href="../newsgroups">Newsserver</a> ohne Anmeldung genutzt werden. 
         </div>
         <div class="col-sm-6 col-lg-3"><h2>Persönlich</h2>
-          <p>Wir treffen uns wöchentlich jeden Dienstag ab 20 Uhr, meist im Maschinenraum in der Marienstraße 18. Neben Vorträgen und der Möglichkeit zum Erfahrungsaustausch gibt es viel praktische Firmwareentwicklung und wenn nötig, Bastelorgien am Gerät. Falls dann noch Zeit bleibt, kann man Mate und Bier genießen.<br> Wir begrüßen außerdem gern neue Interessenten und geben Hilfestellung bei Problemen oder der Inbetriebnahme eines neuen Knoten.</p>
+          <p>Wir treffen uns wöchentlich jeden Dienstag ab 20 Uhr, meist im <a href="http://blog.maschinenraum.tk/contact/">Maschinenraum</a> in der Marienstraße 18. Neben Vorträgen und der Möglichkeit zum Erfahrungsaustausch gibt es viel praktische Firmwareentwicklung und wenn nötig, Bastelorgien am Gerät. Falls dann noch Zeit bleibt, kann man Mate und Bier genießen.<br> Wir begrüßen außerdem gern neue Interessenten und geben Hilfestellung bei Problemen oder der Inbetriebnahme eines neuen Knoten.</p>
           <p>Wann und wo das nächste Treffen stattfindet und ob es aktuelle Themen zu bearbeiten gibt, steht im <a href="http://wireless.subsignal.org/index.php?title=Treffen" target="_blank" >Wiki</a>.</p>
         </div>
         <div class="col-sm-6 col-lg-3"><h2>Postalisch</h2>
@@ -50,7 +50,7 @@
             </div>
             <div class="col-sm-12 col-lg-6">
               <h2>Facebook</h2>
-              <p>Gib uns dein Like bei Facebook. Hier findest du Informationen und kannst uns Fragen stellen oder mit uns diskutieren.</p>
+              <p>Gib uns dein Like bei <a href="https://www.facebook.com/weimarnetz">Facebook</a>. Hier findest du Informationen und kannst uns Fragen stellen oder mit uns diskutieren.</p>
               <div class="fb-like-box" data-href="http://www.facebook.com/weimarnetz" data-width="The pixel width of the plugin" data-height="300" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="false" data-show-border="false"></div>
               <div id="fb-root"></div>
               <script>(function(d, s, id) {
