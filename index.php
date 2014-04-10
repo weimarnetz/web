@@ -19,7 +19,7 @@
         <h1>Willkommen im Weimarnetz</h1>
         <p class="lead">Freifunk in Weimar &mdash; Das freie B&uuml;rger-WLAN!</p>
         <p>
-          <a class="btn btn-primary btn-lg" href="/mitmachen">Jetzt Mitfunken &raquo;</a>
+          <a class="btn btn-primary btn-lg" href="/mitmachen">Jetzt Mitmachen &raquo;</a>
           <a class="btn btn-warning btn-lg" href="/contact">Hilfe bekommen &raquo;</a>
         </p>
         
