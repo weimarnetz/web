@@ -33,7 +33,7 @@
   foreach($monjson['server'] as $server) {
     if ($server['host_state'] == "UP" ) { $stateclass = "success";} else {$stateclass = "danger";}
     if ($server['num_services_ok'] > 0 ) { $okclass = "";} else {$okclass = "danger";}
-    if ($server['num_services_warning'] > 0 ) { $warnclass = "warning";} else {$warnclass = "";}
+    if ($server['num_services_warn'] > 0 ) { $warnclass = "warning";} else {$warnclass = "";}
     if ($server['num_services_crit'] > 0 ) { $critclass = "danger";} else {$critclass = "";}
     if ($server['num_services_pending'] > 0 ) { $pendingclass = "info";} else {$pendingclass = "";}
     $servertable .= '<tr>'
