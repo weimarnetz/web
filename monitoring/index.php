@@ -149,7 +149,7 @@ Router erreichbar: <? echo $json['state']['nodes']; ?>
 		</dl>
 	      </div>
 	      <div class="tab-pane fade in" id="network<%= key %>">
-		<dl>
+		<dl class="slim">
 		<% _.each(item.doc.interfaces,function(iface,ifaceKey,ifaceList) {
 		  if (iface.ipaddr) {%>
 		    <dt><%= iface.ifname%></dt><dd><%=iface.ipaddr%></dd>
@@ -174,7 +174,7 @@ Router erreichbar: <? echo $json['state']['nodes']; ?>
 		</dl>
 	      </div>
 	      <div class="tab-pane fade in" id="olsr<%= key %>">
-		<dl class="table-display">
+		<dl class="table-display wide">
 		<% _.each(item.doc.olsr.links,function(olinks,olsrKey,olsrList) {%>
 		  <dt><%= olinks.destNodeId%></dt><dd><%=olinks.destAddr%></dd>
 		<% }) %>

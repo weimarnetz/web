@@ -18,6 +18,14 @@ dl dt {
 	font-weight: bold;
 }
 	
+dl.slim dt {
+	width: 4em;
+}
+	
+dl.wide dt {
+	width: 16em;
+}
+	
 dl dd {
 }
 
