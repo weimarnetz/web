@@ -14,7 +14,7 @@
     <?php include("./inc/activation.inc.php") ?>
 
     <!-- grosses startseitenbanner -->
-    <div id="banner" class="jumbotron jumbotron-special ff-logo-bg">
+    <div id="banner" class="jumbotron jumbotron-branded cloudy-bg ff-logo-bg">
       <div class="container">
         <h1>Willkommen im Weimarnetz</h1>
         <p class="lead">Freifunk in Weimar &mdash; Das freie B&uuml;rger-WLAN!</p>

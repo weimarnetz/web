@@ -21,6 +21,7 @@
     "tests"
   ],
   "dependencies": {
-    "bootstrap-theme-freifunk": "git://github.com/eins78/bootstrap-theme-freifunk.git#gh-pages"
+    "bootstrap-theme-freifunk": "git://github.com/eins78/bootstrap-theme-freifunk.git#0.1.1",
+    "font-awesome": "~3.2.1"
   }
 }
