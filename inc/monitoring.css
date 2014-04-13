@@ -1,30 +1,24 @@
-dl
-{
-	//float: left;
-	width: 100%;
-	margin-bottom: 50px;
+dl {
+	margin-bottom: 1em;
+}
+
+dl dt, dl dd {
+	margin-bottom: 0.15em;
+	padding: 5px;
+	word-break: break-all;
 }
 	
-dt
-{
+dl dt {
+	float: left;
+	clear: left;
+	width: 8em;
+	margin-right: 0.5em;
 	background:#5f9be3;
 	color:#fff;
-	clear: left;
-	float: left;
-	word-break: break-all;
-	width: 40%;
-	margin: 1px 0;
-	margin-right: 10px;
-	padding: 5px;
 	font-weight: bold;
 }
 	
-dd
-{
-	float: left;
-	margin: 1px 0;
-	padding: 5px;
-//	width: 55%;
+dl dd {
 }
 
 iframe.map
@@ -34,26 +28,3 @@ iframe.map
 	width: 100%;
 	height: 300px;
 }
-
-/*DL, DT, DD TAGS LIST DATA
-dl {
-	margin-bottom:50px;
-	width:100%;
-}
-
-dt {
-	background:#5f9be3;
-	color:#fff;
-	word-break: break-all;
-	clear:left;
-	float:left; 
-	font-weight:bold; 
-	margin-right:10px; 
-	padding:5px;  
-	width:30%; 
-}
-
-dd {
-	margin:2px 0; 
-	padding:5px 0;
-}*/
