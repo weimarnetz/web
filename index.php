@@ -32,7 +32,7 @@
       <!-- main reihe blöcke - content/ad -->
       <div class="row">
     
-        <div class="col-sm-10">
+        <div class="col-sm-9">
     
           <!-- eine reihe content blöcke -->
           <div class="row">
@@ -88,7 +88,7 @@
 
         </div> <!-- ende content -->
     
-        <div class="col-sm-2" style="text-align:right">
+        <div class="col-sm-3" style="text-align:right">
           <h2 class="page-header"><small class="text-muted">Verein</small></h2>
           <!-- mindfactory banner 
           <img src="img/Banner/120x500_mindfactory_hardware.jpg" width="120" height="500" alt="Ihre Hardware stößt an ihre Grenzen? Zeit für ein Upgrade! www.mindfactory.de" usemap="#admap" />
