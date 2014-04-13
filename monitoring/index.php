@@ -252,10 +252,8 @@ function getNodeNumber(ip) {
 }
 
 function lastChangeColor(mtime) {
-  if (mtime<=12) {
+  if (mtime<=20) {
     return "success";
-  } else if (mtime<=96) {
-    return "info";
   } else if (mtime<=192) {
     return "warning";
   } else {
