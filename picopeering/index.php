@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-  <title>Weimarnetz - Kontakt</title>
+  <title>Weimarnetz - Pico Peering Agreement v1.0</title>
   <?php include("../inc/_head.inc.php") ?>
 </head>
 
