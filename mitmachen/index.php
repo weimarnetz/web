@@ -59,7 +59,7 @@
 <dl>
 <dt>Die Teilname als Nutzer oder Knotenbetreiber setzt keine Registrierung, Anmeldung, Erlaubnis oder Ähnliches voraus!</dt>
 <dd>Das Netz ist frei und offen für jeden, wie im <a href="/picopeering/">Pico Peering Agreement</a> vereinbart.<br \>
-Jeder kann neue Router aufstellen. Wir empfehlen Einsteigern dennoch zum Treffen zu kommen, denn vor Ort und persönlich könnnen offene Fragen besser geklärt und nützliche Tipps ausgetauscht werden. Wenn Du möchtest kannst Du Dich auch <a href=https://lists.subsignal.org/mailman/listinfo/wireless-discuss">auf der Mailingliste anmelden</a> um über Treffen und Neuigkeiten informiert zu werden.</dd><br \>
+Jeder kann neue Router aufstellen. Wir empfehlen Einsteigern dennoch zum Treffen zu kommen, denn vor Ort und persönlich könnnen offene Fragen besser geklärt und nützliche Tipps ausgetauscht werden. Wenn Du möchtest kannst Du Dich auch <a href=http://wireless.subsignal.org/index.php?title=Mailingliste">auf der Mailingliste anmelden</a> um über Treffen und Neuigkeiten informiert zu werden.</dd><br \>
 <dt>Wie ist das rechtlich, wenn ich meinen Internetanschluss anderen zur Verfügung stelle?</dt>
 <dd>Um Internet-Einspeisende vor möglichen Abmahnungen zu schützen und von der sogenannten Störerhaftung zu entlasten betreibt der Weimarnetz e.V. einen VPN-Server in Berlin über den alle WLAN-Teilnehmerinnen getunnelt werden. Dadurch können Nutzerinnen des Weimarnetz nicht direkt einem Internetanschluss zugeordnet werden.</dd>
 </dl>
