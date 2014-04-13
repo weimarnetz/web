@@ -130,7 +130,7 @@ Router erreichbar: <? echo $json['state']['nodes']; ?>
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
             <h4 class="modal-title" id="myModalLabel">Detailinformationen zu <strong><%= item.doc.hostname %></strong></h4>
           </div>
-          <div class="modal-body">
+          <div class="modal-body" width="100%">
 	    <ul class="nav nav-tabs" id="dev<%= key%>">
 	      <li class="active"><a href="#general<%= key %>" data-toggle="tab">Allgemein</a></li>
 	      <li><a href="#contact<%= key %>" data-toggle="tab">Kontakt</a></li>
@@ -174,13 +174,29 @@ Router erreichbar: <? echo $json['state']['nodes']; ?>
 		</dl>
 	      </div>
 	      <div class="tab-pane fade in" id="olsr<%= key %>">
-		<dl>
+		<dl class="table-display">
 		<% _.each(item.doc.olsr.links,function(olinks,olsrKey,olsrList) {%>
 		  <dt><%= olinks.destNodeId%></dt><dd><%=olinks.destAddr%></dd>
 		<% }) %>
 		</dl>
 	      </div>
-	      <div class="tab-pane fade" id="map<%= key%>"></div>
+	      <div class="tab-pane fade" id="map<%= key%>">
+		<div><iframe class="map" id="imap<%= key%>"></iframe></div>
+		<script type="text/javascript">
+		$('a[href="#map<%= key %>"]').on('shown.bs.tab', function (e) {
+		  var el = document.getElementById("imap<%= key%>");
+		  lat = parseFloat("<%= item.doc.latitude %>");
+		  lon = parseFloat("<%= item.doc.longitude %>");
+		  lat1 = lat - 0.0001;
+		  lat2 = lat + 0.0001;
+		  lon1 = lon - 0.0001;
+		  lon2 = lon + 0.0001;
+		  console.log(lon1);
+		  el.setAttribute('src', 'http://map.weimarnetz.de/map.html#bbox=' + lat1 + ',' + lon1 + ',' + lat2 + ',' + lon2); 
+		});
+
+		 <%= "<"+"/script>" %>
+	      </div>
 	    </div>
 	  </div>
           <div class="modal-footer">

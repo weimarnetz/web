@@ -1,10 +1,47 @@
-/*DL, DT, DD TAGS LIST DATA*/
+dl
+{
+	//float: left;
+	width: 100%;
+	margin-bottom: 50px;
+}
+	
+dt
+{
+	background:#5f9be3;
+	color:#fff;
+	clear: left;
+	float: left;
+	word-break: break-all;
+	width: 40%;
+	margin: 1px 0;
+	margin-right: 10px;
+	padding: 5px;
+	font-weight: bold;
+}
+	
+dd
+{
+	float: left;
+	margin: 1px 0;
+	padding: 5px;
+//	width: 55%;
+}
+
+iframe.map
+{
+	margin-top: 10px;
+	border: none;
+	width: 100%;
+	height: 300px;
+}
+
+/*DL, DT, DD TAGS LIST DATA
 dl {
 	margin-bottom:50px;
 	width:100%;
 }
 
-dl dt {
+dt {
 	background:#5f9be3;
 	color:#fff;
 	word-break: break-all;
@@ -16,8 +53,7 @@ dl dt {
 	width:30%; 
 }
 
-dl dd {
+dd {
 	margin:2px 0; 
 	padding:5px 0;
-	//width:80%;
-}
+}*/
