@@ -4,8 +4,7 @@
 <meta name="author" content="Weimarnetz e.V." >
 
 <!-- Le styles -->
-<link href="http://www.weimarnetz.de/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="http://www.weimarnetz.de/bower_components/bootstrap-theme-freifunk/dist/css/bootstrap.min.css" rel="stylesheet"> 
+  <link href="/bower_components/bootstrap-theme-freifunk/dist/css/bootstrap.min.css" rel="stylesheet"> 
 
 <!-- local fixes. -->
 <style type="text/css">

@@ -10,7 +10,7 @@
     <?php include("../inc/navbar.inc.php") ?>
 
     <!-- grosses startseitenbanner -->
-    <div id="banner" class="jumbotron jumbotron-special alert-danger ff-logo-bg">
+    <div id="banner" class="jumbotron jumbotron-special alert-danger cloudy-bg ff-logo-bg">
       <div class="container">
         <h1>Error 404!</h1>
         <p class="lead">Diese Seite wurde leider nicht gefunden!</p>
