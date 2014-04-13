@@ -192,7 +192,7 @@ Router erreichbar: <? echo $json['state']['nodes']; ?>
 		  lon1 = lon - 0.0001;
 		  lon2 = lon + 0.0001;
 		  console.log(lon1);
-		  el.setAttribute('src', 'http://map.weimarnetz.de/map.html#bbox=' + lat1 + ',' + lon1 + ',' + lat2 + ',' + lon2); 
+		  el.setAttribute('src', 'http://map.weimarnetz.de/mapnohostdetails.html#bbox=' + lat1 + ',' + lon1 + ',' + lat2 + ',' + lon2); 
 		});
 
 		 <%= "<"+"/script>" %>
