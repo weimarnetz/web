@@ -143,9 +143,15 @@ Router erreichbar: <? echo $json['state']['nodes']; ?>
 		<dl>
 		  <dt>Gerät</dt><dd><%= item.doc.system.sysinfo[1] %></dd>
 		  <dt>Hardware</dt><dd><%= item.doc.hardware %></dd>
-		  <dt>nächster Nachbar</dt><dd><%= item.doc.weimarnetz.nexthop %></dd>
-		  <dt>Gateway</dt><dd><%= item.doc.weimarnetz.gateway %></dd>
-		  <dt>Gatewaykosten</dt><dd><%= item.doc.weimarnetz.gatewaycost %></dd>
+		  <% if (item.doc.weimarnetz.nexthop ) { %>
+		    <dt>nächster Nachbar</dt><dd><%= item.doc.weimarnetz.nexthop %></dd>
+		  <% } %>
+		  <% if (item.doc.weimarnetz.gateway) { %>
+		    <dt>Gateway</dt><dd><%= item.doc.weimarnetz.gateway %></dd>
+		  <% } %>
+		  <% if (item.doc.weimarnetz.gatewaycost) { %>
+		    <dt>Gatewaykosten</dt><dd><%= item.doc.weimarnetz.gatewaycost %></dd>
+		  <% } %>
 		</dl>
 	      </div>
 	      <div class="tab-pane fade in" id="network<%= key %>">
