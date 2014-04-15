@@ -47,11 +47,11 @@ table.sortable th:hover{
 	text-decoration: underline;
 }
 table.sortable th:after{
-	content:"▲▼";
+	content:" ▲▼";
 	font-size:0.7em;
 	color:rgba(0,0,0,0.3);
 }
-table.sortable th.sorttable_sorted:after{
+table.sortable th.sorttable_sorted:after, table.sortable th.sorttable_sorted_reverse:after{
 	content:"";
 	font-weight:bold;
 }
