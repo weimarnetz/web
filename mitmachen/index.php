@@ -55,7 +55,7 @@
 <iframe id="ifrm" src="http://map.weimarnetz.de/map.html#bbox=50.9484779952583,11.194210052490234,51.00651822828961,11.441402435302734" width="98%" scrolling="yes" marginwidth="0" marginheight="0" frameborder="0" style="height: 400px;">Weimarnetz Knoten Karte</iframe>
 </div>
 
-<h3>Gibt es beim Router aufstellen etwas zu bachten?</h3>
+<h3>Gibt es beim Router aufstellen etwas zu beachten?</h3>
 <dl>
 <dt>Die Teilname als Nutzer oder Knotenbetreiber setzt keine Registrierung, Anmeldung, Erlaubnis oder Ähnliches voraus!</dt>
 <dd>Das Netz ist frei und offen für jeden, wie im <a href="/picopeering/">Pico Peering Agreement</a> vereinbart.<br \>
