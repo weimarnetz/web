@@ -54,10 +54,10 @@
 <h5>Fähigkeiten</h5>
 <p>
 <ul>
-<li>Hardware: gering</li>
-<li>Kommunikation: hoch</li>
-<li>Design: hoch</li>
-<li>Programmierung: nicht notwendig</li>
+<li>Hardware: +</li>
+<li>Kommunikation: +++</li>
+<li>Design: +++</li>
+<li>Programmierung: &mdash;</li>
 </ul>
 </p>
 
@@ -72,10 +72,10 @@
 <h5>Fähigkeiten</h5>
 <p>
 <ul>
-<li>Hardware: nicht notwendig</li>
-<li>Kommunikation: hoch</li>
-<li>Design: nicht notwendig</li>
-<li>Programmierung: nicht notwendig</li>
+<li>Hardware: -</li>
+<li>Kommunikation: +++</li>
+<li>Design: &mdash;</li>
+<li>Programmierung: &mdash;</li>
 </ul>
 
 <hr>
@@ -101,10 +101,10 @@
 <h5>Fähigkeiten</h5>
 <p>
 <ul>
-<li>Hardware: nicht notwendig</li>
-<li>Kommunikation: mittel</li>
-<li>Design: mittel</li>
-<li>Programmierung: hoch</li>
+<li>Hardware: &mdash;</li>
+<li>Kommunikation: ++</li>
+<li>Design: ++</li>
+<li>Programmierung: +++</li>
 </ul>
 </p>
 
@@ -129,10 +129,10 @@
 <h5>Fähigkeiten</h5>
 <p>
 <ul>
-<li>Hardware: hoch</li>
-<li>Kommunikation: mittel</li>
-<li>Design: nicht notwendig</li>
-<li>Programmierung: nicht notwendig</li>
+<li>Hardware: +++</li>
+<li>Kommunikation: ++</li>
+<li>Design: &mdash;</li>
+<li>Programmierung: &mdash;</li>
 </ul>
 </p>
 
@@ -159,10 +159,10 @@
 <h5>Fähigkeiten</h5>
 <p>
 <ul>
-<li>Hardware: hoch</li>
-<li>Kommunikation: gering</li>
-<li>Design: gering</li>
-<li>Programmierung: hoch</li>
+<li>Hardware: +++</li>
+<li>Kommunikation: +</li>
+<li>Design: +</li>
+<li>Programmierung: +++</li>
 </ul>
 </p>
 
@@ -184,10 +184,10 @@
 <h5>Fähigkeiten</h5>
 <p>
 <ul>
-<li>Hardware: gering</li>
-<li>Kommunikation: gering</li>
-<li>Design: mittel</li>
-<li>Programmierung: hoch</li>
+<li>Hardware: +</li>
+<li>Kommunikation: +</li>
+<li>Design: ++</li>
+<li>Programmierung: +++</li>
 </ul>
 </p>
 
@@ -214,10 +214,10 @@
 <h5>Fähigkeiten</h5>
 <p>
 <ul>
-<li>Hardware: gering</li>
-<li>Kommunikation: gering</li>
-<li>Design: mittel</li>
-<li>Programmierung: hoch</li>
+<li>Hardware: +</li>
+<li>Kommunikation: +</li>
+<li>Design: ++</li>
+<li>Programmierung: +++</li>
 </ul>
 </p>
 
@@ -240,10 +240,10 @@
 <h5>Fähigkeiten</h5>
 <p>
 <ul>
-<li>Hardware: hoch</li>
-<li>Kommunikation: gering</li>
-<li>Design: nicht notwendig</li>
-<li>Programmierung: gering</li>
+<li>Hardware: +++</li>
+<li>Kommunikation: +</li>
+<li>Design: &mdash;</li>
+<li>Programmierung: +</li>
 </ul>
 </p>
 
