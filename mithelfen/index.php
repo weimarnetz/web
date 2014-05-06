@@ -19,7 +19,24 @@
 
 <hr>
 
-<h4>Öffentlichkeitsarbeit</h4>
+<!-- #BROKEN! - #FIXME: CSS-Voodoo 
+<p>
+<ul>
+<li><a href="#Oeffentlichkeitsarbeit">Öffentlichkeitsarbeit</a></li>
+<li><a href="#Verwaltung-Verein">Verwaltung/Verein</a></li>
+<li><a href="#Webseite">Website</a></li>
+<li><a href="#Installation">Installationen</a></li>
+<li><a href="#Firmware">Firmware</a></li>
+<li><a href="#Registrator">Registrator</a></li>
+<li><a href="#Meshkit">Meshkit</a></li>
+<li><a href="#Administration">Administration</a></li>
+</ul>
+</p>
+
+<hr>
+-->
+
+<h4 id="Oeffentlichkeitsarbeit">Öffentlichkeitsarbeit</h4>
 <p>Ein wichtiger Bestandteil zur Verbreitung unserer Idee und zur Erweiterung des Netzes ist die Öffentlichkeitsarbeit. Diese hilft uns Materialien zu erstellen mit denen wir um neue Mitstreiter werben können, Anfragen zu bearbeiten oder Kontakt zu unseren Kooperationspartnern aufrecht zu erhalten.</p>
 <h5>Das sind typische Arbeitsschwerpunkte in diesem Bereich:</h5>
 <p>
@@ -47,7 +64,7 @@
 <hr>
 
 
-<h4>Verwaltung/Verein</h4>
+<h4 id="Verwaltung-Verein">Verwaltung/Verein</h4>
 <p>Unser Verein weimarnetz e.V. ist kein Mitgliederverein. Er dient dazu, das Freifunkprojekt in Weimar (weimarnetz) zu unterstützen und zu fördern, Veranstaltungen durchzuführen oder Bildungsarbeit zu leisten. Niemand muss Mitglied im Verein werden um am Weimarnetz teilzunehmen oder an unseren Projekten mitzuarbeiten.</p>
 <p>Trotzdem macht auch ein solcher Verein Arbeit: Spenden wollen verwaltet und bestätigt werden, wir organisieren Mitgliederversammlungen, Rechnung, Kontoauszüge und Rechnungen müssen wir abheften, alle 3 Jahre erwartet das Finanzamt eine Steuererklärung von uns.</p>
 <p>Wenn dir Verwaltungstätigkeiten liegen oder dir Steuererklärungen Freude bereiten bist du willkommen uns hier zu helfen.</p>
@@ -64,7 +81,7 @@
 <hr>
 
 
-<h4>Website</h4>
+<h4 id="Website">Website</h4>
 <p>Eine erste Anlaufstelle für Neugierige und Interessenten ist unsere Website www.weimarnetz.de. Die Inhalte sollten wir so aktuell wie möglich halten, um uns und andere nicht zu verwirren. Deshalb sind dort immer wieder Anpassungen erforderlich. Wir möchten uns auch regelmäßig mit unbedarfteren Nutzern treffen, um Schwachstellen in der Benutzerführung auf der Seite oder zu kompliziert aufgebaute Texte zu finden.</p>
 <p>Eng verbunden mit der Website ist unser Wiki unter wireless.subsignal.org. Das Wiki verwenden wir, um bebilderte Anleitungen und Texte für Spezialisten abzulegen oder Dokumentationen zu schreiben, deren Inhalte immer wieder angepasst werden müssen. Diese Inhalte lassen sich leicht ändern und anpassen, bieten aber nicht die gleichen Designmöglichkeiten wie reine Websites. Außerdem neigen Wikis ständig zu einer gewissen Unordnung, die es schwer macht, schnell einen Überblick zu finden.</p>
 <p>Die Website pflegen wir in unserem Repository auf github.com: https://github.com/weimarnetz/web<p>
@@ -94,7 +111,7 @@
 <hr>
 
 
-<h4>Installationen</h4>
+<h4 id="Installation">Installationen</h4>
 <p>Eine nachhaltige Verbesserung des Netzes können wir durch gezielte Installationen von Routern zwischen Gebäuden oder an markanten Punkten erreichen. Diese Orte zeichnen sich durch gerichtete Funkstrecken aus und können mehrere Himmelsrichtungen abdecken und sollten gut geplant und mit den Funknachbarn abgesprochen sein.</p>
 
 <h5>Aufgaben</h5>
@@ -122,7 +139,7 @@
 <hr>
 
 
-<h4>Firmware</h4>
+<h4 id="Firmware">Firmware</h4>
 <p>Ein Herzstück für unser Netz und gleichzeitig einer unserer größten "Brocken" ist unsere Firmware, mit der wir unsere Geräte im Weimarnetz überhaupt zusammenbringen. Sie basiert auf OpenWRT und wir versuchen hier sehr stark auch Komponenten anderer Freifunkcommunities wiederzuverwenden. Neue Anforderungen, Weiterentwicklungen im OpenWRT oder durch neue, leistungsfähigere Hardware, die auf den Markt kommt erfordern ständige Anpassungen und vor allem regelmäßiges Testen. Die Firmwareentwicklung ist auch eng verzahnt mit den Nachbarprojekten Registrator und Meshkit. Änderungen an Firmware oder in der Administration können jeweils auch Auswirkungen aufeinander haben.</p>
 <p>Die Erweiterungen von OpenWRT für das Weimarnetz legen wir im Github unter https://github.com/weimarnetz/weimarnetz und https://github.com/weimarnetz/openwrt-packages ab.</p>
 
@@ -152,7 +169,7 @@
 <hr>
 
 
-<h4>Registrator</h4>
+<h4 id="Registrator">Registrator</h4>
 <p>Mit dem Registrator verwalten wir die sogenannten Knotennummern im Weimarnetz. Die Knotennummer ist eine eindeutig Nummer, die einen Router identifiziert und die Grundlage für seine Netzwerkkonfiguration bildet.</p>
 <p>Der Quellcode des Registrators ist unter https://github.com/weimarnetz/registrator auffindbar.</p>
 <h5>Tätigkeiten</h5>
@@ -177,7 +194,7 @@
 <hr>
 
 
-<h4>Meshkit</h4>
+<h4 id="Meshkit">Meshkit</h4>
 <p>Das Meshkit gibt uns die Möglichkeit, individuelle und fertig konfigurierte Firmwareimages für Router auszuliefern. Mit dem Meshkit konnten wir die Komplexität und Anzahl der Schritte vom gekaufen Router zum einsatzbereiten Weimarnetzgerät extrem verringern und für Nutzer einen inzwischen recht einfachen Weg zur Teilnahme an Netz bereiten.</p>
 <p>Unsere angepasste Version des Meshkit kann man unter https://github.com/weimarnetz/meshkit finden.</p>
 
@@ -207,7 +224,7 @@
 <hr>
 
 
-<h4>Administration</h4>
+<h4 id="Administration">Administration</h4>
 <p>Der Verein betreibt einen eigenen Rootserver, der in Berlin steht und betreibt darauf und bei befreundeten Communities insgesamt 3 virtuelle Server. Darauf laufen unter anderem diese Website, die VPN-Endpunkte für unsere Router, einen Jabberserver und einen DynDNS-Dienst. Die Dienste und Betriebssysteme auf den Servern müssen regelmäßig aktuell gehalten und hin und wieder an neue Gegebenheiten abgepasst werden. Ein Monitoringsystem informiert uns über Störungen an Hard- und Software.</p>
 
 <h5>Hauptsächlich geht es um</h5>
