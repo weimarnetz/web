@@ -30,6 +30,7 @@
           <li class="dropdown-header">Einstieg</li>
           <li <?php echo getActiveClass("/about")?> ><a href="http://www.weimarnetz.de/about">Selbstdarstellung</a></li>
           <li <?php echo getActiveClass("/mitmachen")?> ><a href="http://www.weimarnetz.de/mitmachen">Mitmachen</a></li> 
+          <li <?php echo getActiveClass("/mithelfen")?> ><a href="http://www.weimarnetz.de/mithelfen">Mithelfen</a></li>
           <li <?php echo getActiveClass("/contact")?> ><a href="http://www.weimarnetz.de/contact">Community</a></li>
           <li <?php echo getActiveClass("/spenden")?> ><a href="http://www.weimarnetz.de/spenden">Spenden</a></li>
           <li class="dropdown-header">Dokumentation</li>
