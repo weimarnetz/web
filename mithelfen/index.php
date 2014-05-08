@@ -73,7 +73,7 @@
 <h5>Fähigkeiten</h5>
 <p>
 <ul>
-<li>Hardware: -</li>
+<li>Hardware: &mdash;</li>
 <li>Kommunikation: +++</li>
 <li>Design: &mdash;</li>
 <li>Programmierung: &mdash;</li>
