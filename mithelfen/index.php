@@ -112,6 +112,7 @@
 <hr>
 <h4>Installationen</h4>
 <p>Eine nachhaltige Verbesserung des Netzes können wir durch gezielte Installationen von Routern zwischen Gebäuden oder an markanten Punkten erreichen. Diese Orte zeichnen sich durch gerichtete Funkstrecken aus und können mehrere Himmelsrichtungen abdecken und sollten gut geplant und mit den Funknachbarn abgesprochen sein.</p>
+<p>Um Installationen auf fremden Grundstücken einen rechtlichen Rahmen zu geben und Details wie Zugang oder Stromanschluss zu regeln, schließen wir mit den Eigentümern sogenannte Gestattungsverträge. Dies ist wichtig und notwendig, wenn wir langfristig Standorte nutzen wollen, wo es nur jusitische Personen gib.</p>
 <p>Dir gefallen handfeste Ergebnisse und Höhenangst ist ein Fremdwort &mdash; dann bist du hier richtig.</p>
 
 <h5>Aufgaben</h5>
