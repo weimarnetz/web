@@ -158,8 +158,11 @@ Router erreichbar: <? echo $json['state']['nodes']; ?>
 		<dl class="slim">
 		<% _.each(item.doc.interfaces,function(iface,ifaceKey,ifaceList) {
 		  if (iface.ipaddr) {%>
-		    <dt><%= iface.ifname%></dt><dd><%=iface.ipaddr%></dd>
-		<%}
+        <dt><%= iface.ifname%></dt><dd><%=iface.ipaddr%></dd>
+        <% if (iface.ssid) { %>
+          <dt>SSID <%= iface.ifname%></dt><dd><%=iface.ssid%></dd>
+        <%}
+		  }
 		 }) %>
 		</dl>
 	      </div>
