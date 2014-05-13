@@ -44,7 +44,7 @@
 
 
 
-<h1 class="np_article_headline"><?php=htmlspecialchars($subject) ?></h1>
+<h1 class="np_article_headline"><?=htmlspecialchars($subject) ?></h1>
 
 <table cellpadding="0" cellspacing="0" width="100%" class="np_buttonbar"><tr>
 <?php 
