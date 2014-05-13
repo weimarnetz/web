@@ -10,7 +10,7 @@
 <body onload="setIframeHeight('ifrm');" onresize="setIframeHeight('ifrm');">
 
   <?php include("../inc/navbar.inc.php") ?>
-<?
+<?php
   $apifile = "http://www.weimarnetz.de/weimarnetz.json";
   $monfile = "http://www.weimarnetz.de/monitoring.json";
 

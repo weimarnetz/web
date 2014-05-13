@@ -1,4 +1,4 @@
-<?
+<?php
 /*
  *  NewsPortal: Data type declarations
  *
