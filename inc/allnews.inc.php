@@ -1,4 +1,4 @@
-<?
+<?php
 require_once('simplepie/simplepie.php');
 // We'll process this feed with all of the default options.
 $feed = new SimplePie();
@@ -15,7 +15,7 @@ $feed->handle_content_type();
 
 <ul>
 
-	<?
+	<?php
 	/*
 	Here, we'll loop through all of the items in the feed, and $item represents the current item in the loop.
 	*/
@@ -34,7 +34,7 @@ $feed->handle_content_type();
 			<p><small>Vom <?php echo $item->get_date('j.n.Y, G:i \U\h\r'); ?></small></p>
 		</li>
  
-	<? 
+	<?php 
 	$counter++;
 	endforeach; ?>
 </ul>
