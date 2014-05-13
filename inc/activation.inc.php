@@ -1,9 +1,9 @@
     <?php
-    $origin = $_GET['origin'];
-    $gwip = $_GET['gateway'];
-    $gwnode = $_GET['gwnode'];
-    $neighborip = $_GET['nodeip'];
-    $neighbornode = $_GET['node'];
+    $origin = isset($_GET['origin']) ? $_GET['origin'] : '';
+    $gwip = isset($_GET['gateway']) ? $_GET['gateway'] : '';
+    $gwnode = isset($_GET['gwnode']) ? $_GET['gwnode'] : '';
+    $neighborip = isset($_GET['nodeip']) ? $_GET['nodeid'] : '';
+    $neighbornode = isset($_GET['node']) ? $_GET['node'] : '';
     if ($gwip <> '' or $neighborip <> ''){
       echo '<div class="jumbotron alert alert-success alert-top alert-dismissable">
       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><div class="container">';

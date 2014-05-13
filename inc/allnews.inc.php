@@ -34,7 +34,7 @@ $feed->handle_content_type();
 			<p><small>Vom <?php echo $item->get_date('j.n.Y, G:i \U\h\r'); ?></small></p>
 		</li>
  
-	<?php 
+	<? 
 	$counter++;
 	endforeach; ?>
 </ul>
