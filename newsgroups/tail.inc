@@ -3,7 +3,7 @@
 was written by <a href="http://florian-amrhein.de">Florian Amrhein</a>.
 </small></p>
 
-<? 
+<?php 
   include "../inc/footer.inc.php";
   include "../inc/_foot.inc.php";
 ?>

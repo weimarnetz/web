@@ -1,4 +1,4 @@
-<?
+<?php
 /*  Newsportal NNTP<->HTTP Gateway
  *  Version: 0.36
  *  Download: http://florian-amrhein.de/newsportal

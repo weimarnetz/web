@@ -1,4 +1,4 @@
-<?
+<?php
 /*
  * directories and files
  */

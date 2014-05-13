@@ -1,4 +1,4 @@
-<? header("Expires: ".gmdate("D, d M Y H:i:s",time()+7200)." GMT");
+<?php header("Expires: ".gmdate("D, d M Y H:i:s",time()+7200)." GMT");
 
 // register parameters
 $group=$_REQUEST["group"];
@@ -24,7 +24,7 @@ if((!function_exists("npreg_group_has_read_access") ||
 
 <h1 class="np_thread_headline"><?=htmlspecialchars($group); ?></h1>
 
-<?
+<?php
   echo '<table cellpadding="0" cellspacing="0" width="100%" class="np_buttonbar"><tr>';
   echo '<td class="np_button"><a class="np_button" href="'.
        $file_index.'">'.$text_thread["button_grouplist"].'</td></a>';
@@ -77,6 +77,6 @@ if((!function_exists("npreg_group_has_read_access") ||
 }
 
 ?> 
-<p align="right"><a href="#top"><? echo $text_thread["button_top"];?></a></p>
+<p align="right"><a href="#top"><?php echo $text_thread["button_top"];?></a></p>
 
-<? include "tail.inc"; ?>
+<?php include "tail.inc"; ?>
