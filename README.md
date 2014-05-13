@@ -1,15 +1,16 @@
 # [weimarnetz.de](http://weimarnetz.de)
 
 
+## Dependencies / Preparations
 
-## Dependencies
-
-one-time:
+One-time:
 
 - install `nodejs` and `npm`
 - `$ sudo npm install -g bower`
 
-checkout assets (for dev and on deploy):
+Once in a while / From time to time:
+
+Checkout assets (for dev and on deploy):
 - `$ bower install`
 
 
@@ -18,6 +19,4 @@ checkout assets (for dev and on deploy):
 - `$ make preview` runs local php server
 - php includes starting with `_` are required for every page: `_head` and `_foot`
 - all other includes are just content
-
-
 

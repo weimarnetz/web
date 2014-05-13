@@ -11,7 +11,7 @@ dl dt, dl dd {
 dl dt {
 	float: left;
 	clear: left;
-	width: 8em;
+	width: 9em;
 	margin-right: 0.5em;
 	background:#5f9be3;
 	color:#fff;
@@ -19,7 +19,7 @@ dl dt {
 }
 	
 dl.slim dt {
-	width: 4em;
+	width: 8em;
 }
 	
 dl.wide dt {
