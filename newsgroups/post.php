@@ -1,4 +1,4 @@
-<?
+<?php
 /*  Newsportal NNTP<->HTTP Gateway
  *  Download: http://florian-amrhein.de/newsportal
  *
@@ -51,7 +51,7 @@ if ((isset($post_port)) && ($post_port!=""))
 
 
 ?>
-<?
+<?php
 
   // has the user write-rights on the newsgroups?
   if((function_exists("npreg_group_has_read_access") &&
@@ -144,13 +144,13 @@ if ($type=="post") {
           (substr($message,0,7)=="441 435")) {
 ?>
 
-<h1 class="np_post_headline"><? echo $text_post["message_posted"];?></h1>
+<h1 class="np_post_headline"><?php echo $text_post["message_posted"];?></h1>
 
-<p><? echo $text_post["message_posted2"];?></p>
+<p><?php echo $text_post["message_posted2"];?></p>
 
-<p><a href="<? echo $file_thread.'?group='.urlencode($group).'">'.$text_post["button_back"].'</a> '
+<p><a href="<?php echo $file_thread.'?group='.urlencode($group).'">'.$text_post["button_back"].'</a> '
      .$text_post["button_back2"].' '.urlencode($group) ?></p>
-<?
+<?php
       } else {
         // article not accepted by the newsserver
         $type="retry";
@@ -233,16 +233,16 @@ if ($testnewsgroups == "") {
 
   if (isset($error)) echo "<p>$error</p>"; ?>
 
-<form action="<? echo $file_post?>" method="post" name="postform">
+<form action="<?php echo $file_post?>" method="post" name="postform">
 
 <div class="np_post_header">
 <table>
-<tr><td align="right"><b><? echo $text_header["subject"] ?></b></td>
-<td><input type="text" name="subject" value="<?
+<tr><td align="right"><b><?php echo $text_header["subject"] ?></b></td>
+<td><input type="text" name="subject" value="<?php
 echo htmlspecialchars($subject);?>" size="40" maxlength="80"></td></tr>
 <tr><td align="right"><b><?=$text_post["name"]?></b></td>
  <td align="left">
- <?
+ <?php
  if($form_noname===true) {
    echo htmlspecialchars($name);
  } else {
@@ -255,7 +255,7 @@ echo htmlspecialchars($subject);?>" size="40" maxlength="80"></td></tr>
  </td></tr>
  <tr><td align="right"><b><?=$text_post["email"]?></b></td>
  <td align="left">
- <?
+ <?php
  if($form_noemail===true) {
    echo htmlspecialchars($email);
  } else {
@@ -270,15 +270,15 @@ echo htmlspecialchars($subject);?>" size="40" maxlength="80"></td></tr>
 
 <div class="np_post_body">
 <table>
-<tr><td><b><? echo $text_post["message"];?></b><br>
-<textarea id="postbody" name="body" rows="20" cols="79" wrap="virtual"><?
+<tr><td><b><?php echo $text_post["message"];?></b><br>
+<textarea id="postbody" name="body" rows="20" cols="79" wrap="virtual"><?php
 if ((isset($bodyzeile)) && ($post_autoquote))
   echo htmlspecialchars($bodyzeile); ?>
 </textarea></td></tr>
 <tr><td>
 
-<? if(!$post_autoquote) { ?>
-<input type="hidden" id="hidebody" value="<?
+<?php if(!$post_autoquote) { ?>
+<input type="hidden" id="hidebody" value="<?php
 if (isset($bodyzeile)) echo htmlspecialchars(stripslashes($bodyzeile)); ?>">
 
 <script language="JavaScript">
@@ -293,13 +293,13 @@ function quoten() {
 
 <input tabindex="100" type="Button" name="quote" value="<?=$text_post["quote"]?>" onclick="quoten()">
 
-<? } ?>
+<?php } ?>
 
-<input type="submit"  value="<? echo $text_post["button_post"];?>">
-<? if ($setcookies==true) { ?>
+<input type="submit"  value="<?php echo $text_post["button_post"];?>">
+<?php if ($setcookies==true) { ?>
 <input type="checkbox" name="abspeichern" value="ja">
-<? echo $text_post["remember"];?>
-<? } ?>
+<?php echo $text_post["remember"];?>
+<?php } ?>
 </td>
 </tr>
 </table>
@@ -310,6 +310,6 @@ function quoten() {
 <input type="hidden" name="group" value="<?=htmlspecialchars($group); ?>">
 </form>
 
-<? } } ?>
+<?php } } ?>
 
-<? include "tail.inc"; ?>
+<?php include "tail.inc"; ?>

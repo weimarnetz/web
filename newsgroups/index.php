@@ -1,13 +1,13 @@
-<? header("Expires: ".gmdate("D, d M Y H:i:s",time()+7200)." GMT");
+<?php header("Expires: ".gmdate("D, d M Y H:i:s",time()+7200)." GMT");
 
    include "config.inc.php";
    include "auth.inc";
    include "head.inc"; 
     ?>
 
-<h1 class="np_index_headline"><? echo htmlspecialchars($title); ?></h1>
+<h1 class="np_index_headline"><?php echo htmlspecialchars($title); ?></h1>
 
-<?
+<?php
 include("$file_newsportal");
 flush();
 $newsgroups=groups_read($server,$port);
@@ -16,4 +16,4 @@ groups_show($newsgroups);
 echo '</div>';
 ?>
 
-<? include "tail.inc"; ?>
+<?php include "tail.inc"; ?>

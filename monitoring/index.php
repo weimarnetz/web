@@ -66,15 +66,15 @@
 <h2>Allgemeine Daten</h2>
 <div class="row warning">
 <h3>VPN</h3>
-<? echo $servicetable;?>
+<?php echo $servicetable;?>
 <h3>Server</h3>
-<? echo $servertable;?>
+<?php echo $servertable;?>
 </div>
 
 <h2>Daten der Router</h2>
 <div class="row">
 <div class="routergesamt">Router gesamt: </div>
-Router erreichbar: <? echo $json['state']['nodes']; ?> 
+Router erreichbar: <?php echo $json['state']['nodes']; ?> 
 <table class="router table table-striped sortable">
     <thead>
         <tr>

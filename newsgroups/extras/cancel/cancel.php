@@ -1,4 +1,4 @@
-<? 
+<?php 
   /* 
    with this script you can delete (cancel) articles.
 
@@ -71,9 +71,9 @@ if (!isset($group)) $group=$newsgroups;
 
 ?>
 <table><tr><td valign="top">
-<? include "forumnavi.inc.php";?>
+<?php include "forumnavi.inc.php";?>
 </td><td valign="top" width="100%">
-<?
+<?php
 
 // Is there a new article to be bost to the newsserver?
 if ($type=="cancel") {
@@ -114,9 +114,9 @@ if ($type=="cancel") {
 
 <p>Das Cancel wurde erfolgreich verschickt</p>
 
-<p><a href="<? echo $file_thread.'?group='.urlencode($group).'">'.$text_post["button_back"].'</a> '
+<p><a href="<?php echo $file_thread.'?group='.urlencode($group).'">'.$text_post["button_back"].'</a> '
      .$text_post["button_back2"].' '.urlencode($group) ?></p>
-<?
+<?php 
       } else {
         // article not accepted by the newsserver
         $type="retry";
@@ -196,20 +196,20 @@ echo '<p><b>Achtung!</b> Der Artikel wird auf allen <b>allen</b> '.
 
 <br>
 
-<form action="<? echo $file_cancel?>" method="get">
+<form action="<?php echo $file_cancel?>" method="get">
 
 <div class="np_post_header">
 <table>
-<tr><td align="right"><b><? echo $text_header["subject"] ?></b></td>
-<td><input type="text" name="subject" value="<? echo htmlentities(stripslashes($subject));?>" size="40" maxlength="80"></td></tr>
+<tr><td align="right"><b><?php echo $text_header["subject"] ?></b></td>
+<td><input type="text" name="subject" value="<?php echo htmlentities(stripslashes($subject));?>" size="40" maxlength="80"></td></tr>
 <tr><td align="right"><b>Name:</b></td>
  <td align="left"><input type="text" name="name"
- <? if (isset($name)) echo 'value="'.
+ <?php if (isset($name)) echo 'value="'.
   htmlentities(stripslashes($name)).'"'; ?>
  size="40" maxlength="40"></td></tr>
 <tr><td align="right"><b>eMail:</b></td>
  <td align="left"><input type="text" name="email"
- <? if (isset($email)) echo "value=\"$email\""; ?>
+ <?php if (isset($email)) echo "value=\"$email\""; ?>
  size="40" maxlength="40"></td></tr>
 </table>
 </div>
@@ -217,29 +217,29 @@ echo '<p><b>Achtung!</b> Der Artikel wird auf allen <b>allen</b> '.
 
 <div class="np_post_body">
 <table>
-<tr><td><b><? echo $text_post["message"];?></b><br>
+<tr><td><b><?php echo $text_post["message"];?></b><br>
 <textarea name="body" rows="10" cols="79" wrap="physical">
-<? if (isset($bodyzeile)) echo stripslashes($bodyzeile); ?>
+<?php if (isset($bodyzeile)) echo stripslashes($bodyzeile); ?>
 </textarea></td></tr>
 <tr><td>
 <input type="submit" value="Löschen">
-<? if ($setcookies==true) { ?>
+<?php if ($setcookies==true) { ?>
 <input type="checkbox" name="abspeichern" value="ja">
-<? echo $text_post["remember"];?>
-<? } ?>
+<?php echo $text_post["remember"];?>
+<?php } ?>
 </td>
 </tr>
 </table>
 </div>
 <input type="hidden" name="type" value="cancel">
-<input type="hidden" name="cancelid" value="<? echo $head->id;?>">
-<input type="hidden" name="newsgroups" value="<? echo $newsgroups; ?>">
-<input type="hidden" name="references" value="<? echo htmlentities($references); ?>">
-<input type="hidden" name="group" value="<? echo $group; ?>">
+<input type="hidden" name="cancelid" value="<?php echo $head->id;?>">
+<input type="hidden" name="newsgroups" value="<?php echo $newsgroups; ?>">
+<input type="hidden" name="references" value="<?php echo htmlentities($references); ?>">
+<input type="hidden" name="group" value="<?php echo $group; ?>">
 </form>
 
-<? } } ?>
+<?php } } ?>
 </td></tr></table>
 
 
-<? include "tail.inc"; ?>
+<?php include "tail.inc"; ?>

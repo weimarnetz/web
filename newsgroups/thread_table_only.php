@@ -1,4 +1,4 @@
-<? header("Expires: ".gmdate("D, d M Y H:i:s",time()+7200)." GMT");
+<?php header("Expires: ".gmdate("D, d M Y H:i:s",time()+7200)." GMT");
 /*****
 
 Dieses Skript ist speziell für die Firmware für Router des Projektes Freifunk Weimar angepaßt, um auf der zugehörigen Infoseite die letzten 10 bearbeiteten Beiträge der Diskussionsgruppe zu präsentieren
@@ -32,7 +32,7 @@ if((!function_exists("npreg_group_has_read_access") ||
 
 
 
-	   <?
+	   <?php
 
 
 

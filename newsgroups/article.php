@@ -1,4 +1,4 @@
-<?
+<?php
   header("Expires: ".gmdate("D, d M Y H:i:s",time()+(3600*24))." GMT");
 
 
@@ -44,10 +44,10 @@
 
 
 
-<h1 class="np_article_headline"><?=htmlspecialchars($subject) ?></h1>
+<h1 class="np_article_headline"><?php=htmlspecialchars($subject) ?></h1>
 
 <table cellpadding="0" cellspacing="0" width="100%" class="np_buttonbar"><tr>
-<? 
+<?php 
   echo '<td class="np_button"><a class="np_button" href="'.
        $file_index.'">'.$text_thread["button_grouplist"].'</a></td>';
   echo '<td class="np_button"><a class="np_button" href="'.
@@ -68,7 +68,7 @@
 ?>
 <td width="100%">&nbsp;</td></tr></table>
 
-<? 
+<?php 
   if (!$message)
     // article not found
     echo $text_error["article_not_found"];
