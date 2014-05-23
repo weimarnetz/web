@@ -103,7 +103,7 @@ Router erreichbar: <?php echo $json['state']['nodes']; ?>
     
     <% _.each(items,function(item,key,list){ if (item.doc.firmware){%>
     <tr>
-        <td class="<%= lastChangeColor(item.doc.mtime) %>"><%= item.doc.mtime  %></td>
+        <td class="<%= lastChangeColor(item.doc.mtimehours) %>" data-mtime="<%= item.doc.mtime %>"><%= item.doc.mtimehours  %></td>
         <td><a href="#" data-toggle="modal" data-target="#info<%= key %>"><%= item.doc.hostname %></a></td>
 	  <% if (item.doc.olsr.ipv4Config) {%> 
 	    <td data-nodenumer="<%= item.doc.weimarnetz.nodenumber %>" data-mainip="<%= item.doc.olsr.ipv4Config.mainIpAddress %>">
@@ -234,8 +234,9 @@ success: ( function(Response){
   var rows = Response.rows;
   rows = rows.sort(function(a,b) { return new Date(b.doc.mtime).getTime() - new Date(a.doc.mtime).getTime();}); 
   _.each(rows, function(item, key, list) {
-    var diff = new Date().getTime() - new Date(item.doc.mtime).getTime();
-    item.doc.mtime = Math.round(diff/36000000);
+    today=new Date();
+    var diff = today.getTime() - new Date(item.doc.mtime).getTime();
+    item.doc.mtimehours = Math.floor(diff/3600000);
     if (! item.doc.weimarnetz) {
       item.doc.weimarnetz = {};
     }
