@@ -71,7 +71,7 @@
     <ul class="nav navbar-nav navbar-right">
       <li <?php echo getActiveClass("/partner")?> ><a href="http://www.weimarnetz.de/partner">Partner</a></li>
       <li class="dropdown">
-        <a href="/impressum.php" class="dropdown-toggle"  data-toggle="dropdown">Impressum <b class="caret"></b>
+        <a href="/impressum" class="dropdown-toggle"  data-toggle="dropdown">Impressum <b class="caret"></b>
         </a>
         <ul class="dropdown-menu">
           <li <?php echo getActiveClass("/impressum")?> ><a href="http://www.weimarnetz.de/impressum">Impressum</a></li>
