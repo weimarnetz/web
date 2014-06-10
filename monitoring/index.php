@@ -78,7 +78,7 @@ Router erreichbar: <?php echo $json['state']['nodes']; ?>
 <table class="router table table-striped sortable">
     <thead>
         <tr>
-            <th title="Vor so vielen Stunden wurde die Information zuletzt aktualisiert" class="sorttable_sorted sorttable_numeric">Alter in h<span id="sorttable_sortfwdind">&nbsp;▾</span></th>
+            <th title="Vor so vielen Stunden wurde die Information zuletzt aktualisiert" class="sorttable_numeric sorttable_sorted">Alter in h<span id="sorttable_sortfwdind">&nbsp;▾</span></th>
             <th title="Name des Routers">Name</th>
 	    <th title="Knotennummer des Routers" class="sorttable_numeric">Knoten</th>
 	    <th title="Firmwareversion, die aktuell installiert ist">Firmware</th>
