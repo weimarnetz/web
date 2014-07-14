@@ -92,6 +92,7 @@ Wie und woher bekomme ich einen Router?</h3>
 <p>
 <ul>
 <li><strong>Werbung machen!</strong> Erzähle deinen Freunden und Freundinnen, Arbeitskollegen und Kolleginnen, deiner Lieblingskneipe und anderen von der Freifunk-Idee und bring sie mit uns in Kontakt. Wir helfen euch gerne beim Aufstellen und Betreiben von Knotenpunkten.</li>
+<li><strong>Pack mit an!</strong> Es gibt viele Dinge zu tun, die ganz unterschiedliche Fähigkeiten erfordern. Mehr Informationen zu diesen Themen findest du auf unserer <a href="/mithelfen/">Mithelfen-Seite</a>.</li>
 <li><strong>Spenden!</strong> Unterstütze den Verein mit einmaligen oder monatlichen <a href="/spenden/">Spenden</a>. Auf <a href="http://www.betterplace.org/de/projects/14895-weimarnetz-e-v-freies-wlan-in-weimar">Betterplace</a> kannst Du auch für konkrete Projekte spenden. Als monatlicher Beitrag haben sich 5,00 &euro; etabliert. Diese werden z.B. für den Betrieb des Servers in Berlin bei <a href="https://www.in-berlin.de/verein/">IN-Berlin</a> und das Anschaffen von Routern, Kabeln, PoE-Adaptern usw. verwendet.</li>
 <li><strong>Inhalte auf der Website und im Wiki verbessern und aktualisieren!</strong> Wir sind meistens nicht die Kommunikationsexperten und freuen uns über Hilfe bei der Außenwerbung und -Kommunikation, sowie bei besseren Erklärungen der technischen Zusammenhänge.</li>
 <li><strong>Sag uns, was du nicht verstehst!</strong> Wir wollen Verständnisbarrieren abbauen. Leider sind wir was das angeht oft betriebsblind. Hilf uns, überkomplizierte Erklärungen zu erkennen und zu vereinfachen.</li>
