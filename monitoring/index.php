@@ -9,8 +9,7 @@
 
 <body onload="setIframeHeight('ifrm');" onresize="setIframeHeight('ifrm');">
 
-  <?php include("../inc/navbar.inc.php") ?>
-<?php
+  <?php include("../inc/navbar.inc.php") ;
   $apifile = "http://www.weimarnetz.de/weimarnetz.json";
   $monfile = "http://www.weimarnetz.de/monitoring.json";
 
@@ -185,7 +184,7 @@ Router erreichbar: <?php echo $json['state']['nodes']; ?>
 	      <div class="tab-pane fade in" id="olsr<%= key %>">
 		<dl class="table-display wide">
 		<% _.each(item.doc.olsr.links,function(olinks,olsrKey,olsrList) {%>
-		  <dt><%= olinks.destNodeId%></dt><dd><%=olinks.destAddr%></dd>
+		  <dt><%= olinks.destNodeId%></dt><dd><%=olinks.destAddr%> (ETX <%=olinks.etx%>)</dd>
 		<% }) %>
 		</dl>
 	      </div>
@@ -236,7 +235,15 @@ success: ( function(Response){
   _.each(rows, function(item, key, list) {
     today=new Date();
     var diff = today.getTime() - new Date(item.doc.mtime).getTime();
-    item.doc.mtimehours = Math.floor(diff/3600000);
+		item.doc.mtimehours = Math.floor(diff/3600000);
+		if (item.doc.olsr) {
+			_.each(item.doc.olsr.links,function(olinks,olsrKey,olsrList) {
+				olinks.etx = Math.round(parseFloat(olinks.linkCost) / 1024 * 1000) / 1000;
+				if (olinks.etx > 4000) {
+					olinks.etx = "INFINIT";
+				}
+			});
+		}
     if (! item.doc.weimarnetz) {
       item.doc.weimarnetz = {};
     }
