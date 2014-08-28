@@ -86,20 +86,15 @@
     
           </div> <!-- ende reihe -->
 
-        </div> <!-- ende content -->
+				</div> <!-- ende content -->
+
+				<div class="col-sm-3" style="text-align:right">
+					<h2 class="page-header"><small class="text-muted">Termine</small></h2>
+					<?php include("./inc/agendaview.inc.php") ?>
+				</div>
     
         <div class="col-sm-3" style="text-align:right">
           <h2 class="page-header"><small class="text-muted">Verein</small></h2>
-          <!-- mindfactory banner 
-          <img src="img/Banner/120x500_mindfactory_hardware.jpg" width="120" height="500" alt="Ihre Hardware stößt an ihre Grenzen? Zeit für ein Upgrade! www.mindfactory.de" usemap="#admap" />
-          <map name="admap">
-            <!-- #$-:Image map file created by GIMP Image Map plug-in -->
-            <!-- #$-:GIMP Image Map plug-in by Maurits Rijk -->
-            <!-- #$-:Please do not edit lines starting with "#$" -->
-            <!-- #$VERSION:2.3 -->
-            <!-- #$AUTHOR:Unknown -->
-            <!--<area shape="rect" coords="3,413,116,438" target="_blank" href="http://www.mindfactory.de" />
-          </map>-->
 	  <p>
 	  <address><strong>Weimarnetz e.V.</strong><br>
             Marienstr. 18<br>
