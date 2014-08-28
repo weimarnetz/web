@@ -88,7 +88,7 @@
 
 				</div> <!-- ende content -->
 
-				<div class="col-sm-3" style="text-align:right">
+				<div class="col-sm-3">
 					<h2 class="page-header"><small class="text-muted">Termine</small></h2>
 					<?php include("./inc/agendaview.inc.php") ?>
 				</div>

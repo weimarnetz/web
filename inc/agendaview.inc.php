@@ -10,9 +10,7 @@ $eventsToShow = 5;
 require('ical/class.iCalReader.php');
 $ical = new ical('http://ics.freifunk.net/tags/weimar.ics');
 $eventCounter = 0;
-
 ?>
-<ul>
 
     <?php
 
@@ -27,18 +25,32 @@ $eventCounter = 0;
 				$weekday = date_format($eventtime, 'D');
 				$month = date_format($eventtime, 'M');
 				$time = date_format($eventtime, 'H:i');
-				$output = "<li>" . $weekday . ", " . $day . ". " . $month . "<br/>";
-        $output .= $time . " Uhr: ";
+				?>
+				<small><div class="row"><div class="col-sm-4">
+					<div class="panel panel-primary panel-sm">
+						<div class="panel-heading">
+						<h3 class="panel-title"><?php echo $month; ?></h3>
+				    </div>
+						<div class="panel-body">
+							<?php echo "<strong>" . $day . "</strong><br/>" . $weekday; ?>
+					  </div>
+				  </div>
+				</div>
+				<div class="col-sm-8"><div class="well">
+				<?php
+
+        $output = $time . " ";
 				if ($event['URL']) {
 						$output .= "<a href=\"". $event['URL'] ."\">" . $event['SUMMARY'] . "</a>";
 				} else {
 	          $output .= "" . $event['SUMMARY'];
 				}
-        $output .= ", Ort: " . $event['LOCATION'];
-				$output .= "</li>";
+        $output .= "<br/>Ort: " . $event['LOCATION'];
 				echo $output;
-        $eventCounter++;
+				$eventCounter++;
+				?>
+				</div></div></div></small>
+				<?php
 		}
     ?>
-</ul>
 
