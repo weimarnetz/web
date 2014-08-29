@@ -1,0 +1,13 @@
+dd
+{
+    margin: 0 0 0 .5em;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 0 0 0 .5em;
+    text-overflow: ellipsis;
+}
+
+.modal div
+{
+    text-align: left;
+}
