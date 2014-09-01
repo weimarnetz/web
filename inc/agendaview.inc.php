@@ -51,9 +51,9 @@ $eventCounter = 0;
                         <h5>Wo?</h5>
                         <p><?php echo $event['LOCATION'];?></p>
                         <?php
-                        if ($event['URL']) { ?>
+                        if (! empty($event['URL'])) { ?>
                             <h5>Mehr Informationen:</h5>
-                        <p><?php echo "<a href=\"" . $event['URL'] . "\" target=\"_blank\">" . $event['URL'] . "</a>";?></p>
+                            <p><?php echo "<a href=\"" . $event['URL'] . "\" target=\"_blank\">" . $event['URL'] . "</a>";?></p>
                         <?php
                         }
                         ?>
