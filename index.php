@@ -77,10 +77,17 @@
 		Die Nutzung von Weimarnetz ist kostenlos und keiner der Betreiber von Netzknoten verlangt Geld oder andere Zuwendungen. Jeder Mensch soll das Netz ohne Anmeldung, eigene Router und schlechtes Gewissen nutzen können. Falls das Gewissen trotzdem hineinredet, stellt einen eigenen Router auf und unterstützt uns durch Spenden.
 	      </p>
 	      <p>
-		Eure Spenden werden eingesetzt, um laufende Kosten zu decken, z.B. für den VPN-Server, um die Störerhaftung von den DSL-Einspeisern zu nehmen.
+              <?php include("./inc/betterplace.inc.php"); ?>
+              Aktuell haben wir <?php echo $bpIncompleteNeedCount; ?> aktive Spendenkampagnen und es besteht Spendenbedarf für <?php echo $bpOpenAmount/100; ?> €. Unser Spendenbarometer:
+              <div class="progress">
+                 <div class="progress-bar" role="progressbar" aria-valuenow="<?php echo $bpProgressPercentage; ?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $bpProgressPercentage; ?>%;">
+                    <?php echo $bpProgressPercentage; ?> %
+                 </div>
+              </div>
 	      </p>
 	      <p>
 		Welche Möglichkeiten es gibt, uns finanziell zu unterstützen und wofür wir die Spenden einsetzen erfahrt ihr auf <a href="/spenden">dieser Seite</a>.
+
 	      </p>
             </div>
     
@@ -104,10 +111,6 @@
 	  <address><strong>Email</strong><br>
 	    <a href="mailto:kontakt@weimarnetz.de?subject=Anfrage über weimarnetz.de">kontakt@weimarnetz.de</a>
 	  </address>
-	  <strong>Spenden</strong>
-	  </p>
-	  <p>
-	  <iframe frameborder='0' marginheight='0' marginwidth='0' src='http://www.betterplace.org/de/projects/14895-weimarnetz-e-v-freies-wlan-in-weimar/widget' width='160' height='260' style='border: 0; padding:0; margin:0;'>Ihr Browser unterstützt keine Iframes. <a href='http://www.betterplace.org/projects'>Online Spenden</a> auf betterplace.org</iframe>
 	  </p>
         </div>
       
