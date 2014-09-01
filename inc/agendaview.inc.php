@@ -20,12 +20,13 @@ $eventCounter = 0;
         if ($eventCounter >= $eventsToShow) {
             break;
         }
-        $fmt = new IntlDateFormatter('de_DE', IntlDateFormatter::FULL, IntlDateFormatter::FULL);
+        $weekdayFmt = new IntlDateFormatter('de_DE', IntlDateFormatter::FULL, IntlDateFormatter::FULL, 'Europe/Berlin', IntlDateFormatter::GREGORIAN, "eeee");
+        $monthFmt = new IntlDateFormatter('de_DE', IntlDateFormatter::FULL, IntlDateFormatter::FULL, 'Europe/Berlin', IntlDateFormatter::GREGORIAN, "MMMM");
         $eventtime = new DateTime($event['DTSTART']);
         $eventtime->setTimezone(new DateTimeZone('Europe/Berlin'));
-        $day = $fmt->formatObject($eventtime, 'd');
-        $weekday = $fmt->formatObject($eventtime, 'eee');
-        $month = $fmt->formatObject($eventtime, 'MMM');
+        $day = date_format($eventtime, 'd');
+        $weekday = $weekdayFmt->format($eventtime);
+        $month = $monthFmt->format($eventtime);
         $time = date_format($eventtime, 'H:i');
         ?>
         <dt>
@@ -42,7 +43,7 @@ $eventCounter = 0;
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal"><span>&times;</span><span class="sr-only">Close</span></button>
-                        <h4>Am <?php echo $fmt->formatObject($eventtime, 'eeee') . ", " . $day . ". " . $fmt->formatObject($eventtime, 'MMMM') . " " . $fmt->formatObject($eventtime, 'YYYY') . " um " . $time . " Uhr"; ?></h4>
+                        <h4>Am <?php echo $weekday . ", " . $day . ". " . $month . " " . date_format($eventtime, 'Y') . " um " . $time . " Uhr"; ?></h4>
                     </div>
                     <div class="modal-body">
                         <h5>Was?</h5>
@@ -59,7 +60,7 @@ $eventCounter = 0;
 
                     </div>
                     <div class="modal-footer">
-                        <a href="http://ics.freifunk.net/tags/weimarnetz" target="_blank">Alle Termine</a>
+                        <a href="http://ics.freifunk.net/tags/weimar" target="_blank">Alle Termine</a>
                         <button type="button" class="btn btn-default" data-dismiss="modal">Schließen</button>
                     </div>
                 </div>
