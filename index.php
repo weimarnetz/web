@@ -79,14 +79,14 @@
 	      <p>
               <?php include("./inc/betterplace.inc.php"); ?>
               Aktuell haben wir <?php echo $bpIncompleteNeedCount; ?> aktive Spendenkampagnen und es besteht Spendenbedarf für <?php echo $bpOpenAmount/100; ?> €. Unser Spendenbarometer:
-              <a href="/spenden">
-                  <div class="progress">
-                     <div class="progress-bar" role="progressbar" aria-valuenow="<?php echo $bpProgressPercentage; ?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $bpProgressPercentage; ?>%;">
-                        <?php echo $bpProgressPercentage; ?> %
-                     </div>
-                  </div>
-              </a>
-	      </p>
+          </p>
+          <a href="/spenden">
+              <div class="progress">
+                 <div class="progress-bar" role="progressbar" aria-valuenow="<?php echo $bpProgressPercentage; ?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $bpProgressPercentage; ?>%;">
+                    <?php echo $bpProgressPercentage; ?> %
+                 </div>
+              </div>
+          </a>
 	      <p>
 		Welche Möglichkeiten es gibt, uns finanziell zu unterstützen und wofür wir die Spenden einsetzen erfahrt ihr auf <a href="/spenden">dieser Seite</a>.
 
