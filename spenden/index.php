@@ -39,11 +39,13 @@
               <li><a href="<?php echo $bpDonationLink?>" target="_blank">Direkt spenden</a></li>
           </ul>
           Gesamtspendenstand:
-          <div class="progress">
-              <div class="progress-bar" role="progressbar" aria-valuenow="<?php echo $bpProgressPercentage; ?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $bpProgressPercentage; ?>%;">
-                  <?php echo $bpProgressPercentage; ?> %
+          <a href="<?php echo $bpPlatformLink?>" target="_blank">
+              <div class="progress">
+                  <div class="progress-bar" role="progressbar" aria-valuenow="<?php echo $bpProgressPercentage; ?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $bpProgressPercentage; ?>%;">
+                      <?php echo $bpProgressPercentage; ?> %
+                  </div>
               </div>
-          </div>
+          </a>
       </div>
       <div class="col-sm-12 col-lg-4">
         <h2>Laufende Kampagnen</h2>
@@ -61,11 +63,13 @@
                       ?>
                       <dd>
                           <p><?php echo $need['progress_percentage']; ?> % des Betrages sind schon gespendet:</p>
-                          <div class="progress">
-                              <div class="progress-bar" role="progressbar" aria-valuenow="<?php echo $need['progress_percentage']; ?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $need['progress_percentage']; ?>%;">
-                                  noch <strong><?php echo $need['open_amount_in_cents']/100; ?> €</strong>
-                              </div>
-                          </div>
+                              <a href="<?php echo $donationLink; ?>" target="_blank">
+                                  <div class="progress">
+                                      <div class="progress-bar" role="progressbar" aria-valuenow="<?php echo $need['progress_percentage']; ?>" aria-valuemin="0" aria-valuemax="100" style="width: <?php echo $need['progress_percentage']; ?>%;">
+                                          noch <strong><?php echo $need['open_amount_in_cents']/100; ?> €</strong>
+                                      </div>
+                                  </div>
+                              </a>
                           <p>
                               <?php echo $need['donated_amount_in_cents']/100; ?> € von <?php echo $need['requested_amount_in_cents']/100; ?> € erreicht -
                               <a href="<?php echo $donationLink; ?>" target="_blank">Spende für diesen Bedarf</a>
