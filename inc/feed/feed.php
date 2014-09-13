@@ -4,7 +4,7 @@ include_once("mergedrss.php");
 // place our feeds in an array
 $feeds = array(
         array('http://www.weimarnetz.de/newsgroups/backend.php','Weimarnetz Newsserver','http://www.weimarnetz.de/newsgroups/backend.php'),
-        array('https://www.facebook.com/feeds/page.php?id=130383450345014&format=rss20', 'Weimarnetz im Facebook','http://www.facebook.com/weimarnetz')
+        array('http://weimarnetz.de/timeline2rss/tl2rss.php', 'Weimarnetz im Facebook','http://www.facebook.com/weimarnetz')
 //	array('', 'Freifunk Radio', 'http://wiki.freifunk.net/Freifunk.radio')
 );
 
