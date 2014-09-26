@@ -22,13 +22,14 @@
  */
 
 /*
+ * !!!!function is now part of php (>=5.3.8)
  * Encode lines with 8bit-characters to quote-printable
  *
  * $line: the to be encoded line
  *
  * the function returns a sting containing the quoted-printable encoded
  * $line
- */
+ 
 function quoted1_printable_encode($line) {
   global $www_charset;
   $qp_table=array(
@@ -96,7 +97,7 @@ function quoted1_printable_encode($line) {
     $line=$begin.'=?'.$www_charset.'?Q?'.$newmiddle.'?='.$end;
   }
   return $line;
-}
+}*/
 
 /*
  * generate a message-id for posting.
@@ -139,7 +140,7 @@ function message_post($subject,$from,$newsgroups,$ref,$body) {
   if ($ns != false) {
     fputs($ns,"POST\r\n");
     $weg=line_read($ns);
-    fputs($ns,'Subject: '.quoted_printable_encode($subject)."\r\n");
+    fputs($ns,'Subject: '.$subject."\r\n");
     fputs($ns,'From: '.$from."\r\n");
     fputs($ns,'Newsgroups: '.$newsgroups."\r\n");
     fputs($ns,"Mime-Version: 1.0\r\n");
@@ -160,7 +161,7 @@ function message_post($subject,$from,$newsgroups,$ref,$body) {
       fputs($ns,'References: '.implode(" ",$ref)."\r\n");
     }
     if (isset($organization))
-      fputs($ns,'Organization: '.quoted_printable_encode($organization)."\r\n");
+      fputs($ns,'Organization: '.$organization."\r\n");
     if ((isset($file_footer)) && ($file_footer!="")) {
       $footerfile=fopen($file_footer,"r");
       $body.="\n".fread($footerfile,filesize($file_footer));

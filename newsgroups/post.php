@@ -50,8 +50,6 @@ if ((isset($post_port)) && ($post_port!=""))
  include $file_newsportal;
 
 
-?>
-<?php
 
   // has the user write-rights on the newsgroups?
   if((function_exists("npreg_group_has_read_access") &&
@@ -136,8 +134,8 @@ if ($type=="post") {
         $nemail=$anonym_address;
       else
         $nemail=$email;
-      $message=message_post(quoted_printable_encode($subject),
-                 $nemail." (".quoted_printable_encode($name).")",
+      $message=message_post($subject,
+                 $nemail." (".$name.")",
                  $newsgroups,$references_array,addslashes($body));
       // Article sent without errors, or duplicate?
       if ((substr($message,0,3)=="240") ||
