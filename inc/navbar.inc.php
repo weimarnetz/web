@@ -75,6 +75,7 @@
         </a>
         <ul class="dropdown-menu">
           <li <?php echo getActiveClass("/impressum")?> ><a href="http://www.weimarnetz.de/impressum">Impressum</a></li>
+          <li <?php echo getActiveClass("/datenschutz")?> ><a href="http://www.weimarnetz.de/datenschutz">Datenschutz</a></li>
           <li <?php echo getActiveClass("/contact")?> ><a href="http://www.weimarnetz.de/contact">Kontakt</a></li>
         </ul>
       </li>
