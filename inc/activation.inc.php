@@ -4,7 +4,10 @@
     $gwnode = isset($_GET['gwnode']) ? $_GET['gwnode'] : '';
     $neighborip = isset($_GET['nodeip']) ? $_GET['nodeip'] : '';
     $neighbornode = isset($_GET['node']) ? $_GET['node'] : '';
-    if ($gwip <> '' or $neighborip <> ''){
+		if ($gwip <> '' or $neighborip <> ''){
+			if ($gwnode === $neighbornode) {
+				$gwip = $neighborip;
+			}
       echo '<div class="jumbotron alert alert-success alert-top alert-dismissable">
       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><div class="container">';
       echo '<h2>Dein Internetzugang wurde erfolgreich freigeschaltet</h2>';
