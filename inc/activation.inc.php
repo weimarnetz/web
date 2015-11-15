@@ -2,7 +2,7 @@
     $origin = isset($_GET['origin']) ? $_GET['origin'] : '';
     $gwip = isset($_GET['gateway']) ? $_GET['gateway'] : '';
     $gwnode = isset($_GET['gwnode']) ? $_GET['gwnode'] : '';
-    $neighborip = isset($_GET['nodeip']) ? $_GET['nodeid'] : '';
+    $neighborip = isset($_GET['nodeip']) ? $_GET['nodeip'] : '';
     $neighbornode = isset($_GET['node']) ? $_GET['node'] : '';
     if ($gwip <> '' or $neighborip <> ''){
       echo '<div class="jumbotron alert alert-success alert-top alert-dismissable">
