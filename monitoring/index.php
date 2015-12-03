@@ -104,7 +104,7 @@ Router erreichbar: <?php echo $json['state']['nodes']; ?>
     <tr>
         <td class="<%= lastChangeColor(item.doc.mtimehours) %>" data-mtime="<%= item.doc.mtime %>"><%= item.doc.mtimehours  %></td>
         <td><a href="#" data-toggle="modal" data-target="#info<%= key %>"><%= item.doc.hostname %></a></td>
-	  <% if (item.doc.olsr.ipv4Config) {%> 
+	  <% if (item.doc.olsr && item.doc.olsr.ipv4Config) {%> 
 	    <td data-nodenumer="<%= item.doc.weimarnetz.nodenumber %>" data-mainip="<%= item.doc.olsr.ipv4Config.mainIpAddress %>">
 	      <a href="http://<%= item.doc.olsr.ipv4Config.mainIpAddress %>/cgi-bin-status.html" target="_blank">
 	      <%= item.doc.weimarnetz.nodenumber %>
@@ -113,8 +113,13 @@ Router erreichbar: <?php echo $json['state']['nodes']; ?>
 	  <% } %>
 	</td>
 	<td><%= item.doc.firmware.revision %></td>
-	<td data-uptime="<%= item.doc.system.uptime %>"><%= Math.round(item.doc.system.uptime/3600)   %></td>
-	<td><%= item.doc.links.length %></td>
+	<% if (item.doc.system && item.doc.system.uptime) {%>
+		<td data-uptime="<%= item.doc.system.uptime %>"><%= Math.round(item.doc.system.uptime/3600)   %></td>
+	<% } else { %>
+		<td></td>
+	<% } %>
+	<td><% if (item.doc.links)%><%= item.doc.links.length %>
+	</td>
     
     </tr>
     <% }}) %>
@@ -140,7 +145,9 @@ Router erreichbar: <?php echo $json['state']['nodes']; ?>
 	    <div class="tab-content">
 	      <div class="tab-pane fade in active" id="general<%= key %>">
 		<dl>
-		  <dt>Gerät</dt><dd><%= item.doc.system.sysinfo[1] %></dd>
+		  <dt>Gerät</dt>
+			<dd><% if (item.doc.system && item.doc.system.sysinfo) %><%= item.doc.system.sysinfo[1] %>
+			</dd>
 		  <dt>Hardware</dt><dd><%= item.doc.hardware %></dd>
 		  <% if (item.doc.weimarnetz.nexthop ) { %>
 		    <dt>nächster Nachbar</dt><dd><%= item.doc.weimarnetz.nexthop %></dd>
@@ -167,13 +174,13 @@ Router erreichbar: <?php echo $json['state']['nodes']; ?>
 	      </div>
 	      <div class="tab-pane fade in" id="contact<%= key %>">
 		<dl>
-		  <% if (item.doc.freifunk.contact.nickname) { %>
+		  <% if (item.doc.freifunk && item.doc.freifunk.contact && item.doc.freifunk.contact.nickname) { %>
 		    <dt>Ansprechpartner</dt><dd><%= item.doc.freifunk.contact.nickname %></dd>
 		  <% } %>
-		  <% if (item.doc.freifunk.contact.mail) { %>
+		  <% if (item.doc.freifunk && item.doc.freifunk.contact && item.doc.freifunk.contact.mail) { %>
 		    <dt>Email</dt><dd><%= item.doc.freifunk.contact.mail %></dd>
 		  <% } %>
-		  <% if (item.doc.freifunk.contact.phone) { %>
+		  <% if (item.doc.freifunk && item.doc.freifunk.contact && item.doc.freifunk.contact.phone) { %>
 		    <dt>Telefon</dt><dd><%= item.doc.freifunk.contact.phone %></dd>
 		  <% } %>
 		  <% if (item.doc.location) { %>
@@ -183,9 +190,10 @@ Router erreichbar: <?php echo $json['state']['nodes']; ?>
 	      </div>
 	      <div class="tab-pane fade in" id="olsr<%= key %>">
 		<dl class="table-display wide">
-		<% _.each(item.doc.olsr.links,function(olinks,olsrKey,olsrList) {%>
-		  <dt><%= olinks.destNodeId%></dt><dd><%=olinks.destAddr%> (ETX <%=olinks.etx%>)</dd>
-		<% }) %>
+		<% if (item.doc.olsr) {
+			_.each(item.doc.olsr.links,function(olinks,olsrKey,olsrList) {%>
+			  <dt><%= olinks.destNodeId%></dt><dd><%=olinks.destAddr%> (ETX <%=olinks.etx%>)</dd>
+			<% })} %>
 		</dl>
 	      </div>
 	      <div class="tab-pane fade" id="map<%= key%>">
