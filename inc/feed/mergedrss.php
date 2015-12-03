@@ -4,17 +4,21 @@ class MergedRSS {
 	private $myTitle = null;
 	private $myLink = null;
 	private $myDescription = null;
+	private $myImage = null;
 	private $myPubDate = null;
 	private $myCacheTime = null;
+	private $fetch_timeout = null; //timeout for fetching urls in seconds (floating point)
 
 	// create our Merged RSS Feed
-	public function __construct($feeds = null, $channel_title = null, $channel_link = null, $channel_description = null, $channel_pubdate = null, $cache_time_in_seconds = 86400) {
+	public function __construct($feeds = null, $channel_title = null, $channel_link = null, $channel_description = null, $channel_image = null, $channel_pubdate = null, $cache_time_in_seconds = 3600, $fetch_timeout = 2.0) {
 		// set variables
 		$this->myTitle = $channel_title;
 		$this->myLink = $channel_link;
 		$this->myDescription = $channel_description;
+		$this->myImage = $channel_image;
 		$this->myPubDate = $channel_pubdate;
 		$this->myCacheTime = $cache_time_in_seconds;
+		$this->fetch_timeout = $fetch_timeout;
 
 		// initialize feed variable
 		$this->myFeeds = array();
@@ -30,12 +34,17 @@ class MergedRSS {
 	}
 
 	// exports the data as a returned value and/or outputted to the screen
-	public function export($return_as_string = true, $output = false, $limit = null) { 
+	public function export($return_as_string = true, $output = false, $limit = null, $community = 'all') {
 		// initialize a combined item array for later
 		$items = array();	
 
 		// loop through each feed
-		foreach ($this->myFeeds as $feed_array) {
+		foreach ($this->myFeeds as $key => $feed_array) {
+			if ($community !== 'all' && ! in_array($community, $feed_array[3])) {
+				continue;
+			}
+
+			$results = null;
 			$feed_url = $feed_array[0];
 			// determine my cache file name.  for now i assume they're all kept in a file called "cache"
 			$cache_file = "cache/" . $this->__create_feed_key($feed_url);
@@ -55,7 +64,9 @@ class MergedRSS {
 			} else { 
 				// retrieve updated rss feed
 				$sxe = $this->__fetch_rss_from_url($feed_url);
-				$results = $sxe->channel->item;
+				if ( is_object($sxe) ) {
+					$results = $sxe->channel->item;
+				}
 
 				if (!isset($results)) { 
 					// couldn't fetch from the url. grab a cached version if we can
@@ -65,7 +76,9 @@ class MergedRSS {
 					}
 				} else { 
 					// we need to update the cache file
-					$sxe->asXML($cache_file);
+					if (is_object($sxe)) {
+						$sxe->asXML($cache_file);
+					}
 				}
 			}
 
@@ -93,6 +106,7 @@ class MergedRSS {
 		$xml .= "\t<atom:link href=\"http://".$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF']."\" rel=\"self\" type=\"application/rss+xml\" />\n";
 		if (isset($this->myLink)) { $xml .= "\t<link>".$this->myLink."</link>\n"; }
 		if (isset($this->myDescription)) { $xml .= "\t<description>".$this->myDescription."</description>\n"; }
+		if (isset($this->myImage)) { $xml .= "\t<itunes:image href=\"".$this->myImage."\" />\n"; }
 		if (isset($this->myPubDate)) { $xml .= "\t<pubDate>".$this->myPubDate."</pubDate>\n"; }
 
 		// if there are any items to add to the feed, let's do it
@@ -100,7 +114,7 @@ class MergedRSS {
 
 			// sort items
 			usort($items, array($this,"__compare_items"));		
-	
+
 			// if desired, splice items into an array of the specified size
 			if (isset($limit)) { array_splice($items, intval($limit)); }
 
@@ -108,17 +122,19 @@ class MergedRSS {
 			for ($i=0; $i<sizeof($items); $i++) { 
 				$xml .= $items[$i]->asXML() ."\n";
 			}
-			
+
 
 		}
 		$xml .= "</channel>\n</rss>";
 
 		// if output is desired print to screen
 		if ($output) { echo $xml; }
-		
+
 		// if user wants results returned as a string, do so
-		if ($return_as_string) { return $xml; }
-		
+			if ($return_as_string) { 
+				return $xml;
+			}
+
 	}
 
 
@@ -139,9 +155,20 @@ class MergedRSS {
 	private function __fetch_rss_from_url($url) {
 		// Create new SimpleXMLElement instance
 		try {
-			//set user agent, i.e. facebook.com doesn't deliver feeds to unknown browsers
-			ini_set('user_agent', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10.5; en-US; rv:1.9.1.3) Gecko/20090824 Firefox/3.5.3');
-			$sxe = new SimpleXMLElement($url, null, true);
+			$ch = curl_init();
+			curl_setopt($ch, CURLOPT_URL,$url);
+			curl_setopt($ch, CURLOPT_SSLVERSION,6);
+			//curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+			curl_setopt($ch, CURLOPT_TIMEOUT, $this->fetch_timeout);
+			$fp = $this->curl_exec_follow($ch);
+			curl_close($ch);
+			if (! curl_errno($ch)) {
+				$sxe = simplexml_load_string($fp);
+			} else {
+				error_log("cannot load feed " . $url);
+				$sxe = false;
+			}
 			return $sxe;
 		} catch (Exception $e) {
 			return null;
@@ -151,6 +178,51 @@ class MergedRSS {
 	// creates a key for a specific feed url (used for creating friendly file names)
 	private function __create_feed_key($url) { 
 		return preg_replace('/[^a-zA-Z0-9\.]/', '_', $url) . 'cache';
+	}
+
+	private function curl_exec_follow(/*resource*/ $ch, /*int*/ &$maxredirect = null) { 
+		$mr = $maxredirect === null ? 5 : intval($maxredirect); 
+		if (ini_get('open_basedir') == '' && ini_get('safe_mode' == 'Off')) { 
+			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, $mr > 0); 
+			curl_setopt($ch, CURLOPT_MAXREDIRS, $mr); 
+		} else { 
+			curl_setopt($ch, CURLOPT_FOLLOWLOCATION, false); 
+			if ($mr > 0) { 
+				$newurl = curl_getinfo($ch, CURLINFO_EFFECTIVE_URL); 
+
+				$rch = curl_copy_handle($ch); 
+				curl_setopt($rch, CURLOPT_HEADER, true); 
+				curl_setopt($rch, CURLOPT_NOBODY, true); 
+				curl_setopt($rch, CURLOPT_FORBID_REUSE, false); 
+				curl_setopt($rch, CURLOPT_RETURNTRANSFER, true); 
+				do { 
+					curl_setopt($rch, CURLOPT_URL, $newurl); 
+					$header = curl_exec($rch); 
+					if (curl_errno($rch)) { 
+						$code = 0; 
+					} else { 
+						$code = curl_getinfo($rch, CURLINFO_HTTP_CODE); 
+						if ($code == 301 || $code == 302) { 
+							preg_match('/Location:(.*?)\n/', $header, $matches); 
+							$newurl = trim(array_pop($matches)); 
+						} else { 
+							$code = 0; 
+						} 
+					} 
+				} while ($code && --$mr); 
+				curl_close($rch); 
+				if (!$mr) { 
+					if ($maxredirect === null) { 
+						trigger_error('Too many redirects. When following redirects, libcurl hit the maximum amount.', E_USER_WARNING); 
+					} else { 
+						$maxredirect = 0; 
+					} 
+					return false; 
+				} 
+				curl_setopt($ch, CURLOPT_URL, $newurl); 
+			} 
+		} 
+		return curl_exec($ch); 
 	}
 
 }
