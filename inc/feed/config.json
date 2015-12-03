@@ -1,0 +1,19 @@
+{
+	"directoryUrl": "",
+	"defaultLimit" : 20,
+	"additionalFeeds" : 
+	[
+		{
+			"category" : "blog",
+			"url" : "http://weimarnetz.de/timeline2rss/tl2rss.php",
+			"name" : "fbweimarnetz",
+			"homepage" : "https://facebook.com/weimarnetz"
+		},
+		{
+			"category" : "blog",
+			"url" : "http://www.weimarnetz.de/newsgroups/backend.php",
+			"name" : "mlweimarnetz",
+			"homepage" : "http://www.weimarnetz.de/newsgroups/backend.php"
+		}
+	]
+}
