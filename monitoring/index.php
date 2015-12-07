@@ -108,7 +108,9 @@ Router erreichbar: <?php echo $json['state']['nodes']; ?>
 	    <td data-nodenumer="<%= item.doc.weimarnetz.nodenumber %>" data-mainip="<%= item.doc.olsr.ipv4Config.mainIpAddress %>">
 	      <a href="http://<%= item.doc.olsr.ipv4Config.mainIpAddress %>/cgi-bin-status.html" target="_blank">
 	      <%= item.doc.weimarnetz.nodenumber %>
-	      </a><% } else { %>
+	      </a><% } else if (item.doc.weimarnetz.nodenumber) { %>
+					<td><%= item.doc.weimarnetz.nodenumber %>
+	      <% } else { %>
 	    <td>
 	  <% } %>
 	</td>
