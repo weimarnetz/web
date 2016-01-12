@@ -114,7 +114,11 @@ Router erreichbar: <?php echo $json['state']['nodes']; ?>
 	    <td>
 	  <% } %>
 	</td>
-	<td><%= item.doc.firmware.revision %></td>
+	<td><%= item.doc.firmware.revision %>
+	<% if (item.doc.firmware.fffversion) { %>
+	 - <%= item.doc.firmware.fffversion %>
+ 	<% } %>
+	</td>
 	<% if (item.doc.system && item.doc.system.uptime) {%>
 		<td data-uptime="<%= item.doc.system.uptime %>"><%= Math.round(item.doc.system.uptime/3600)   %></td>
 	<% } else { %>
