@@ -1,4 +1,4 @@
-<?
+<?php
 /*
  *  NewsPortal: Functions for handling single messages
  *

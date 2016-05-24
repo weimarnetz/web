@@ -1,5 +1,5 @@
 <?php header("Content-Type: text/xml"); ?>
-<?php echo '<?php';?>xml version="1.0" encoding="ISO-8859-1"<?php echo '?>';?>
+<?php echo '<?';?>xml version="1.0" encoding="UTF-8"<?php echo '?>';?>
 
 <rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:itunes="http://www.itunes.com/DTDs/Podcast-1.0.dtd" >
 
@@ -18,7 +18,7 @@
 <description>Unsere Diskussionsliste als Archiv im Netz</description>
 <language>de-DE</language>
 
-<?php
+<?
 /* *** Some settings ****/
 // Newsgroup
 $group="freifunk.de.weimar.discuss";

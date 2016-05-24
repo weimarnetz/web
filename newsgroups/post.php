@@ -50,6 +50,8 @@ if ((isset($post_port)) && ($post_port!=""))
  include $file_newsportal;
 
 
+?>
+<?php
 
   // has the user write-rights on the newsgroups?
   if((function_exists("npreg_group_has_read_access") &&
@@ -148,7 +150,7 @@ if ($type=="post") {
 
 <p><a href="<?php echo $file_thread.'?group='.urlencode($group).'">'.$text_post["button_back"].'</a> '
      .$text_post["button_back2"].' '.urlencode($group) ?></p>
-<?php
+<?
       } else {
         // article not accepted by the newsserver
         $type="retry";
@@ -236,11 +238,11 @@ if ($testnewsgroups == "") {
 <div class="np_post_header">
 <table>
 <tr><td align="right"><b><?php echo $text_header["subject"] ?></b></td>
-<td><input type="text" name="subject" value="<?php
+<td><input type="text" name="subject" value="<?
 echo htmlspecialchars($subject);?>" size="40" maxlength="80"></td></tr>
 <tr><td align="right"><b><?=$text_post["name"]?></b></td>
  <td align="left">
- <?php
+ <?
  if($form_noname===true) {
    echo htmlspecialchars($name);
  } else {
@@ -253,7 +255,7 @@ echo htmlspecialchars($subject);?>" size="40" maxlength="80"></td></tr>
  </td></tr>
  <tr><td align="right"><b><?=$text_post["email"]?></b></td>
  <td align="left">
- <?php
+ <?
  if($form_noemail===true) {
    echo htmlspecialchars($email);
  } else {
@@ -269,14 +271,14 @@ echo htmlspecialchars($subject);?>" size="40" maxlength="80"></td></tr>
 <div class="np_post_body">
 <table>
 <tr><td><b><?php echo $text_post["message"];?></b><br>
-<textarea id="postbody" name="body" rows="20" cols="79" wrap="virtual"><?php
+<textarea id="postbody" name="body" rows="20" cols="79" wrap="virtual"><?
 if ((isset($bodyzeile)) && ($post_autoquote))
   echo htmlspecialchars($bodyzeile); ?>
 </textarea></td></tr>
 <tr><td>
 
 <?php if(!$post_autoquote) { ?>
-<input type="hidden" id="hidebody" value="<?php
+<input type="hidden" id="hidebody" value="<?
 if (isset($bodyzeile)) echo htmlspecialchars(stripslashes($bodyzeile)); ?>">
 
 <script language="JavaScript">

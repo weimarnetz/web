@@ -32,7 +32,7 @@ if((!function_exists("npreg_group_has_read_access") ||
 
 
 
-	   <?php
+	   <?
 
 
 

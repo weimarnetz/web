@@ -1,4 +1,4 @@
-<?php
+<?
 $text_header["from"]="<b>De:</b> ";
 $text_header["subject"]="<b>Sujet:</b> ";
 $text_header["newsgroups"]="<b>Groupes:</b> ";

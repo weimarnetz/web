@@ -1,4 +1,4 @@
-<?php
+<?
 header("Expires: ".gmdate("D, d M Y H:i:s",time()+(3600*24))." GMT");
 $group=$_REQUEST["group"];
 $id=$_REQUEST["id"];

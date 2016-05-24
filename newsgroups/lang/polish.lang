@@ -1,4 +1,4 @@
-<?php
+<?
 /* zmieñ $www_charset w config.inc.php na:
  * change $www_charset in config.inc.php to:
  * iso-8859-2
