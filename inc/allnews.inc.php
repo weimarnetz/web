@@ -4,7 +4,7 @@ require_once('simplepie/simplepie.php');
 $feed = new SimplePie();
 // Set which feed to process.
 
-$feed->set_feed_url('http://relaunch.weimarnetz.de/inc/feed/feed.php');
+$feed->set_feed_url('http://weimarnetz.de/inc/feed/feed.php');
  
 // Run SimplePie.
 $feed->init();

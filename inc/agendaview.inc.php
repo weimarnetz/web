@@ -8,7 +8,7 @@
 $eventsToShow = 4;
 
 require('ical/class.iCalReader.php');
-$ical = new ical('http://ics.freifunk.net/tags/weimar.ics');
+$ical = new ical('https://ics.freifunk.net/tags/weimar.ics');
 $eventCounter = 0;
 ?>
 <link href="/inc/agenda.css" rel="stylesheet">

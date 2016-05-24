@@ -237,7 +237,7 @@ Router erreichbar: <?php echo $json['state']['nodes']; ?>
 var tableTemplate = $("#table-data").html();
 var infoBoxes = $("#info-data").html();
 test = function(){
-url = "http://mapapi.weimarnetz.de/db/_all_docs?include_docs=true";
+url = "//mapapi.weimarnetz.de/db/_all_docs?include_docs=true";
 $.ajax({
 url: url,
 dataType: 'jsonp',
