@@ -10,8 +10,8 @@
 <body onload="setIframeHeight('ifrm');" onresize="setIframeHeight('ifrm');">
 
   <?php include("../inc/navbar.inc.php") ;
-  $apifile = "http://www.weimarnetz.de/weimarnetz.json";
-  $monfile = "http://www.weimarnetz.de/monitoring.json";
+  $apifile = "https://weimarnetz.de/weimarnetz.json";
+  $monfile = "https://weimarnetz.de/monitoring.json";
 
   $api = file_get_contents($apifile);
   $json = json_decode($api, true);
@@ -146,7 +146,7 @@ Router erreichbar: <?php echo $json['state']['nodes']; ?>
 	      <li><a href="#contact<%= key %>" data-toggle="tab">Kontakt</a></li>
 	      <li><a href="#network<%= key %>" data-toggle="tab">Netzwerk</a></li>
 	      <li><a href="#olsr<%= key %>" data-toggle="tab">OLSR</a></li>
-	      <li><a href="#map<%= key %>" data-toggle="tab" data-tab-url="http://map.weimarnetz.de/#detail?node=<%= item.id %>">Karte</a></li>
+	      <li><a href="#map<%= key %>" data-toggle="tab" data-tab-url="https://map.weimarnetz.de/#detail?node=<%= item.id %>">Karte</a></li>
 	    </ul>
 	    <div class="tab-content">
 	      <div class="tab-pane fade in active" id="general<%= key %>">
@@ -190,7 +190,7 @@ Router erreichbar: <?php echo $json['state']['nodes']; ?>
 		    <dt>Telefon</dt><dd><%= item.doc.freifunk.contact.phone %></dd>
 		  <% } %>
 		  <% if (item.doc.location) { %>
-		    <dt>Standort</dt><dd><a href="http://map.weimarnetz.de/#detail?node=<%= item.id %>" target="_blank"><%= item.doc.location %></a></dd>
+		    <dt>Standort</dt><dd><a href="https://map.weimarnetz.de/#detail?node=<%= item.id %>" target="_blank"><%= item.doc.location %></a></dd>
 		  <% } %>
 		</dl>
 	      </div>
@@ -214,7 +214,7 @@ Router erreichbar: <?php echo $json['state']['nodes']; ?>
 		  lon1 = lon - 0.0001;
 		  lon2 = lon + 0.0001;
 		  console.log(lon1);
-		  el.setAttribute('src', 'http://map.weimarnetz.de/mapnohostdetails.html#bbox=' + lat1 + ',' + lon1 + ',' + lat2 + ',' + lon2); 
+		  el.setAttribute('src', 'https://map.weimarnetz.de/mapnohostdetails.html#bbox=' + lat1 + ',' + lon1 + ',' + lat2 + ',' + lon2); 
 		});
 
 		 <%= "<"+"/script>" %>
@@ -243,7 +243,7 @@ url: url,
 dataType: 'jsonp',
 success: ( function(Response){
   delete Response["myhostname"]; 
-  console.log(26, 'responseis: ', Response);
+  //console.log(26, 'responseis: ', Response);
   var rows = Response.rows;
   rows = rows.sort(function(a,b) { return new Date(b.doc.mtime).getTime() - new Date(a.doc.mtime).getTime();}); 
   _.each(rows, function(item, key, list) {
@@ -266,7 +266,7 @@ success: ( function(Response){
     }
     if (! item.doc.weimarnetz.nodenumber) { item.doc.weimarnetz.nodenumber = NaN; }
   });
-  console.log(26, 'sorted: ', rows);
+  //console.log(26, 'sorted: ', rows);
   $("div.routergesamt").html("Router gesamt: " + rows.length);
   $("table.router tbody").html(_.template(tableTemplate,{items:rows}));
   $("div.infoboxes").html(_.template(infoBoxes,{items:rows}));
