@@ -10,7 +10,7 @@
 
 <div class="container">
 
-  <script src="http://dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=6.1" type="text/javascript"></script>
+  <script src="https://dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=6.1&s=1" type="text/javascript"></script>
                 <script type="text/javascript">                                                                            
                         var alias = new Array;                                                                             
                         var points = new Array;                                                                            
@@ -27,8 +27,8 @@
                         {                                                            
                                 points[mainip] = new VELatLong(lat, lon);
                                 map.AddPushpin(new VEPushpin(mainip, points[mainip],  
-                                './img/'+(ishna?'hna':'node')+'.gif', 'Node:'+name,
-                                '<br><img src="./img/'+(ishna?'hna':'node')+'.gif">'+
+                                '/img/'+(ishna?'hna':'node')+'.gif', 'Node:'+name,
+                                '<br><img src="/img/'+(ishna?'hna':'node')+'.gif">'+
                                 '<br>IP:'+mainip+'<br>DefGW:'+hnaip));                                                         
                         }                                                                                                      
                                                                                                                                
