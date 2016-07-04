@@ -53,7 +53,7 @@ Endger&auml;te, Sch&auml;den an Endger&auml;ten oder finanzielle Verluste, die e
 durch die Nutzung des Netzwerks Freifunk Weimar erleidet, ab.
 </p>
 
-Diese Bedingungen haben sind denen von <a href="http://wiki.freifunk-hannover.de/Willkommen" target="_blank">Freifunk Hannover</a> angelehnt.<br>
+Diese Bedingungen sind denen von <a href="http://wiki.freifunk-hannover.de/Willkommen" target="_blank">Freifunk Hannover</a> angelehnt.<br>
 Weiterhin gilt das <a href="/picopeering/">Picopeering Aggrement</a>.
 
   <?php include("../inc/footer.inc.php") ?>
