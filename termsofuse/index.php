@@ -14,7 +14,7 @@
 
 <p>Dieses sind die Nutzungsbedingungen f&uuml;r das Netzwerk Freifunk Weimar
 (weimarnetz).
-Durch die Verbindung zum Netzwerk oder dessen Nutzung akzepiert der Client
+Durch die Verbindung zum Netzwerk oder dessen Nutzung akzeptiert der Client
 (Benutzer) diese Bedingungen.
 </p>
 <h2> Anwendungsbereich </h2>
@@ -22,7 +22,7 @@ Durch die Verbindung zum Netzwerk oder dessen Nutzung akzepiert der Client
 Freiwilligen betrieben ("Betreiber"), die die n&ouml;tigen Ger&auml;te und
 Internet-Anschl&uuml;sse ("Infrastruktur") auf eigene Kosten zur Verf&uuml;gung stellen.
 Diese Nutzungsbestimmungen regeln die Inanspruchnahme des Netzwerks Freifunk
-Weimar durch die Teilnehmer, welche sich mittels Computer, Handheld a.&auml;
+Weimar durch die Teilnehmer, welche sich mittels Computer, Handheld a.&auml;.
 ("Endger&auml;t") mit dem Netzwerk Freifunk Weimar verbinden.
 </p><p>Der Zugang zum Netzwerk Freifunk Weimar wird nicht garantiert.
 Er kann jederzeit und ohne Angabe von Gr&uuml;nden unterbrochen oder f&uuml;r bestimmte
@@ -30,7 +30,7 @@ Endger&auml;te und Teilnehmer gesperrt werden.
 </p>
 <h2> Gesetzlich verbotene Handlungen </h2>
 <p>Der Teilnehmer verpflichtet sich, keine Handlungen vorzunehmen bzw.
-Handlungen zu unterlassen, welche gesetztliche Bestimmungen oder die Rechte
+Handlungen zu unterlassen, welche gesetzliche Bestimmungen oder die Rechte
 Dritter verletzen.
 </p>
 <h2> Gesetzlich verbotene Inhalte</h2>
@@ -40,14 +40,14 @@ Weimar zu &uuml;bertragen, welche gegen geltendes Recht verstossen.
 <h2> Fair Use Policy</h2>
 <p>Der Teilnehmer verpflichtet sich, das Netzwerk Freifunk Weimar nicht in
 einer Weise zu beanspruchen, welche die Infrastruktur, das Netzwerk Freifunk
-Weimar selbst, dessen Betreiber oder andere Teilnehmer beintr&auml;chtigt.
+Weimar selbst, dessen Betreiber oder andere Teilnehmer beeintr&auml;chtigt.
 </p>
 <h2> Sicherheit</h2>
 <p>Das Netzwerk Freifunk Weimar ist, wie das Internet, unverschl&uuml;sselt und
 offen. Jeder Teilnehmer ist selbst f&uuml;r die Sicherheit seiner Verbindungen und
 seiner Endger&auml;te verantwortlich.
 </p>
-<h2> Haftungsauschluss </h2>
+<h2> Haftungsausschluss </h2>
 <p>Die Betreiber lehnen jede Haftung f&uuml;r Datenverlust, unbefugter Zugriff auf
 Endger&auml;te, Sch&auml;den an Endger&auml;ten oder finanzielle Verluste, die ein Teilnehmer
 durch die Nutzung des Netzwerks Freifunk Weimar erleidet, ab.
