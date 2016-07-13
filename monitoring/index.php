@@ -93,7 +93,7 @@ Router erreichbar: <?php echo $json['state']['nodes']; ?>
 
 </div>
 	
-<script src="/inc/underscore.js"></script>
+<script src="/inc/underscore-min.js"></script>
   <?php include("../inc/footer.inc.php") ?>
 
 </div>

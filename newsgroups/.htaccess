@@ -5,10 +5,10 @@ AuthName "Weimarnetz Newsserver -- geschuetzer Bereich (User:freifunk Passwort:w
 <Files "post.php">
 	require valid-user
 
-	order deny,allow
-	deny from all
-	allow from localhost
-	#satisfy any 
+#	order deny,allow
+#	deny from all
+#	allow from localhost
+#	#satisfy any 
 
-	allow from all
+#	allow from all
 </Files>
