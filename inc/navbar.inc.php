@@ -35,6 +35,7 @@
           <li <?php echo getActiveClass("/spenden")?> ><a href="//weimarnetz.de/spenden">Spenden</a></li>
           <li class="dropdown-header">Dokumentation</li>
           <li <?php echo getActiveClass("/wiki")?>><a href="http://wireless.subsignal.org">Wiki</a></li>
+          <li <?php echo getActiveClass("/newsgroups")?> ><a href="//weimarnetz.de/newsgroups/thread.php?group=freifunk.de.weimar.discuss" >Mailingliste Weimarnetz</a></li>
           <li <?php echo getActiveClass("/newsgroups")?> ><a href="//weimarnetz.de/newsgroups" >Mailinglisten</a></li>
           <li class="dropdown-header">Rechtliches</li>
           <li <?php echo getActiveClass("/termsofuse")?>><a href="//weimarnetz.de/termsofuse" >Nutzungsbedingungen</a></li>
