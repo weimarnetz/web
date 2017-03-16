@@ -93,7 +93,7 @@ Router erreichbar: <?php echo $json['state']['nodes']; ?>
 
 </div>
 	
-<script src="/inc/underscore-min.js"></script>
+<script src="/inc/underscore.js"></script>
   <?php include("../inc/footer.inc.php") ?>
 
 </div>
@@ -261,9 +261,14 @@ success: ( function(Response){
     if (! item.doc.weimarnetz) {
       item.doc.weimarnetz = {};
     }
-    if (! item.doc.weimarnetz.nodenumber && item.doc.olsr && item.doc.olsr.ipv4Config) {
-      item.doc.weimarnetz.nodenumber = getNodeNumber(item.doc.olsr.ipv4Config.mainIpAddress);
-    }
+		if (! item.doc.weimarnetz.nodenumber && item.doc.olsr && item.doc.olsr.ipv4Config) {
+			console.log(item.doc.olsr.ipv4Config);
+			if (item.doc.olsr.ipv4Config.mainIpAddress) {
+	      item.doc.weimarnetz.nodenumber = getNodeNumber(item.doc.olsr.ipv4Config.mainIpAddress);
+			} else	if (item.doc.olsr.ipv4Config.mainIp) {
+	      item.doc.weimarnetz.nodenumber = getNodeNumber(item.doc.olsr.ipv4Config.mainIp);
+			}
+		}
     if (! item.doc.weimarnetz.nodenumber) { item.doc.weimarnetz.nodenumber = NaN; }
   });
   //console.log(26, 'sorted: ', rows);
