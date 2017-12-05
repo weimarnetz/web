@@ -17,7 +17,7 @@ c/o Maschinenraum<br />
 </p>
 <h2>Vertreten durch:</h2>
 <p>Bastian Bittorf<br />
-Christian Storch<br />
+René Hoffmann<br />
 Andreas Bräu</p>
 <h2>Kontakt:</h2>
 <table><tr>
