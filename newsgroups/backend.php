@@ -18,7 +18,7 @@
 <description>Unsere Diskussionsliste als Archiv im Netz</description>
 <language>de-DE</language>
 
-<?
+<?php
 /* *** Some settings ****/
 // Newsgroup
 $group="freifunk.de.weimar.discuss";

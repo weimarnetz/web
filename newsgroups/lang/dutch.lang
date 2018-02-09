@@ -11,7 +11,7 @@ $text_header["user-agent"]="<b>User-Agent:</b> ";
 $text_header["date_format"]="d M Y H:i:s";
 
 $text_thread["no_articles"]="<p><b>Geen artikelen beschikbaar</b></p>";
-$text_thread["button_write"]="Schrijf";
+$text_thread["button_write"]="Schrijf (user:freifunk / password:weimar)";
 $text_thread["button_grouplist"]="Nieuwsgroepen";
 $text_thread["button_top"]="Terug naar boven";
 $text_thread["date"]="<b>Datum</b>";

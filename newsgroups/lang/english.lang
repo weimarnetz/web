@@ -12,7 +12,7 @@ $text_header["date_format"]="M d Y H:i:s";
 $text_header["attachments"]="<b>Attachments:</b> ";
 
 $text_thread["no_articles"]="<p><b>No articles available</b></p>";
-$text_thread["button_write"]="Write";
+$text_thread["button_write"]="Write (user:freifunk / password:weimar)";
 $text_thread["button_grouplist"]="Newsgroups";
 $text_thread["button_top"]="Back to Top";
 $text_thread["date"]="<b>Date</b>";

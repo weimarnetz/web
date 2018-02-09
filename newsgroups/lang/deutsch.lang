@@ -59,7 +59,7 @@ $text_error["error:"]='<font color="red">Fehler:</font>';
 $text_error["connection_failed"]="Der Verbindungsaufbau zum Newsserver ist fehlgeschlagen";
 $text_error["article_not_found"]="<p>Der Artikel ist nicht vorhanden</p>";
 $text_error["read_access_denied"]="<p>Keine Leseberechtigung!</p>";
-$text_error["post_failed"]="Verbindungsaufbau zum Newsserver fehlgeschlagen. Versuche es vielleicht sp√§ter nochmal einen Reload.";
+$text_error["post_failed"]="Verbindungsaufbau zum Newsserver fehlgeschlagen. Versuche es vielleicht sp‰ter nochmal einen Reload.";
 $text_error["auth_error"]="Authentifikation beim Newsserver fehlgeschlagen.";
 $text_error["spool_error"]="Fehler in Spooldatei. Bitte neuladen.";
 

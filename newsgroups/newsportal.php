@@ -99,9 +99,9 @@ function validate_email($address)
   global $validate_email;
   $return=true;
   if (($validate_email >= 1) && ($return == true))
-    $return = (ereg('^[-!#$%&\'*+\\./0-9=?A-Z^_A-z{|}~]+'.'@'.
-               '[-!#$%&\'*+\\/0-9=?A-Z^_A-z{|}~]+\.'.
-               '[-!#$%&\'*+\\./0-9=?A-Z^_A-z{|}~]+$',$address));
+    $return = (preg_match('/^[-!#$%&\'*+\\./0-9=?A-Z^_A-z{|}~]+'.'@'.
+               '[-!#$%&\'*+\\\/0-9=?A-Z^_A-z{|}~]+\.'.
+               '[-!#$%&\'*+\\.\/0-9=?A-Z^_A-z{|}~]+$/',$address));
   if (($validate_email >= 2) && ($return == true)) {
     $addressarray=address_decode($address,"garantiertungueltig");
     $return=checkdnsrr($addressarray[0]["host"],"MX");
@@ -253,7 +253,7 @@ function line_read(&$ns) {
  * - "Realname" <user@host.domain>
  * - user@host.domain
  *
- * The address will be split into user, host (incl. domain) and realname
+ * The address will be explode into user, host (incl. domain) and realname
  *
  * $adrstring: The string containing the address in internet format
  * $defaulthost: The name of the host which should be returned if the
@@ -470,20 +470,20 @@ function getArticleList(&$ns,$groupname) {
  * returns the decoded line
  */
 function headerDecode($value) {
-  if (eregi('=\?.*\?.\?.*\?=',$value)) { // is there anything encoded?
-    if (eregi('=\?.*\?Q\?.*\?=',$value)) {  // quoted-printable decoding
+  if (preg_match('/=\?.*\?.\?.*\?=/i',$value)) { // is there anything encoded?
+    if (preg_match('/=\?.*\?Q\?.*\?=/i',$value)) {  // quoted-printable decoding
 
-      $charset=eregi_replace('(.*)=\?(.*)\?Q\?(.*)\?=(.*)','\2',$value);
-      $result1=eregi_replace('(.*)=\?.*\?Q\?(.*)\?=(.*)','\1',$value);
-      $result2=eregi_replace('(.*)=\?.*\?Q\?(.*)\?=(.*)','\2',$value);
-      $result3=eregi_replace('(.*)=\?.*\?Q\?(.*)\?=(.*)','\3',$value);
+      $charset=preg_replace('/(.*)=\?(.*)\?Q\?(.*)\?=(.*)/i','\2',$value);
+      $result1=preg_replace('/(.*)=\?.*\?Q\?(.*)\?=(.*)/i','\1',$value);
+      $result2=preg_replace('/(.*)=\?.*\?Q\?(.*)\?=(.*)/i','\2',$value);
+      $result3=preg_replace('/(.*)=\?.*\?Q\?(.*)\?=(.*)/i','\3',$value);
       $result2=str_replace("_"," ",quoted_printable_decode($result2));
       $newvalue=$result1.recode_charset($result2,$charset).$result3;
     }
-    if (eregi('=\?.*\?B\?.*\?=',$value)) {  // base64 decoding
-      $result1=eregi_replace('(.*)=\?.*\?B\?(.*)\?=(.*)','\1',$value);
-      $result2=eregi_replace('(.*)=\?.*\?B\?(.*)\?=(.*)','\2',$value);
-      $result3=eregi_replace('(.*)=\?.*\?B\?(.*)\?=(.*)','\3',$value);
+    if (preg_match('/=\?.*\?B\?.*\?=/i',$value)) {  // base64 decoding
+      $result1=preg_replace('/(.*)=\?.*\?B\?(.*)\?=(.*)/i','\1',$value);
+      $result2=preg_replace('/(.*)=\?.*\?B\?(.*)\?=(.*)/i','\2',$value);
+      $result3=preg_replace('/(.*)=\?.*\?B\?(.*)\?=(.*)/i','\3',$value);
       $result2=base64_decode($result2);
       $newvalue=$result1.$result2.$result3;
     }
@@ -508,7 +508,7 @@ function getTimestamp($value) {
   global $timezone;
   $months=array("Jan"=>1,"Feb"=>2,"Mar"=>3,"Apr"=>4,"May"=>5,"Jun"=>6,"Jul"=>7,"Aug"=>8,"Sep"=>9,"Oct"=>10,"Nov"=>11,"Dec"=>12);
   $value=str_replace("  "," ",$value);
-  $d=split(" ",$value,6);
+  $d=explode(" ",$value,6);
   if (strcmp(substr($d[0],strlen($d[0])-1,1),",") == 0) {
     $date[0]=$d[1];  // day
     $date[1]=$d[2];  // month
@@ -522,7 +522,7 @@ function getTimestamp($value) {
     $date[3]=$d[3];  // hours:minutes:seconds
     $gmt=$d[4];      // timezone
   }
-  $time=split(":",$date[3]);
+  $time=explode(":",$date[3]);
   // timezone handling
   $msgtimezone=0;
   if ($gmt[0]=='-') {
@@ -576,7 +576,7 @@ function parse_header($hdr,$number="") {
           break; 
         case "content-type:":
           $header->content_type=array();
-          $subheader=split(";",$value);
+          $subheader=explode(";",$value);
           $header->content_type[0]=strtolower(trim($subheader[0]));
           for ($i=1; $i<count($subheader); $i++) {
             $gleichpos=strpos($subheader[$i],"=");
@@ -688,34 +688,34 @@ function html_parse($text) {
   }
   // regular expressions that will be applied to every word in the text
   $regexp_replace=array(
-    'http://((\.*([-a-z0-9_/~@?=%#;+]|&amp;)+)+)' =>
+    '/http:\/\/((\.*([-a-z0-9_\/~@?=%#;+]|&amp;)+)+)/i' =>
       '<a'.$target.'href="http://\1">http://\1</a>',
-    '(www\.[-a-z]+\.(de|pl|cz|sk|tk|tv|cc|cx|biz|us|uk|info|int|eu|dk|org|net|at|ch|com))' =>
+    '/(www\.[-a-z]+\.(de|pl|cz|sk|tk|tv|cc|cx|biz|us|uk|info|int|eu|dk|org|net|at|ch|com))/i' =>
       '<a'.$target.'href="http://\1">\1</a>',
-    'https://([-a-z0-9_./~@?=%#&;\n]+)' =>
+    '/https:\/\/([-a-z0-9_.\/~@?=%#&;\n]+)/i' =>
       '<a'.$target.'href="https://\1">https://\1</a>',
-    'gopher://([-a-z0-9_./~@?=%\n]+)' =>
+    '/gopher:\/\/([-a-z0-9_.\/~@?=%\n]+)/i' =>
       '<a'.$target.'href="gopher://\1">gopher://\1</a>',
-    'news://([-a-z0-9_./~@?=%\n]+)' =>
+    '/news:\/\/([-a-z0-9_.\/~@?=%\n]+)/i' =>
       '<a'.$target.'href="news://\1">news://\1</a>',
-    'ftp://([-a-z0-9_./~@?=%\n]+)' =>
+    '/ftp:\/\/([-a-z0-9_.\/~@?=%\n]+)/i' =>
       '<a'.$target.'href="ftp://\1">ftp://\1</a>',
     //'([-a-z0-9_./n]+)@([-a-z0-9_.]+)' =>
     //  $_SESSION["loggedin"]!==true ? '(e-Mail)' :
     //  '<a href="mailto:\1@\2">\1@\2</a>'
   );
   $ntext="";
-  // split every line into it's words
+  // explode every line into it's words
   $words=explode(" ",$text);
   $n=count($words);
   for($i=0; $i<$n; $i++) {
     $word=$words[$i];
     // test, if we need the slow walk through all the regular expressions
-    if(eregi('www|\:|@',$word)) {
+    if(preg_match('/www|\:|@/i',$word)) {
       // apply the regular expressions to the word until a matching 
       // expression is found
       foreach ($regexp_replace as $key => $value) {
-        $nword=eregi_replace($key,$value,$word);
+        $nword=preg_replace($key,$value,$word);
         if($nword!=$word) {
           $word=$nword;
           break;
@@ -750,7 +750,7 @@ function readPlainHeader(&$ns,$group,$articleNumber) {
       $body .= $line."\n";
       $line=line_read($ns);
     }
-    return split("\n",str_replace("\r\n","\n",$body));
+    return explode("\n",str_replace("\r\n","\n",$body));
   }
 }
 
@@ -790,7 +790,7 @@ function message_cancel($subject,$from,$newsgroups,$ref,$body,$id) {
     }
     $body=str_replace("\n.\r","\n..\r",$body);
     $body=str_replace("\r",'',$body);
-    $b=split("\n",$body);
+    $b=explode("\n",$body);
     $body="";
     for ($i=0; $i<count($b); $i++) {
       if ((strpos(substr($b[$i],0,strpos($b[$i]," ")),">") != false ) | (strcmp(substr($b[$i],0,1),">") == 0)) {

@@ -198,7 +198,7 @@ if ($type=="reply") {
   $subject="Re: ".$subject;
   // Cut off old parts of a subject
   // for example: 'foo (was: bar)' becomes 'foo'.
-  $subject=eregi_replace('(\(wa[sr]: .*\))$','',$subject);
+  $subject=preg_replace('/(\(wa[sr]: .*\))$/i','',$subject);
   $show=1;
   $references=false;
   if (isset($head->references[0])) {

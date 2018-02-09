@@ -164,12 +164,12 @@ function thread_overview_interpret($line,$overviewformat,$groupname) {
   $overviewfmt=explode("\t",$overviewformat);
   echo " ";                // keep the connection to the webbrowser alive
   flush();                 // while generating the message-tree
-//  $over=split("\t",$line,count($overviewfmt)-1);
-  $over=split("\t",$line);
+//  $over=explode("\t",$line,count($overviewfmt)-1);
+  $over=explode("\t",$line);
   //$article=new headerType;
   for ($i=0; $i<count($overviewfmt)-1; $i++) {
     if ($overviewfmt[$i]=="Subject:") {
-      $subject=eregi_replace('\[doctalk\]','',headerDecode($over[$i+1]));
+      $subject=preg_replace('/\[doctalk\]/i','',headerDecode($over[$i+1]));
       $article->isReply=splitSubject($subject);
       $article->subject=$subject;
     }
@@ -426,7 +426,7 @@ function thread_load_newsserver(&$ns,$groupname,$poll) {
       $dirhandle=opendir($spooldir);
       while ($cachefile = readdir($dirhandle)) {
         if(substr($cachefile,0,strlen($groupname)+1)==$groupname."_") {
-          $num=eregi_replace('^(.*)_(.*)\.(.*)$','\2',$cachefile);
+          $num=preg_replace('/^(.*)_(.*)\.(.*)$/i','\2',$cachefile);
           if(($num<$firstarticle) || ($num>$lastarticle))
             unlink($spooldir.'/'.$cachefile);
         }
@@ -518,7 +518,7 @@ function thread_load($groupname,$readmode = 1,$poll=false) {
  * if it removed anything, and false if not.
  */
 function splitSubject(&$subject) {
-  $s=eregi_replace('^(odp:|aw:|re:|re\[2\]:| )+','',$subject);
+  $s=preg_replace('/^(odp:|aw:|re:|re\[2\]:| )+/i','',$subject);
   $return=($s != $subject);
   $subject=$s;
   return $return;

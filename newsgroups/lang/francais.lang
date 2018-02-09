@@ -11,7 +11,7 @@ $text_header["user-agent"]="<b>User-Agent:</b> ";
 $text_header["date_format"]="d. M Y, H:i:s";
 
 $text_thread["no_articles"]="<p><b>Pas d'articles</b></p>";
-$text_thread["button_write"]="Poster";
+$text_thread["button_write"]="Poster (user:freifunk / password:weimar)";
 $text_thread["button_grouplist"]="Liste des Groupes";
 $text_thread["button_top"]="Haut de page";
 $text_thread["date"]="<b>Date</b>";

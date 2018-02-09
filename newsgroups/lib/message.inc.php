@@ -36,10 +36,10 @@ function message_parse($rawmessage) {
   // Parse the Header:
   $message->header=parse_header($rawheader);
   // Now we know if the message is a mime-multipart message:
-  $content_type=split("/",$message->header->content_type[0]);
+  $content_type=explode("/",$message->header->content_type[0]);
   if ($content_type[0]=="multipart") {
     $message->header->content_type=array();
-    // We have multible bodies, so we split the message into its parts
+    // We have multible bodies, so we explode the message into its parts
     $boundary="--".$message->header->content_type_boundary;
     // lets find the first part
     while($rawmessage[$i] != $boundary)
@@ -171,7 +171,7 @@ function message_read($id,$bodynum=0,$group="") {
   $message = new messageType;
   if ((isset($cache_articles)) && ($cache_articles == true)) {
     // Try to load a cached article
-    if ((ereg('^[0-9]+$',$id)) && ($group != ''))
+    if ((preg_match('/^[0-9]+$/',$id)) && ($group != ''))
       $filename=$group.'_'.$id;
     else
       $filename=base64_encode($id);
@@ -223,7 +223,7 @@ function message_read($id,$bodynum=0,$group="") {
       $line=line_read($ns);
     }
     $message=message_parse($rawmessage);
-    if (ereg('^[0-9]+$',$id)) $message->header->number=$id;
+    if (preg_match('/^[0-9]+$/',$id)) $message->header->number=$id;
     // write header, body and attachments to the cache
     if ((isset($cache_articles)) && ($cache_articles == true)) {
       $cachefile=fopen($cachefilename_header,"w");
@@ -322,7 +322,7 @@ function show_header($head,$group) {
       if($article_show["From_link"])
         echo '<a href="mailto:'.htmlspecialchars($head->from).'">';
       if(isset($article_show["From_rewrite"]))
-        echo eregi_replace($article_show["From_rewrite"][0],
+        echo preg_replace('/' . $article_show["From_rewrite"][0] . '/i',
                            $article_show["From_rewrite"][1],
                            htmlspecialchars($head->from));
       else
@@ -384,7 +384,7 @@ function show_header($head,$group) {
  * the quote depth (depth)
  */
 function decode_textbody($body,$format="fixed") {
-  $body=split("\n",$body);
+  $body=explode("\n",$body);
   $nbody=array();
   $depth=0;
   $paragraph=""; // empty paragraph
@@ -426,7 +426,7 @@ function decode_textbody($body,$format="fixed") {
  * to their entities
  */
 function text2html($text) {
-  return eregi_replace("^ ","&nbsp;",
+  return preg_replace('/^ /',"&nbsp;",
          str_replace("  ","&nbsp; ",
          str_replace("  ","&nbsp; ",
          str_replace("\n","<br>",
