@@ -3,3 +3,5 @@
 *.swp
 /bower_components/
 /inc/feed/cache/
+./newsgroups
+./openwifimap-html5
