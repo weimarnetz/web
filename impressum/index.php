@@ -16,9 +16,10 @@ c/o Maschinenraum<br />
 99423 Weimar
 </p>
 <h2>Vertreten durch:</h2>
-<p>Bastian Bittorf<br />
+<p>
 René Hoffmann<br />
-Andreas Bräu</p>
+Katrin Linke<br />
+Andreas Bräu</p>	
 <h2>Kontakt:</h2>
 <table><tr>
 <td>Telefon:</td>
