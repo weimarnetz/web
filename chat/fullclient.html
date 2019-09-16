@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Converse</title>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Converse: An XMPP chat client which can be integrated into any website" />
+    <meta name="author" content="JC Brand" />
+    <meta name="keywords" content="xmpp chat webchat converse.js Converse" />
+
+    <link type="text/css" rel="stylesheet" media="screen" href="/inc/converse.min.css" />
+    <script src="/inc/converse.min.js"></script>
+
+</head>
+
+<body id="page-top" data-spy="scroll" class="converse-website">
+
+</body>
+
+<script>
+		/*
+		@licstart
+    This is free and unencumbered software released into the public domain.
+
+    Anyone is free to copy, modify, publish, use, compile, sell, or
+    distribute this software, either in source code form or as a compiled
+    binary, for any purpose, commercial or non-commercial, and by any
+    means.
+
+    In jurisdictions that recognize copyright laws, the author or authors
+    of this software dedicate any and all copyright interest in the
+    software to the public domain. We make this dedication for the benefit
+    of the public at large and to the detriment of our heirs and
+    successors. We intend this dedication to be an overt act of
+    relinquishment in perpetuity of all present and future rights to this
+    software under copyright law.
+
+    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+    EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+    IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+    OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+    ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+    OTHER DEALINGS IN THE SOFTWARE.
+
+    For more information, please refer to <https://unlicense.org/>
+    @licend
+    */
+    converse.initialize({
+        domain_placeholder: 'jabber.weimarnetz.de',
+				hide_offline_users: true,
+				theme: 'concord',
+			  keepalive: true, 
+        play_sounds: true,
+				view_mode: 'fullscreen',
+        show_controlbox_by_default: false,
+        strict_plugin_dependencies: false,
+        websocket_url: 'wss://jabber.weimarnetz.de:5443/websocket/'
+    });
+</script>
+</html>

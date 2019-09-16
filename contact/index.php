@@ -34,9 +34,10 @@
             Marienstr. 18<br>
             99423 Weimar</address>
           </div>
-          <div class="col-sm-6 col-lg-3"><h2>Telefonisch</h2>
+          <div class="col-sm-6 col-lg-3"><h2>Telefon oder Chat</h2>
             <address><strong>Weimarnetz Sorgentelefon</strong><br>
-              +49 3643 544304</address>   
+							+49 3643 544304</address>
+						<p>In unserem <a href="/chat/chatroom.html" target="_window">Channel</a> kannst du deine Fragen loswerden und mit uns diskutieren.</p>
             </div> 
           </div>
           <div class="row">

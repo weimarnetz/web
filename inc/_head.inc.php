@@ -5,6 +5,7 @@
 
 <!-- Le styles -->
   <link href="/bower_components/bootstrap-theme-freifunk/dist/css/bootstrap.min.css" rel="stylesheet"> 
+  <link type="text/css" rel="stylesheet" media="screen" href="/inc/converse.min.css" />
 
 <!-- local fixes. -->
 <style type="text/css">
